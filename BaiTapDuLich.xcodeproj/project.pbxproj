@@ -35,6 +35,8 @@
 		845E252A2E1A94BC0098E637 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845E25272E1A94BC0098E637 /* ProfileVC.xib */; };
 		845E252C2E1A94D20098E637 /* FormMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E252B2E1A94D20098E637 /* FormMode.swift */; };
 		845E252E2E1A94E80098E637 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E252D2E1A94E80098E637 /* UserProfile.swift */; };
+		845E25332E1B4C0B0098E637 /* HealthGuruCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E25312E1B4C0B0098E637 /* HealthGuruCell.swift */; };
+		845E25342E1B4C0B0098E637 /* HealthGuruCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845E25322E1B4C0B0098E637 /* HealthGuruCell.xib */; };
 		849B2C722E169E18000BCDD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B2C682E169E18000BCDD4 /* AppDelegate.swift */; };
 		849B2C732E169E18000BCDD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B2C6F2E169E18000BCDD4 /* SceneDelegate.swift */; };
 		849B2C742E169E18000BCDD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B2C702E169E18000BCDD4 /* ViewController.swift */; };
@@ -88,6 +90,8 @@
 		845E25272E1A94BC0098E637 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		845E252B2E1A94D20098E637 /* FormMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormMode.swift; sourceTree = "<group>"; };
 		845E252D2E1A94E80098E637 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		845E25312E1B4C0B0098E637 /* HealthGuruCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthGuruCell.swift; sourceTree = "<group>"; };
+		845E25322E1B4C0B0098E637 /* HealthGuruCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthGuruCell.xib; sourceTree = "<group>"; };
 		849B2C502E169DBC000BCDD4 /* BaiTapDuLich.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiTapDuLich.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849B2C682E169E18000BCDD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		849B2C692E169E18000BCDD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 			children = (
 				845E24FD2E197D680098E637 /* HealthGuruVC.swift */,
 				845E24FE2E197D680098E637 /* HealthGuruVC.xib */,
+				845E25312E1B4C0B0098E637 /* HealthGuruCell.swift */,
+				845E25322E1B4C0B0098E637 /* HealthGuruCell.xib */,
 			);
 			path = HealthGuru;
 			sourceTree = "<group>";
@@ -398,6 +404,7 @@
 				845E25192E1A5F190098E637 /* SettingsCell.xib in Resources */,
 				849B2C802E169F93000BCDD4 /* Trang1VC.xib in Resources */,
 				849B2C872E17A8FC000BCDD4 /* Trang2VC.xib in Resources */,
+				845E25342E1B4C0B0098E637 /* HealthGuruCell.xib in Resources */,
 				845E24EE2E1909720098E637 /* Trang234V.xib in Resources */,
 				849B2C8D2E17AB5F000BCDD4 /* TestCollectionVVc.xib in Resources */,
 				849B2C9C2E17E0D8000BCDD4 /* HearHealthV.xib in Resources */,
@@ -419,6 +426,7 @@
 				849B2C8C2E17AB5F000BCDD4 /* TestCollectionVVc.swift in Sources */,
 				845E25082E1984FC0098E637 /* IndexV.swift in Sources */,
 				849B2C732E169E18000BCDD4 /* SceneDelegate.swift in Sources */,
+				845E25332E1B4C0B0098E637 /* HealthGuruCell.swift in Sources */,
 				845E252E2E1A94E80098E637 /* UserProfile.swift in Sources */,
 				849B2C742E169E18000BCDD4 /* ViewController.swift in Sources */,
 				849B2C8F2E17AC26000BCDD4 /* User.swift in Sources */,

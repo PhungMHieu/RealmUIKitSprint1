@@ -64,7 +64,10 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
          Setting(image: "Document Align Right", title: "Term of User")]
     ]
     var userProfile: UserProfile?
+    
     @IBOutlet weak var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let titleLabel = UILabel()
