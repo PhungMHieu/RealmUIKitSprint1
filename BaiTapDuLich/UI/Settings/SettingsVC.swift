@@ -6,8 +6,24 @@
 //
 
 import UIKit
+//protocol InformationDelegate {
+//    
+//}
+class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    var data: [[Setting]] = [
+        [Setting(image: "Profile Circle", title: "Profile")],
+        [Setting(image: "Notification", title: "Daily Reminder"),
+         Setting(image: "Category", title: "Change App Icon"),
+         Setting(image: "Website", title: "Language")],
+        [Setting(image: "Like", title: "Rate us"),
+         Setting(image: "Message 37", title: "Feedback"),
+         Setting(image: "Shield Star", title: "Privacy Policy"),
+         Setting(image: "Document Align Right", title: "Term of User")]
+    ]
+    var userProfile: UserProfile?
+    
+    @IBOutlet weak var tableView: UITableView!
 
-class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data[section].count;
     }
@@ -34,20 +50,43 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return 16
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //        if(indexPath.section == 0 && indexPath.row == 0){
+        ////            let vc = InformationVC()
+        //            let vc = ProfileVC()
+        ////            self.userProfile = UserProfile(firstName: "---", lastName: "---", weight: 1, height: 1, gender: .male)
+        //            vc.userProfile = self.userProfile
+        //            vc.profileDelegate = self
+        ////            self.userProfile = vc.userProfile
+        ////            if(vc.has)
+        //            navigationController?.pushViewController(vc, animated: true)
+        //        }
         if(indexPath.section == 0 && indexPath.row == 0){
-//            let vc = InformationVC()
-            let vc = ProfileVC()
-//            self.userProfile = UserProfile(firstName: "---", lastName: "---", weight: 1, height: 1, gender: .male)
-            vc.userProfile = self.userProfile
-            vc.profileDelegate = self
-//            self.userProfile = vc.userProfile
-//            if(vc.has)
-            navigationController?.pushViewController(vc, animated: true)
+            
+            if(userProfile == nil){
+                let vc = InformationVC()
+                vc.informationUpdateDelegate = self
+//                vc2.informationDelegate = self
+//                vc2.informationDelegate = self
+//                vc2.informationDelegate
+                vc.hidesBottomBarWhenPushed = true
+                navigationController?.pushViewController(vc, animated: true)
+            }else{
+                let vc = ProfileVC()
+                vc.userProfile = self.userProfile
+                vc.hidesBottomBarWhenPushed = true
+//                vc.profileDelegate = self
+                navigationController?.pushViewController(vc, animated: true)
+            }
         }
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
         let numberOfRows = tableView.numberOfRows(inSection: indexPath.section)
-
+//        if(indexPath.row == 0 || indexPath.row == numberOfRows){
+//            cell.separatorInset = UIEdgeInsets(top: 0, left: cell.bounds.size.width, bottom: 0, right: 0)
+//        }else{
+//            cell.separatorInset = UIEdgeInsets.zero
+//        }
         let isFirst = indexPath.row == 0
         let isLast  = indexPath.row == numberOfRows - 1
         if #available(iOS 11.0, *) {
@@ -74,29 +113,7 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        switch section {
-//        case 0: return ""
-//        case 1: return ""
-//        case 2: return ""
-//        default: return nil
-//        }
-//
-//    }
-//    
-    var data: [[Setting]] = [
-        [Setting(image: "Profile Circle", title: "Profile")],
-        [Setting(image: "Notification", title: "Daily Reminder"),
-         Setting(image: "Category", title: "Change App Icon"),
-         Setting(image: "Website", title: "Language")],
-        [Setting(image: "Like", title: "Rate us"),
-         Setting(image: "Message 37", title: "Feedback"),
-         Setting(image: "Shield Star", title: "Privacy Policy"),
-         Setting(image: "Document Align Right", title: "Term of User")]
-    ]
-    var userProfile: UserProfile?
-    
-    @IBOutlet weak var tableView: UITableView!
+
     
     
     override func viewDidLoad() {
@@ -121,21 +138,19 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //        tableView.tableHeaderView = headerView
         // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+//        printContent(self.userProfile)
+        guard let userProfile = self.userProfile as? UserProfile else { return }
+        print(userProfile.firstName)
     }
-    */
-
 }
-extension SettingsVC: ProfileDelegate{
-    func getUpdateProfile(_ userProfile: UserProfile) {
-        self.userProfile = userProfile
+//extension SettingsVC: ProfileDelegate{
+//    func getUpdateProfile(_ userProfile: UserProfile) {
+//        self.userProfile = userProfile
+//    }
+//}
+extension SettingsVC: InformationUpdateDelegate{
+    func didUpdateUser(_ user: UserProfile) {
+        self.userProfile = user
     }
 }

@@ -38,12 +38,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        window.rootViewController = navi
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [healthGuruNavi, settingsNavi]
-//        if(UserDefaults.standard.bool(forKey: ("didEnterMainApp"))){
-//            window.rootViewController = tabBarController
-//        }else{
-//            window.rootViewController = navi
-//        }
-        window.rootViewController = navi
+        tabBarController.tabBar.tintColor = .primary
+        let apperance = UITabBarAppearance()
+        apperance.configureWithOpaqueBackground()
+        apperance.backgroundColor = .neutral5
+//            apperance.layer.cornerRadius = 10
+        tabBarController.tabBar.standardAppearance = apperance
+        tabBarController.tabBar.scrollEdgeAppearance = apperance
+        tabBarController.tabBar.layer.cornerRadius = 20
+        tabBarController.tabBar.layer.masksToBounds = true
+        
+        tabBarController.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+
+        if(UserDefaults.standard.bool(forKey: ("didEnterMainApp"))){
+            window.rootViewController = tabBarController
+        }else{
+            window.rootViewController = navi
+        }
+//        window.rootViewController = navi
 //
         
         self.window = window

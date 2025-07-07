@@ -32,7 +32,7 @@ class Trang4VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         trang4V.nextBtn.backgroundColor = .neutral3
-        trang4V.nextAction = {[weak self] in
+        trang4V.nextAction = {()in
 //            let healthGuru = HealthGuruVC()
 //            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
 //               let sceneDelegate = windowScene.delegate as? SceneDelegate,
@@ -67,6 +67,18 @@ class Trang4VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
             let tabBarController = UITabBarController()
             tabBarController.viewControllers = [healthGuruNavi, settingsNavi]
             tabBarController.tabBar.tintColor = .primary
+            tabBarController.tabBar.barTintColor = .neutral5
+            let apperance = UITabBarAppearance()
+            apperance.configureWithOpaqueBackground()
+            apperance.backgroundColor = .neutral5
+//            apperance.layer.cornerRadius = 10
+            tabBarController.tabBar.standardAppearance = apperance
+            tabBarController.tabBar.scrollEdgeAppearance = apperance
+            tabBarController.tabBar.layer.cornerRadius = 20
+            tabBarController.tabBar.layer.masksToBounds = true
+            
+            tabBarController.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+//            tabBarController.tabBar.backgroundColor = .neutral5
             window.rootViewController = tabBarController
 //            window.rootViewController = navi
 //            self.window = window
@@ -85,7 +97,7 @@ class Trang4VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         for cell in trang4V.collectionView.visibleCells{
 //            print("Khong ep kieu duoc")
             guard let myCell = cell as? HearHealthCell else{
-                print("Khong ep kieu duoc")
+//                print("Khong ep kieu duoc")
                 continue
             }
             if myCell.checkBox.button.isSelected{
@@ -108,15 +120,5 @@ class Trang4VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         }
         print(hasBorder)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

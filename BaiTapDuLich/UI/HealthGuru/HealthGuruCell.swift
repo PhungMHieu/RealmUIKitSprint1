@@ -35,6 +35,10 @@ class HealthGuruCell: UITableViewCell {
         healthGuruV.pulseV.unit.textColor = color
         healthGuruV.hrv.unit.textColor = color
         healthGuruV.status.index.textColor = color
+        
+        healthGuruV.pulseV.index.font = UIFont.boldSystemFont(ofSize: healthGuruV.pulseV.index.font.pointSize)
+        healthGuruV.hrv.index.font = UIFont.boldSystemFont(ofSize: healthGuruV.pulseV.index.font.pointSize)
+        healthGuruV.status.index.font = UIFont.boldSystemFont(ofSize: healthGuruV.pulseV.index.font.pointSize)
     }
     
 }

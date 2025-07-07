@@ -13,7 +13,7 @@ protocol InformationUpdateDelegate: AnyObject{
     func didUpdateUser(_ user: UserProfile)
 }
 class InformationVC: UIViewController {
-    var hasUser: Bool?
+    
     @IBOutlet weak var heightV: LabelTextFieldV!
     @IBOutlet weak var weightV: LabelTextFieldV!
     @IBOutlet weak var button: UIButton!
@@ -21,6 +21,7 @@ class InformationVC: UIViewController {
     @IBOutlet weak var lastNameV: LabelTextFieldV!
     @IBOutlet weak var firstNameV: LabelTextFieldV!
     
+    var hasUser: Bool?
     var mode: FormMode = .add
     var userProfile: UserProfile?
     weak var informationDelegate: InformationDelegate?
@@ -29,6 +30,8 @@ class InformationVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Information"
+        //        self.view.layer.cornerRadius = 16
+        //        self.layer.cornerRadius = 16
         heightV.config(label: "Height", textField: "Cm")
         weightV.config(label: "Weight", textField: "Kg")
         firstNameV.config(label: "First name", textField: "Enter first name")
@@ -48,7 +51,7 @@ class InformationVC: UIViewController {
                     print("\(gender.titleForSegment(at: i)) \(userProfile.gender.rawValue)")
                     if(gender.titleForSegment(at: i) == userProfile.gender.rawValue){
                         //                        print("\(gender.titleForSegment(at: i)) \(userProfile.gender.rawValue)")
-//                        print(i)
+                        //                        print(i)
                         gender.selectedSegmentIndex = i
                         break
                     }
@@ -68,7 +71,7 @@ class InformationVC: UIViewController {
             }
             gender.addTarget(self, action: #selector(textFieldUpdate), for: .valueChanged)
         }
-                // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.
     }
     @IBAction func btn(_ sender: Any) {
         if(mode == .add){
@@ -80,15 +83,23 @@ class InformationVC: UIViewController {
             let genderString = gender.titleForSegment(at: genderIndexPath) ?? ""
             let selectedGender = Gender(rawValue: genderString)
             //            let selectedGender = Gender(description: genderString)
-//            print("\(selectedGender) la gender duoc chon")
+            //            print("\(selectedGender) la gender duoc chon")
             let userProfile = UserProfile(firstName: firstName, lastName: lastName, weight: Double(weight) ?? 0, height: Double(height) ?? 0, gender: selectedGender ?? .male)
             //        var listProfileVC = ListProfileVC()
             //        listProfileVC.data.append(userProfile)
             
-            informationDelegate?.didAddUserProfile(userProfile)
-//            informationDelegate.didUpdateUser(userProfile)
+            //            informationDelegate?.didAddUserProfile(userProfile)
+            
+            let vc = ProfileVC()
+            vc.userProfile = userProfile
+            vc.profileDelegate = self
+            //            vc.informationUpdateDelegate = self
+            //            vc.profileDelegate = self
+            //            vc.didAddUserProfile(userProfile)
+            navigationController?.pushViewController(vc, animated: true)
+            //            informationDelegate.didUpdateUser(userProfile)
             //        navigationController?.pushViewController(listProfileVC, animated: true)
-            navigationController?.popViewController(animated: true)
+            //            navigationController?.popViewController(animated: true)
         }else{
             let userProfile = self.userProfile
             userProfile?.firstName = firstNameV.textField.text ?? ""
@@ -135,8 +146,8 @@ class InformationVC: UIViewController {
         guard let genderUser = userProfile?.gender.rawValue else{
             return
         }
-//        guard let gender = Gender(rawValue: Int(genderTitle) ?? 0) else { return }
-//        print("\(userProfile?.gender.rawValue ?? "male") đây là giá trị \n \(genderTitle) là giá trị")
+        //        guard let gender = Gender(rawValue: Int(genderTitle) ?? 0) else { return }
+        //        print("\(userProfile?.gender.rawValue ?? "male") đây là giá trị \n \(genderTitle) là giá trị")
         print("\(genderUser) \(genderTitle)")
         if(firstName != userProfile?.firstName || lastName != userProfile?.lastName
            || height != String(userProfile?.height ?? 0)
@@ -156,4 +167,10 @@ class InformationVC: UIViewController {
         validateInputUpdate()
     }
     
+}
+extension InformationVC: ProfileDelegate{
+    func getUpdateProfile(_ userProfile: UserProfile) {
+        //        self.userProfile = userProfile
+        self.informationUpdateDelegate?.didUpdateUser(userProfile)
+    }
 }

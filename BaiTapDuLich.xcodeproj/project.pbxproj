@@ -50,11 +50,6 @@
 		849B2C832E16E505000BCDD4 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B2C822E16E4FF000BCDD4 /* CustomButton.swift */; };
 		849B2C872E17A8FC000BCDD4 /* Trang2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849B2C862E17A8FC000BCDD4 /* Trang2VC.xib */; };
 		849B2C882E17A8FC000BCDD4 /* Trang2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B2C852E17A8FC000BCDD4 /* Trang2VC.swift */; };
-		849B2C8C2E17AB5F000BCDD4 /* TestCollectionVVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B2C8A2E17AB5F000BCDD4 /* TestCollectionVVc.swift */; };
-		849B2C8D2E17AB5F000BCDD4 /* TestCollectionVVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849B2C8B2E17AB5F000BCDD4 /* TestCollectionVVc.xib */; };
-		849B2C8F2E17AC26000BCDD4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B2C8E2E17AC22000BCDD4 /* User.swift */; };
-		849B2C922E17ACC6000BCDD4 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B2C902E17ACC6000BCDD4 /* HomeCell.swift */; };
-		849B2C932E17ACC6000BCDD4 /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849B2C912E17ACC6000BCDD4 /* HomeCell.xib */; };
 		849B2C972E17E078000BCDD4 /* HearHealthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B2C952E17E078000BCDD4 /* HearHealthCell.swift */; };
 		849B2C982E17E078000BCDD4 /* HearHealthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849B2C962E17E078000BCDD4 /* HearHealthCell.xib */; };
 		849B2C9A2E17E0C2000BCDD4 /* HearHealthV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B2C992E17E0C2000BCDD4 /* HearHealthV.swift */; };
@@ -109,11 +104,6 @@
 		849B2C822E16E4FF000BCDD4 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		849B2C852E17A8FC000BCDD4 /* Trang2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trang2VC.swift; sourceTree = "<group>"; };
 		849B2C862E17A8FC000BCDD4 /* Trang2VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Trang2VC.xib; sourceTree = "<group>"; };
-		849B2C8A2E17AB5F000BCDD4 /* TestCollectionVVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionVVc.swift; sourceTree = "<group>"; };
-		849B2C8B2E17AB5F000BCDD4 /* TestCollectionVVc.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestCollectionVVc.xib; sourceTree = "<group>"; };
-		849B2C8E2E17AC22000BCDD4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		849B2C902E17ACC6000BCDD4 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
-		849B2C912E17ACC6000BCDD4 /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
 		849B2C952E17E078000BCDD4 /* HearHealthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearHealthCell.swift; sourceTree = "<group>"; };
 		849B2C962E17E078000BCDD4 /* HearHealthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HearHealthCell.xib; sourceTree = "<group>"; };
 		849B2C992E17E0C2000BCDD4 /* HearHealthV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearHealthV.swift; sourceTree = "<group>"; };
@@ -133,13 +123,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2C5ECA932E1B646000AD6A18 /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TabBar;
-			sourceTree = "<group>";
-		};
 		2C5ECA942E1B6A2C00AD6A18 /* InformationHeart */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,7 +188,6 @@
 				845E250C2E198AA30098E637 /* Index.swift */,
 				845E24F12E1910250098E637 /* HearIssue.swift */,
 				845E252B2E1A94D20098E637 /* FormMode.swift */,
-				849B2C8E2E17AC22000BCDD4 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -283,14 +265,12 @@
 			isa = PBXGroup;
 			children = (
 				2C5ECA942E1B6A2C00AD6A18 /* InformationHeart */,
-				2C5ECA932E1B646000AD6A18 /* TabBar */,
 				845E25232E1A93230098E637 /* Information */,
 				845E25102E1A34360098E637 /* Settings */,
 				845E250B2E198A960098E637 /* Model */,
 				845E24FC2E197D540098E637 /* HealthGuru */,
 				845E24F72E19774F0098E637 /* Trang4 */,
 				845E24E22E1841A10098E637 /* Trang3 */,
-				849B2C892E17AAD0000BCDD4 /* CollectionViewTest */,
 				849B2C842E17A8E6000BCDD4 /* Trang2 */,
 				849B2C7D2E169F82000BCDD4 /* Trang1 */,
 				849B2C7C2E169E3B000BCDD4 /* CustomUI */,
@@ -334,17 +314,6 @@
 				849B2C962E17E078000BCDD4 /* HearHealthCell.xib */,
 			);
 			path = Trang2;
-			sourceTree = "<group>";
-		};
-		849B2C892E17AAD0000BCDD4 /* CollectionViewTest */ = {
-			isa = PBXGroup;
-			children = (
-				849B2C8A2E17AB5F000BCDD4 /* TestCollectionVVc.swift */,
-				849B2C8B2E17AB5F000BCDD4 /* TestCollectionVVc.xib */,
-				849B2C902E17ACC6000BCDD4 /* HomeCell.swift */,
-				849B2C912E17ACC6000BCDD4 /* HomeCell.xib */,
-			);
-			path = CollectionViewTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,7 +377,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				849B2C932E17ACC6000BCDD4 /* HomeCell.xib in Resources */,
 				845E25252E1A93230098E637 /* InformationVC.xib in Resources */,
 				849B2C982E17E078000BCDD4 /* HearHealthCell.xib in Resources */,
 				845E24EA2E18424A0098E637 /* Trang3VC.xib in Resources */,
@@ -429,7 +397,6 @@
 				849B2C872E17A8FC000BCDD4 /* Trang2VC.xib in Resources */,
 				845E25342E1B4C0B0098E637 /* HealthGuruCell.xib in Resources */,
 				845E24EE2E1909720098E637 /* Trang234V.xib in Resources */,
-				849B2C8D2E17AB5F000BCDD4 /* TestCollectionVVc.xib in Resources */,
 				849B2C9C2E17E0D8000BCDD4 /* HearHealthV.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,13 +413,11 @@
 				845E24F22E1910300098E637 /* HearIssue.swift in Sources */,
 				849B2C722E169E18000BCDD4 /* AppDelegate.swift in Sources */,
 				845E24FA2E19775C0098E637 /* Trang4VC.swift in Sources */,
-				849B2C8C2E17AB5F000BCDD4 /* TestCollectionVVc.swift in Sources */,
 				845E25082E1984FC0098E637 /* IndexV.swift in Sources */,
 				849B2C732E169E18000BCDD4 /* SceneDelegate.swift in Sources */,
 				845E25332E1B4C0B0098E637 /* HealthGuruCell.swift in Sources */,
 				845E252E2E1A94E80098E637 /* UserProfile.swift in Sources */,
 				849B2C742E169E18000BCDD4 /* ViewController.swift in Sources */,
-				849B2C8F2E17AC26000BCDD4 /* User.swift in Sources */,
 				845E252C2E1A94D20098E637 /* FormMode.swift in Sources */,
 				845E24EC2E1909600098E637 /* Trang234V.swift in Sources */,
 				849B2C812E169F93000BCDD4 /* Trang1VC.swift in Sources */,
@@ -467,7 +432,6 @@
 				845E250D2E198AA70098E637 /* Index.swift in Sources */,
 				845E25032E1981CB0098E637 /* RateIndexV.swift in Sources */,
 				845E25292E1A94BC0098E637 /* ProfileVC.swift in Sources */,
-				849B2C922E17ACC6000BCDD4 /* HomeCell.swift in Sources */,
 				845E24FF2E197D680098E637 /* HealthGuruVC.swift in Sources */,
 				845E25242E1A93230098E637 /* InformationVC.swift in Sources */,
 				849B2C832E16E505000BCDD4 /* CustomButton.swift in Sources */,

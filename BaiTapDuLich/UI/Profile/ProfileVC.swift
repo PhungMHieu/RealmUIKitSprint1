@@ -21,6 +21,7 @@ class ProfileVC: UIViewController {
     @IBOutlet weak var bmi: UILabel!
     @IBOutlet weak var fullName: UILabel!
     
+    @IBOutlet weak var userProfileV: UIView!
     @IBOutlet var profileView: UIView!
     var fullNameText: String = ""
     var heightText: String = ""
@@ -32,19 +33,24 @@ class ProfileVC: UIViewController {
     
     weak var profileDelegate: ProfileDelegate?
     weak var profileDeleteDelegate: ProfileDeleteDelegate?
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
+//    weak var profileDeleteDelegate: ProfileDeleteDelegate?
+//    override func viewWillAppear(_ animated: Bool) {
+//        
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if userProfile == nil{
-//            view.isHidden = true
-            let informationVC = InformationVC()
-            informationVC.userProfile = self.userProfile
-            informationVC.informationDelegate = self
-            navigationController?.pushViewController(informationVC, animated: true)
-//            navigationController?.popViewController(animated: true)
-        }
+        self.userProfileV.layer.cornerRadius = 16
+        self.userProfileV.clipsToBounds = true
+//        self.profileView.backgroundColor = .accentNormal
+//        if userProfile == nil{
+////            view.isHidden = true
+//            let informationVC = InformationVC()
+//            informationVC.userProfile = self.userProfile
+//            informationVC.informationDelegate = self
+//            navigationController?.pushViewController(informationVC, animated: true)
+////            navigationController?.popViewController(animated: true)
+//        }
 //        UITableView.headerView(/*<#T##self: UITableView##UITableView#>*/)
 //        editBtn.layer.cornerRadius = 16
         fullName.text = userProfile?.fullName
@@ -66,6 +72,11 @@ class ProfileVC: UIViewController {
         updateButton.setTitleTextAttributes(attributes, for: .normal)
         updateButton.tintColor = .primary
         navigationItem.rightBarButtonItem = updateButton
+        
+        let customLeftButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(didTapBack))
+        navigationItem.leftBarButtonItem = customLeftButton
+        
+        profileDelegate?.getUpdateProfile(userProfile!)
 //        genderRes.text = userProfile?.gender.
         // Do any additional setup after loading the view.
     }
@@ -102,6 +113,12 @@ class ProfileVC: UIViewController {
             bmi.text = String(bmiValue)
         }
 //        bmi.text = (userProfile?.calculateBMI())
+    }
+    
+    @objc func didTapBack(){
+//        updateUI()
+        navigationController?.popToRootViewController(animated: true)
+//        navigationController?.popToViewController(vc, animated: true)
     }
     @objc func didTapUpdate(){
         let informationVC = InformationVC()

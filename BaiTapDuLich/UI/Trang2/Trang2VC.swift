@@ -8,6 +8,16 @@
 import UIKit
 
 class Trang2VC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    @IBOutlet weak var button: RoundButton!
+    @IBOutlet weak var collectionView: UICollectionView!
+    var hasBorder = false
+    
+    var data: [HearlIssue] = [
+        HearlIssue(healIssue: "Heart rate", image: "pulse"),
+        HearlIssue(healIssue: "High Blood Pressure", image: "hybertension"),
+        HearlIssue(healIssue: "Stress & Anxiety", image: "stress"),
+        HearlIssue(healIssue: "Low Energy Levels", image: "energy-consumption")]
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4
     }
@@ -32,23 +42,6 @@ class Trang2VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
 //    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
 ////        updateButtonColor()
 //    }
-
-    @IBOutlet weak var button: RoundButton!
-    @IBOutlet weak var collectionView: UICollectionView!
-    var hasBorder = false
-    
-    var data: [HearlIssue] = [
-        HearlIssue(healIssue: "Heart rate", image: "pulse"),
-        HearlIssue(healIssue: "High Blood Pressure", image: "hybertension"),
-        HearlIssue(healIssue: "Stress & Anxiety", image: "stress"),
-        HearlIssue(healIssue: "Low Energy Levels", image: "energy-consumption")]
-    
-    @IBAction func `continue`(_ sender: Any) {
-        let trang3 = Trang3VC()
-        if(hasBorder){
-            navigationController?.pushViewController(trang3, animated: true)
-        }
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         button.backgroundColor = .neutral3
@@ -59,7 +52,14 @@ class Trang2VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         collectionView.delegate = self
         collectionView.dataSource = self
     }
-
+    
+    @IBAction func `continue`(_ sender: Any) {
+        let trang3 = Trang3VC()
+        if(hasBorder){
+            navigationController?.pushViewController(trang3, animated: true)
+        }
+    }
+    
     func updateButtonColor(){
         for cell in collectionView.visibleCells{
 //            print("Khong ep kieu duoc")
@@ -87,14 +87,5 @@ class Trang2VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         }
         print(hasBorder)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

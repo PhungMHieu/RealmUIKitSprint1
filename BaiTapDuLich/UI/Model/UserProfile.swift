@@ -15,16 +15,8 @@ class UserProfile{
         return "\(firstName) \(lastName)"
     }
 //    var bmi: Double
-    var weight: Double{
-        didSet{
-            calculateBMI()
-        }
-    }
-    var height: Double{
-        didSet{
-            calculateBMI()
-        }
-    }
+    var weight: Double
+    var height: Double
     func calculateBMI()->Double{
         return Double(Int(weight / (height * height / 100_00)))
     }
