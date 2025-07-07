@@ -30,6 +30,8 @@ class HealthGuruVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
 
+    @IBOutlet weak var trackDailyV: UIView!
+    @IBOutlet weak var rateIndexV: RateIndexV!
     @IBOutlet weak var heartView: UIView!
     @IBOutlet weak var emptyView: UIStackView!
     @IBOutlet weak var tableView: UITableView!
@@ -39,7 +41,9 @@ class HealthGuruVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         heartView.isUserInteractionEnabled = true
         heartView.addGestureRecognizer(tapGestureRecognizer)
-//        emptyView
+        trackDailyV.layer.cornerRadius = 16
+        rateIndexV.layer.cornerRadius = 16
+//        emptyVie
 //        title = "Health Guru"
         let titleLabel = UILabel()
         titleLabel.text = "Health Guru"

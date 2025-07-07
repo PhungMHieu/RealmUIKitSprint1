@@ -17,6 +17,7 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //        cell.accessoryType = .disclosureIndicator
         cell.layer.cornerRadius = 12
         cell.selectionStyle = .none
+//        cell.separatorß
         return cell;
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -112,6 +113,7 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
 //        let headerView = RateIndexV()
 //        headerView.widthAnchor.constraint(equalToConstant: view.frame.width).isActive = true
 //        headerView.hrv.translatesAutoresizingMaskIntoConstraints = false

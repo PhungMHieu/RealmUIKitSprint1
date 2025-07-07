@@ -13,7 +13,9 @@
             <connections>
                 <outlet property="emptyView" destination="FwV-x3-9cs" id="GJw-O1-BUu"/>
                 <outlet property="heartView" destination="Xsi-Cq-C3n" id="Tbw-U1-bjq"/>
+                <outlet property="rateIndexV" destination="epj-ja-yR2" id="nvJ-pF-fgT"/>
                 <outlet property="tableView" destination="YhH-Df-cDb" id="LZz-Hh-zbD"/>
+                <outlet property="trackDailyV" destination="Dcs-tk-kho" id="CSb-hj-CjG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

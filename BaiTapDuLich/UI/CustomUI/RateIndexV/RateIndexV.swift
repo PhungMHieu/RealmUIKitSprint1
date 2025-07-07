@@ -42,6 +42,8 @@ class RateIndexV: UIView {
         pulseV.config(customIndex: CustomIndex(title: "Pulse", index: "--", unit: "bpm"))
         hrv.config(customIndex: CustomIndex(title: "HRV", index: "--", unit: "bpm"))
         status.config(customIndex: CustomIndex(title: "Status", index: "--", unit: ""))
+        nibView.layer.cornerRadius = 16
+//        clipsToBounds = true
 //        contentView.layer
         
     }
