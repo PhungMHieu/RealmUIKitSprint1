@@ -13,6 +13,7 @@ class SettingsCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+//        contentView.layer.
         // Initialization code
     }
 

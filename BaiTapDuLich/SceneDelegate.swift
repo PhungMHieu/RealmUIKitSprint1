@@ -21,7 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
 //        let vc = ProfileVC()
 //        let vc = InformationVC()
-//        let vc = Trang1VC()
+        let vc = Trang1VC()
+        let navi = UINavigationController(rootViewController: vc)
+//        let vc = Trang2VC()
         let settingsVC = SettingsVC()
         let settingsNavi = UINavigationController(rootViewController: settingsVC)
         settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gearshape"), selectedImage: UIImage(systemName: "gearshape.fill"))
@@ -36,7 +38,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        window.rootViewController = navi
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [healthGuruNavi, settingsNavi]
-        window.rootViewController = tabBarController
+//        if(UserDefaults.standard.bool(forKey: ("didEnterMainApp"))){
+//            window.rootViewController = tabBarController
+//        }else{
+//            window.rootViewController = navi
+//        }
+        window.rootViewController = navi
+//
+        
         self.window = window
         window.makeKeyAndVisible()
 

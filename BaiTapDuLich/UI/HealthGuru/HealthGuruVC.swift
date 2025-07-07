@@ -17,9 +17,16 @@ class HealthGuruVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         cell.healthGuruV.hrv.index.text = String(data[indexPath.row].hrv)
         cell.healthGuruV.pulseV.index.text = String(data[indexPath.row].pulse)
         cell.healthGuruV.status.index.text = data[indexPath.row].status
-//        cell.healthGuruV.hrv.value.text = data[indexPath.row].value
+        let status = data[indexPath.row].status
+        cell.selectionStyle = .none
+        if(status == "Low"){
+            cell.config(color: .low)
+        }else if(status == "Good"){
+            cell.config(color: .accentNormal)
+        }else{
+            cell.config(color: .warning)
+        }
         return cell
-//        cell.healthGuruV.pulseV.title.text = ""
     }
     
 
@@ -32,7 +39,7 @@ class HealthGuruVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         heartView.isUserInteractionEnabled = true
         heartView.addGestureRecognizer(tapGestureRecognizer)
-        
+//        emptyView
 //        title = "Health Guru"
         let titleLabel = UILabel()
         titleLabel.text = "Health Guru"
@@ -45,14 +52,17 @@ class HealthGuruVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         tableView.register(nib, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
+//        tableView.
+        
 //        title.alignment(to: .leading)
 //        title.al
         // Do any additional setup after loading the view.
     }
     var data:[Index] = [
-        Index(pulse: 80, hrv: 90, status: "Good"),
-        Index(pulse: 80, hrv: 90, status: "Low"),
-        Index(pulse: 80, hrv: 90, status: "High")
+//        Index(pulse: 80, hrv: 90),
+//        Index(pulse: 80, hrv: 90),
+//        Index(pulse: 80, hrv: 90)
     ]
     func updateBackground(){
         if(data.isEmpty){
@@ -64,7 +74,12 @@ class HealthGuruVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         }
     }
     @objc func handleTap() {
-        let vc = InformationVC()
+        let vc = InformationHeartVC()
+        vc.addIndex = {[weak self] index in
+            self?.data.append(index)
+            self?.updateBackground()
+            self?.tableView.reloadData()
+        }
         navigationController?.pushViewController(vc, animated: true)
     }
     /*

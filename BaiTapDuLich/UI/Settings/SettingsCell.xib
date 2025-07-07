@@ -54,6 +54,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="backgroundTrang2"/>
             <connections>
                 <outlet property="imageOfCell" destination="5C0-K2-k0q" id="dI2-AC-9Iz"/>
                 <outlet property="title" destination="GFl-1c-uet" id="bOi-hd-QUe"/>
@@ -72,6 +73,9 @@
         </namedColor>
         <namedColor name="Primary">
             <color red="1" green="0.38823529411764707" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="backgroundTrang2">
+            <color red="0.95686274509803926" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

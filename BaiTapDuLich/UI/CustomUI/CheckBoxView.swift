@@ -39,6 +39,7 @@ class CheckBoxView: UIView {
         nibView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         nibView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         button.setImage(UIImage(systemName: "square"), for: .normal)
+        button.layer.cornerRadius = 5
         button.backgroundColor = .neutral4
         button.tintColor = .neutral4
         button.setImage(UIImage(systemName: "checkmark.square.fill"), for: .selected)

@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Trang2VC" customModule="BaiTapDuLich" customModuleProvider="target">
             <connections>
+                <outlet property="button" destination="vdf-0g-8dP" id="hQT-yO-muf"/>
                 <outlet property="collectionView" destination="vpj-We-DlH" id="e0d-jL-K2W"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -45,10 +46,12 @@
                 </collectionView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdf-0g-8dP" customClass="RoundButton" customModule="BaiTapDuLich" customModuleProvider="target">
                     <rect key="frame" x="25" y="712" width="343" height="56"/>
+                    <color key="backgroundColor" name="Neutral3"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="343" id="JKZ-aq-pX2"/>
                         <constraint firstAttribute="height" constant="56" id="sbr-5K-DOl"/>
                     </constraints>
+                    <color key="tintColor" name="Neutral5"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                     <connections>
@@ -72,6 +75,12 @@
     <resources>
         <namedColor name="Neutral1">
             <color red="0.18431372549019609" green="0.20784313725490197" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Neutral3">
+            <color red="0.61176470588235299" green="0.61960784313725492" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Neutral5">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="backgroundTrang2">
             <color red="0.95686274509803926" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

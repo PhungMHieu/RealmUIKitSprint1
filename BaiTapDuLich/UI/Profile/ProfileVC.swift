@@ -32,10 +32,13 @@ class ProfileVC: UIViewController {
     
     weak var profileDelegate: ProfileDelegate?
     weak var profileDeleteDelegate: ProfileDeleteDelegate?
-    
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         if userProfile == nil{
+//            view.isHidden = true
             let informationVC = InformationVC()
             informationVC.userProfile = self.userProfile
             informationVC.informationDelegate = self
@@ -43,7 +46,7 @@ class ProfileVC: UIViewController {
 //            navigationController?.popViewController(animated: true)
         }
 //        UITableView.headerView(/*<#T##self: UITableView##UITableView#>*/)
-        editBtn.layer.cornerRadius = 16
+//        editBtn.layer.cornerRadius = 16
         fullName.text = userProfile?.fullName
         genderRes.text = userProfile?.gender.rawValue
         if let heightValue = userProfile?.height{
@@ -56,20 +59,24 @@ class ProfileVC: UIViewController {
             bmi.text = String(bmiValue)
         }
         title = "Profile"
-        let removeButton = UIBarButtonItem(image: UIImage(systemName: "trash.fill"), style: .plain, target: self, action: #selector(didTapRemove))
-        removeButton.tintColor = .primary
-        navigationItem.rightBarButtonItem = removeButton
+        let updateButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(didTapUpdate))
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: UIFont.boldSystemFont(ofSize: 16)
+        ]
+        updateButton.setTitleTextAttributes(attributes, for: .normal)
+        updateButton.tintColor = .primary
+        navigationItem.rightBarButtonItem = updateButton
 //        genderRes.text = userProfile?.gender.
         // Do any additional setup after loading the view.
     }
-    @IBAction func updateBtn(_ sender: UIButton) {
-        let informationVC = InformationVC()
-        informationVC.mode = .update
-        informationVC.userProfile = userProfile
-        informationVC.informationUpdateDelegate = self
-//        informationVC.
-        navigationController?.pushViewController(informationVC, animated: true)
-    }
+//    @IBAction func updateBtn(_ sender: UIButton) {
+//        let informationVC = InformationVC()
+//        informationVC.mode = .update
+//        informationVC.userProfile = userProfile
+//        informationVC.informationUpdateDelegate = self
+////        informationVC.
+//        navigationController?.pushViewController(informationVC, animated: true)
+//    }
     func config(_ userProfile: UserProfile){
         self.userProfile = userProfile
         self.fullNameText = userProfile.fullName
@@ -96,28 +103,13 @@ class ProfileVC: UIViewController {
         }
 //        bmi.text = (userProfile?.calculateBMI())
     }
-    @objc func didTapRemove(){
-//        let alertVC = CustomAlerVC()
-//        alertVC.userIndex = userIndex
-//        alertVC.deleteProfile = { [weak self](userIndex) in
-//            self?.profileDeleteDelegate?.deleteProfile(userIndex)
-//            self?.navigationController?.popViewController(animated: true)
-//        }
-//        alertVC.userIndex = userIndex
-//        definesPresentationContext = true
-//        present(alertVC, animated: true)
-        
-//        self.profileDeleteDelegate?.deleteProfile(self.userIndex)
-//        let deleteAction = CustomAlerVC().customPopUPV
-//        let alert = UIAlertController(title: "Delete profile", message: "Are you sure, you want to delete", preferredStyle: .alert)
-//        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { (_) in
-//            self.profileDeleteDelegate?.deleteProfile(self.userIndex)
-//            self.navigationController?.popViewController(animated: true)
-//        }
-//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-//        alert.addAction(deleteAction)
-//        alert.addAction(cancelAction)
-//        present(alert, animated: true)
+    @objc func didTapUpdate(){
+        let informationVC = InformationVC()
+        informationVC.mode = .update
+        informationVC.userProfile = userProfile
+        informationVC.informationUpdateDelegate = self
+//        informationVC.
+        navigationController?.pushViewController(informationVC, animated: true)
     }
 }
 extension ProfileVC: InformationUpdateDelegate{

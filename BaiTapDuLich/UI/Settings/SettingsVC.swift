@@ -16,6 +16,7 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         cell.config(setting: data[indexPath.section][indexPath.row])
 //        cell.accessoryType = .disclosureIndicator
         cell.layer.cornerRadius = 12
+        cell.selectionStyle = .none
         return cell;
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -41,6 +42,35 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //            self.userProfile = vc.userProfile
 //            if(vc.has)
             navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let numberOfRows = tableView.numberOfRows(inSection: indexPath.section)
+
+        let isFirst = indexPath.row == 0
+        let isLast  = indexPath.row == numberOfRows - 1
+        if #available(iOS 11.0, *) {
+            cell.contentView.layer.cornerRadius = 12
+//            cell.clipsToBounds = true
+            cell.contentView.layer.masksToBounds = true
+            
+            if isFirst && isLast {
+                // Section chỉ có 1 cell → bo đủ 4 góc
+                cell.contentView.layer.maskedCorners = [
+                    .layerMinXMinYCorner, .layerMaxXMinYCorner,
+                    .layerMinXMaxYCorner, .layerMaxXMaxYCorner
+                ]
+            } else if isFirst {
+                cell.contentView.layer.maskedCorners = [
+                    .layerMinXMinYCorner, .layerMaxXMinYCorner
+                ]
+            } else if isLast {
+                cell.contentView.layer.maskedCorners = [
+                    .layerMinXMaxYCorner, .layerMaxXMaxYCorner
+                ]
+            } else {
+                cell.contentView.layer.cornerRadius = 0 // cell ở giữa
+            }
         }
     }
 //    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

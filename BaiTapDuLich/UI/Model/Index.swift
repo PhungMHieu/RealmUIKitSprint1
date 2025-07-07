@@ -8,11 +8,19 @@
 class Index{
     var pulse: Int
     var hrv: Int
-    var status: String
+    var status: String{
+        if(pulse < 60){
+            return "Low"
+        }else if(pulse > 100){
+            return "High"
+        }else{
+            return "Good"
+        }
+    }
     
-    init(pulse: Int, hrv: Int, status: String) {
+    init(pulse: Int, hrv: Int) {
         self.pulse = pulse
         self.hrv = hrv
-        self.status = status
+//        self.status = status
     }
 }

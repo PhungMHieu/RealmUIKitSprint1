@@ -12,6 +12,14 @@ class HealthGuruCell: UITableViewCell {
     @IBOutlet weak var healthGuruV: RateIndexV!
     override func awakeFromNib() {
         super.awakeFromNib()
+//        layer.cornerRadius = 16
+        healthGuruV.layer.cornerRadius = 16
+        healthGuruV.layer.masksToBounds = true
+        healthGuruV.clipsToBounds = true
+        contentView.layer.cornerRadius = 16
+        contentView.layer.masksToBounds = true
+        contentView.clipsToBounds = true
+//        cell.clipsToBounds = true
         // Initialization code
     }
 
@@ -19,6 +27,14 @@ class HealthGuruCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    func config(color: UIColor){
+        healthGuruV.pulseV.index.textColor = color
+        healthGuruV.hrv.index.textColor = color
+        
+        healthGuruV.pulseV.unit.textColor = color
+        healthGuruV.hrv.unit.textColor = color
+        healthGuruV.status.index.textColor = color
     }
     
 }

@@ -32,6 +32,7 @@ class LabelTextFieldV: UIView {
         
     }
     private func loadFromNib(){
+        
         let nib = UINib(nibName: "LabelTextFieldV", bundle: nil)
         let nibView = nib.instantiate(withOwner: self).first as! UIView
         addSubview(nibView)
@@ -42,12 +43,12 @@ class LabelTextFieldV: UIView {
         nibView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
     }
     func config(label: String, textField: String){
-        self.label.text = label
-        self.textField.placeholder = textField
         self.viewTextField.layer.cornerRadius = 16
         self.viewTextField.clipsToBounds = true
         self.viewTextField.layer.borderWidth = 1
         self.viewTextField.layer.borderColor = UIColor.neutral4.cgColor
+        self.label.text = label
+        self.textField.placeholder = textField
         //        self.textField.setBorder(radius: 16, color: .neutral4, width: 1)
     }
 }

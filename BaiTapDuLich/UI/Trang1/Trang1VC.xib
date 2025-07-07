@@ -50,10 +50,12 @@
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEE-LK-BBm" customClass="RoundButton" customModule="BaiTapDuLich" customModuleProvider="target">
                     <rect key="frame" x="25" y="712" width="343" height="56"/>
+                    <color key="backgroundColor" name="Neutral3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="56" id="Vre-K8-0qx"/>
                         <constraint firstAttribute="width" constant="343" id="whK-ft-l2l"/>
                     </constraints>
+                    <color key="tintColor" name="Neutral5"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                     <connections>
@@ -89,6 +91,9 @@
         </namedColor>
         <namedColor name="Neutral3">
             <color red="0.61176470588235299" green="0.61960784313725492" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Neutral5">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

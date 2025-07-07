@@ -16,6 +16,9 @@ class Trang3VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! HearHealthCell
         cell.image.image = UIImage(named: data[indexPath.row].image)
         cell.title.text = data[indexPath.row].healIssue
+        cell.changeButtonColor = {[weak self]  in
+            self?.updateButtonColor()
+        }
         return cell
     }
     
@@ -27,10 +30,11 @@ class Trang3VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         HearlIssue(healIssue: "Increase Energy Levels", image: "no-energy")]
 
     @IBOutlet weak var trang234V: Trang234V!
-    
+    var hasBorder = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        trang234V.nextBtn.backgroundColor = .neutral3
         trang234V.title.text = "What would you like to achieve?"
         let nib = UINib(nibName: "HearHealthCell", bundle: nil)
         trang234V.collectionView.register(nib, forCellWithReuseIdentifier: "Cell")
@@ -42,7 +46,34 @@ class Trang3VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         }
         // Do any additional setup after loading the view.
     }
-
+    func updateButtonColor(){
+        
+        for cell in trang234V.collectionView.visibleCells{
+//            print("Khong ep kieu duoc")
+            guard let myCell = cell as? HearHealthCell else{
+                print("Khong ep kieu duoc")
+                continue
+            }
+            if myCell.checkBox.button.isSelected{
+                hasBorder = true
+            }
+            //            hasBorder = true
+//            print(myCell.title.text)
+//            print(cell)
+//            print(cell.title.text)
+//            print("\(myCell.layer.borderColor) \(UIColor.primary.cgColor)")
+//            if myCell.layer.borderColor == UIColor.primary.cgColor{
+//                hasBorder = true
+//                break
+//            }
+        }
+        if hasBorder {
+            trang234V.nextBtn.backgroundColor = .primary
+        }else{
+            trang234V.nextBtn.backgroundColor = .neutral3
+        }
+        print(hasBorder)
+    }
 
     /*
     // MARK: - Navigation

@@ -3,8 +3,8 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,18 +18,20 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dU-rE-exC" customClass="RateIndexV" customModule="BaiTapDuLich" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="403" height="122"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <rect key="frame" x="0.0" y="0.0" width="403" height="110"/>
+                        <color key="backgroundColor" name="backgroundTrang2"/>
                     </view>
                 </subviews>
+                <color key="backgroundColor" name="backgroundTrang2"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="8dU-rE-exC" secondAttribute="bottom" id="2lD-wW-iNl"/>
+                    <constraint firstAttribute="bottom" secondItem="8dU-rE-exC" secondAttribute="bottom" constant="12" id="2lD-wW-iNl"/>
                     <constraint firstItem="8dU-rE-exC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="4lD-oJ-Jgk"/>
                     <constraint firstAttribute="trailing" secondItem="8dU-rE-exC" secondAttribute="trailing" id="N5z-sX-DK5"/>
                     <constraint firstItem="8dU-rE-exC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pr7-vY-LH3"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="backgroundTrang2"/>
             <connections>
                 <outlet property="healthGuruV" destination="8dU-rE-exC" id="aZc-dM-AqH"/>
             </connections>
@@ -37,8 +39,8 @@
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="backgroundTrang2">
+            <color red="0.95686274509803926" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
