@@ -28,7 +28,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let settingsNavi = UINavigationController(rootViewController: settingsVC)
         settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gearshape"), selectedImage: UIImage(systemName: "gearshape.fill"))
         let healthGuruVC = HealthGuruVC()
-        healthGuruVC.tabBarItem = UITabBarItem(title: "Report", image: UIImage(systemName: "chart.bar.horizontal.page"), selectedImage: UIImage(systemName: "chart.bar.horizontal.page.fill"))
+        healthGuruVC.tabBarItem = UITabBarItem(title: "Report", image: UIImage(named: "Chart 1"), selectedImage: UIImage(named: "Chart"))
         let healthGuruNavi = UINavigationController(rootViewController: healthGuruVC)
     
         

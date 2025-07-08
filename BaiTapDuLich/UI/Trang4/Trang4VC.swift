@@ -8,6 +8,13 @@
 import UIKit
 
 class Trang4VC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    var data: [HearlIssue] = [
+        HearlIssue(healIssue: "Educational Plan", image: "plan"),
+        HearlIssue(healIssue: "Exercise Plan", image: "exercise-routine"),
+        HearlIssue(healIssue: "Health Tests", image: "stress-test")]
+    @IBOutlet weak var trang4V: Trang234V!
+    
+    var hasBorder = false
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3;
     }
@@ -21,14 +28,6 @@ class Trang4VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         }
         return cell
     }
-    
-    var data: [HearlIssue] = [
-        HearlIssue(healIssue: "Educational Plan", image: "plan"),
-        HearlIssue(healIssue: "Exercise Plan", image: "exercise-routine"),
-        HearlIssue(healIssue: "Health Tests", image: "stress-test")]
-    @IBOutlet weak var trang4V: Trang234V!
-    
-    var hasBorder = false
     override func viewDidLoad() {
         super.viewDidLoad()
         trang4V.nextBtn.backgroundColor = .neutral3
@@ -56,7 +55,7 @@ class Trang4VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
             let settingsNavi = UINavigationController(rootViewController: settingsVC)
             settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gearshape"), selectedImage: UIImage(systemName: "gearshape.fill"))
             let healthGuruVC = HealthGuruVC()
-            healthGuruVC.tabBarItem = UITabBarItem(title: "Report", image: UIImage(systemName: "chart.bar.horizontal.page"), selectedImage: UIImage(systemName: "chart.bar.horizontal.page.fill"))
+            healthGuruVC.tabBarItem = UITabBarItem(title: "Report", image: UIImage(systemName: "Chart 1"), selectedImage: UIImage(systemName: "Chart"))
             let healthGuruNavi = UINavigationController(rootViewController: healthGuruVC)
         
             
@@ -84,6 +83,7 @@ class Trang4VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
 //            self.window = window
             window.makeKeyAndVisible()
         }
+        
         trang4V.title.text = "What type of plan would you like to follow?"
         
         let nib = UINib(nibName: "HearHealthCell", bundle: nil)

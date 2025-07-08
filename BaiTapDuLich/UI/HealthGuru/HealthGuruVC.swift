@@ -8,6 +8,16 @@
 import UIKit
 
 class HealthGuruVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var data:[Index] = [
+//        Index(pulse: 80, hrv: 90),
+//        Index(pulse: 80, hrv: 90),
+//        Index(pulse: 80, hrv: 90)
+    ]
+    @IBOutlet weak var trackDailyV: UIView!
+    @IBOutlet weak var rateIndexV: RateIndexV!
+    @IBOutlet weak var heartView: UIView!
+    @IBOutlet weak var emptyView: UIStackView!
+    @IBOutlet weak var tableView: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
@@ -29,12 +39,6 @@ class HealthGuruVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         return cell
     }
     
-
-    @IBOutlet weak var trackDailyV: UIView!
-    @IBOutlet weak var rateIndexV: RateIndexV!
-    @IBOutlet weak var heartView: UIView!
-    @IBOutlet weak var emptyView: UIStackView!
-    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         updateBackground()
@@ -63,11 +67,7 @@ class HealthGuruVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 //        title.al
         // Do any additional setup after loading the view.
     }
-    var data:[Index] = [
-//        Index(pulse: 80, hrv: 90),
-//        Index(pulse: 80, hrv: 90),
-//        Index(pulse: 80, hrv: 90)
-    ]
+    
     func updateBackground(){
         if(data.isEmpty){
             tableView.isHidden = true

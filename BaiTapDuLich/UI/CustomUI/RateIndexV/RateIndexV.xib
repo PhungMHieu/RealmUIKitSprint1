@@ -27,19 +27,19 @@
                         <constraint firstAttribute="width" constant="56" id="nIq-eU-95I"/>
                     </constraints>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="eOe-ch-k90">
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="eOe-ch-k90">
                     <rect key="frame" x="81" y="12" width="680" height="161"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SdX-dI-Vlz" userLabel="PulseV" customClass="IndexV" customModule="BaiTapDuLich" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="208.66666666666666" height="161"/>
+                            <rect key="frame" x="0.0" y="0.0" width="215.33333333333334" height="161"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAF-K7-Zb6" userLabel="HrvV" customClass="IndexV" customModule="BaiTapDuLich" customModuleProvider="target">
-                            <rect key="frame" x="235.66666666666669" y="0.0" width="208.66666666666669" height="161"/>
+                            <rect key="frame" x="232.33333333333331" y="0.0" width="215.33333333333331" height="161"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2GC-bp-2Gm" userLabel="StatusV" customClass="IndexV" customModule="BaiTapDuLich" customModuleProvider="target">
-                            <rect key="frame" x="471.33333333333343" y="0.0" width="208.66666666666669" height="161"/>
+                            <rect key="frame" x="464.66666666666657" y="0.0" width="215.33333333333331" height="161"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                     </subviews>

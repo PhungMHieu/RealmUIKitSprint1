@@ -47,7 +47,7 @@
                         <constraint firstItem="Uci-YN-jI3" firstAttribute="top" secondItem="Xsi-Cq-C3n" secondAttribute="top" id="urL-EB-4F8"/>
                     </constraints>
                 </view>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="FwV-x3-9cs">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="FwV-x3-9cs" userLabel="EmtpyView">
                     <rect key="frame" x="25" y="537" width="343" height="184"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epj-ja-yR2" customClass="RateIndexV" customModule="BaiTapDuLich" customModuleProvider="target">

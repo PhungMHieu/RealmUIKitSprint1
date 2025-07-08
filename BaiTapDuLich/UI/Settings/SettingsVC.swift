@@ -34,6 +34,8 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         cell.layer.cornerRadius = 12
         cell.selectionStyle = .none
 //        cell.separatorß
+        let numberOfRows = tableView.numberOfRows(inSection: indexPath.section)
+        cell.seperatorLineV.isHidden = (indexPath.row == numberOfRows - 1)
         return cell;
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -82,6 +84,11 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         let numberOfRows = tableView.numberOfRows(inSection: indexPath.section)
+//        if(indexPath.row == numberOfRows - 1){
+////            cell.contentView.seperatorLineV.isHidden = true
+//            cell.seperatorLineV.isHidden = true
+////            cell.contentView.seperatorLineV.isHidden = true
+//        }
 //        if(indexPath.row == 0 || indexPath.row == numberOfRows){
 //            cell.separatorInset = UIEdgeInsets(top: 0, left: cell.bounds.size.width, bottom: 0, right: 0)
 //        }else{
@@ -114,6 +121,7 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         }
     }
 
+    
     
     
     override func viewDidLoad() {

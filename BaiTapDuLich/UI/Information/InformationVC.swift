@@ -30,6 +30,8 @@ class InformationVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Information"
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(didTapBackForBtn))
+        navigationItem.leftBarButtonItem?.tintColor = .neutral2
         //        self.view.layer.cornerRadius = 16
         //        self.layer.cornerRadius = 16
         heightV.config(label: "Height", textField: "Cm")
@@ -165,6 +167,9 @@ class InformationVC: UIViewController {
     }
     @objc func textFieldUpdate(_ sender: Any){
         validateInputUpdate()
+    }
+    @objc func didTapBackForBtn(){
+        navigationController?.popViewController(animated: true)
     }
     
 }

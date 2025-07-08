@@ -9,6 +9,7 @@ import UIKit
 
 class SettingsCell: UITableViewCell {
 
+    @IBOutlet weak var seperatorLineV: UIView!
     @IBOutlet weak var imageOfCell: UIImageView!
     @IBOutlet weak var title: UILabel!
     override func awakeFromNib() {

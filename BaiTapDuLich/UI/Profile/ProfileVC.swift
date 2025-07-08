@@ -40,6 +40,7 @@ class ProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(didTapBackForBtn))
         self.userProfileV.layer.cornerRadius = 16
         self.userProfileV.clipsToBounds = true
 //        self.profileView.backgroundColor = .accentNormal
@@ -75,7 +76,7 @@ class ProfileVC: UIViewController {
         
         let customLeftButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(didTapBack))
         navigationItem.leftBarButtonItem = customLeftButton
-        
+        navigationItem.leftBarButtonItem?.tintColor = .neutral2
         profileDelegate?.getUpdateProfile(userProfile!)
 //        genderRes.text = userProfile?.gender.
         // Do any additional setup after loading the view.
@@ -128,6 +129,9 @@ class ProfileVC: UIViewController {
 //        informationVC.
         navigationController?.pushViewController(informationVC, animated: true)
     }
+//    @objc func didTapBackForBtn(){
+//        navigationController?.popViewController(animated: true)
+//    }
 }
 extension ProfileVC: InformationUpdateDelegate{
     func didUpdateUser(_ user: UserProfile) {
