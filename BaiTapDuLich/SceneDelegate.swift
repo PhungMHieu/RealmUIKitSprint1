@@ -61,6 +61,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         window.makeKeyAndVisible()
 
+        UITableView.appearance().sectionHeaderTopPadding = 0
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

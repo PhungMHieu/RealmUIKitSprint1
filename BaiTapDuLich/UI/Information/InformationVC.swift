@@ -21,7 +21,7 @@ class InformationVC: UIViewController {
     @IBOutlet weak var lastNameV: LabelTextFieldV!
     @IBOutlet weak var firstNameV: LabelTextFieldV!
     
-    var hasUser: Bool?
+    private var hasUser: Bool?
     var mode: FormMode = .add
     var userProfile: UserProfile?
     weak var informationDelegate: InformationDelegate?
@@ -66,7 +66,7 @@ class InformationVC: UIViewController {
                 textField?.addTarget(self, action: #selector(textFieldChanged), for:.editingChanged)
             }
             gender.addTarget(self, action: #selector(textFieldChanged), for: .valueChanged)
-        }else{
+        } else {
             validateInputUpdate()
             for textField in [firstNameV.textField, lastNameV.textField, heightV.textField, weightV.textField]{
                 textField?.addTarget(self, action: #selector(textFieldUpdate), for:.editingChanged)
@@ -75,6 +75,7 @@ class InformationVC: UIViewController {
         }
         // Do any additional setup after loading the view.
     }
+    
     @IBAction func btn(_ sender: Any) {
         if(mode == .add){
             let firstName = firstNameV.textField.text ?? ""
@@ -124,7 +125,7 @@ class InformationVC: UIViewController {
     }
     
     
-    func validateInput(){
+    private func validateInput(){
         let firstName = firstNameV.textField.text ?? ""
         let lastName = lastNameV.textField.text ?? ""
         let height = heightV.textField.text ?? ""
@@ -138,6 +139,7 @@ class InformationVC: UIViewController {
             button.backgroundColor = .neutral3
         }
     }
+    
     func validateInputUpdate(){
         let firstName = firstNameV.textField.text ?? ""
         let lastName = lastNameV.textField.text ?? ""

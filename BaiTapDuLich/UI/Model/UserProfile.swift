@@ -7,7 +7,7 @@
 
 import Foundation
 
-class UserProfile{
+class UserProfile {
     let id: String = UUID().uuidString
     var firstName: String
     var lastName: String

@@ -9,7 +9,7 @@ import UIKit
 //protocol InformationDelegate {
 //    
 //}
-class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var data: [[Setting]] = [
         [Setting(image: "Profile Circle", title: "Profile")],
         [Setting(image: "Notification", title: "Daily Reminder"),
@@ -25,7 +25,7 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data[section].count;
+        return data[section].count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! SettingsCell
@@ -39,18 +39,15 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         return cell;
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        return data.count;
+        return data.count
     }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView()
-//        headerView.
-//        headerView.backgroundColor = .clear
-        tableView.backgroundColor = .clear
-        return headerView
+        .init()
     }
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 16
-    }
+    
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        if(indexPath.section == 0 && indexPath.row == 0){
         ////            let vc = InformationVC()
@@ -81,6 +78,8 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             }
         }
     }
+    
+    
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         let numberOfRows = tableView.numberOfRows(inSection: indexPath.section)
@@ -135,28 +134,15 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         self.navigationItem.leftBarButtonItem = leftItem
         let nib = UINib(nibName: "SettingsCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "Cell")
+        tableView.sectionHeaderHeight = 16
+        tableView.rowHeight = 56
         tableView.delegate = self
         tableView.dataSource = self
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
-//        let headerView = RateIndexV()
-//        headerView.widthAnchor.constraint(equalToConstant: view.frame.width).isActive = true
-//        headerView.hrv.translatesAutoresizingMaskIntoConstraints = false
-//        headerView.hrv.heightAnchor.constraint(equalToConstant: 1).isActive = true
-//        tableView.tableHeaderView = headerView
-        // Do any additional setup after loading the view.
-    }
-    override func viewDidAppear(_ animated: Bool) {
-//        printContent(self.userProfile)
-        guard let userProfile = self.userProfile as? UserProfile else { return }
-        print(userProfile.firstName)
     }
 }
-//extension SettingsVC: ProfileDelegate{
-//    func getUpdateProfile(_ userProfile: UserProfile) {
-//        self.userProfile = userProfile
-//    }
-//}
+
 extension SettingsVC: InformationUpdateDelegate{
     func didUpdateUser(_ user: UserProfile) {
         self.userProfile = user
