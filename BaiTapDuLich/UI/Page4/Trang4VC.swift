@@ -55,7 +55,7 @@ class Trang4VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
             let settingsNavi = UINavigationController(rootViewController: settingsVC)
             settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gearshape"), selectedImage: UIImage(systemName: "gearshape.fill"))
             let healthGuruVC = HealthGuruVC()
-            healthGuruVC.tabBarItem = UITabBarItem(title: "Report", image: UIImage(systemName: "Chart 1"), selectedImage: UIImage(systemName: "Chart"))
+            healthGuruVC.tabBarItem = UITabBarItem(title: "Report", image: UIImage(named: "Chart 1"), selectedImage: UIImage(named: "Chart"))
             let healthGuruNavi = UINavigationController(rootViewController: healthGuruVC)
         
             
@@ -93,7 +93,7 @@ class Trang4VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         // Do any additional setup after loading the view.
     }
     func updateButtonColor(){
-        
+        var tmp = 0
         for cell in trang4V.collectionView.visibleCells{
 //            print("Khong ep kieu duoc")
             guard let myCell = cell as? HearHealthCell else{
@@ -102,6 +102,8 @@ class Trang4VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
             }
             if myCell.checkBox.button.isSelected{
                 hasBorder = true
+            }else{
+                tmp += 1
             }
             //            hasBorder = true
 //            print(myCell.title.text)
@@ -112,6 +114,9 @@ class Trang4VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
 //                hasBorder = true
 //                break
 //            }
+        }
+        if(tmp == 3){
+            hasBorder = false
         }
         if hasBorder {
             trang4V.nextBtn.backgroundColor = .primary

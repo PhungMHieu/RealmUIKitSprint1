@@ -28,7 +28,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let settingsNavi = UINavigationController(rootViewController: settingsVC)
         settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gearshape"), selectedImage: UIImage(systemName: "gearshape.fill"))
         let healthGuruVC = HealthGuruVC()
-        healthGuruVC.tabBarItem = UITabBarItem(title: "Report", image: UIImage(named: "Chart 1"), selectedImage: UIImage(named: "Chart"))
+//        let healthNavi = UINavigationController(rootViewController: healthGuruVC)
+        healthGuruVC.tabBarItem = UITabBarItem(title: "Report", image: UIImage(named: "Chart 1"), selectedImage: UIImage(named: "Chart 1"))
+//        healthGuruVC.tabBarItem = UITabBarItem(title: "Report", image: UIImage(systemName: "Chart 1"), selectedImage: UIImage(systemName: "Chart"))
+//        settingsVC.tabBarItem
         let healthGuruNavi = UINavigationController(rootViewController: healthGuruVC)
     
         
@@ -50,12 +53,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         tabBarController.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
 
-        if(UserDefaults.standard.bool(forKey: ("didEnterMainApp"))){
-            window.rootViewController = tabBarController
-        }else{
-            window.rootViewController = navi
-        }
-//        window.rootViewController = navi
+//        if(UserDefaults.standard.bool(forKey: ("didEnterMainApp"))){
+//            window.rootViewController = tabBarController
+//        }else{
+//            window.rootViewController = navi
+//        }
+        window.rootViewController = navi
 //
         
         self.window = window

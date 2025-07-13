@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Trang2VC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class Page2VC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var button: RoundButton!
     @IBOutlet weak var collectionView: UICollectionView!
     var hasBorder = false
@@ -44,6 +44,7 @@ class Trang2VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
 //    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setNavigationBarHidden(true, animated: false)
         button.backgroundColor = .neutral3
         let nib = UINib(nibName: "HearHealthCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "Cell")
@@ -51,6 +52,9 @@ class Trang2VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         // Do any additional setup after loading the view.
         collectionView.delegate = self
         collectionView.dataSource = self
+//        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+//            layout.itemSize = CGSize(width: 100, height: 100) // đặt kích thước mong muốn
+//        }
     }
     
     @IBAction func `continue`(_ sender: Any) {
@@ -61,6 +65,7 @@ class Trang2VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     }
     
     func updateButtonColor(){
+        var tmp = 0
         for cell in collectionView.visibleCells{
 //            print("Khong ep kieu duoc")
             guard let myCell = cell as? HearHealthCell else{
@@ -69,7 +74,12 @@ class Trang2VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
             }
             if myCell.checkBox.button.isSelected{
                 hasBorder = true
+            }else{
+                tmp+=1
             }
+//            else{
+//                hasBorder = false
+//            }
             //            hasBorder = true
 //            print(myCell.title.text)
 //            print(cell)
@@ -80,7 +90,11 @@ class Trang2VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
 //                break
 //            }
         }
-        if hasBorder {
+        if(tmp == 4){
+            hasBorder = false
+            tmp = 0
+        }
+        if hasBorder{
             button.backgroundColor = .primary
         }else{
             button.backgroundColor = .neutral3

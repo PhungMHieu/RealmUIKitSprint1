@@ -28,9 +28,9 @@ class Trang3VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         HearlIssue(healIssue: "Improve blood pressure health", image: "pressure"),
         HearlIssue(healIssue: "Reduce Stress", image: "harmony"),
         HearlIssue(healIssue: "Increase Energy Levels", image: "no-energy")]
-
-    @IBOutlet weak var trang234V: Trang234V!
     var hasBorder = false
+    @IBOutlet weak var trang234V: Trang234V!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class Trang3VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         // Do any additional setup after loading the view.
     }
     func updateButtonColor(){
-        
+        var tmp = 0
         for cell in trang234V.collectionView.visibleCells{
 //            print("Khong ep kieu duoc")
             guard let myCell = cell as? HearHealthCell else{
@@ -56,6 +56,8 @@ class Trang3VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
             }
             if myCell.checkBox.button.isSelected{
                 hasBorder = true
+            }else{
+                tmp += 1
             }
             //            hasBorder = true
 //            print(myCell.title.text)
@@ -67,6 +69,10 @@ class Trang3VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
 //                break
 //            }
         }
+        if(tmp == 4){
+            hasBorder = false
+            tmp = 0
+        }
         if hasBorder {
             trang234V.nextBtn.backgroundColor = .primary
         }else{
@@ -74,15 +80,4 @@ class Trang3VC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         }
         print(hasBorder)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

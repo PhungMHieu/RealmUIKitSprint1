@@ -32,6 +32,7 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         cell.config(setting: data[indexPath.section][indexPath.row])
 //        cell.accessoryType = .disclosureIndicator
         cell.layer.cornerRadius = 12
+//        cell.heightAnchor = 
         cell.selectionStyle = .none
 //        cell.separatorß
         let numberOfRows = tableView.numberOfRows(inSection: indexPath.section)

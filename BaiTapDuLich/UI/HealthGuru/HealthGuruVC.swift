@@ -17,6 +17,7 @@ class HealthGuruVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     @IBOutlet weak var rateIndexV: RateIndexV!
     @IBOutlet weak var heartView: UIView!
     @IBOutlet weak var emptyView: UIStackView!
+    @IBOutlet weak var trackDailyText: UILabel!
     @IBOutlet weak var tableView: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
@@ -47,6 +48,8 @@ class HealthGuruVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         heartView.addGestureRecognizer(tapGestureRecognizer)
         trackDailyV.layer.cornerRadius = 16
         rateIndexV.layer.cornerRadius = 16
+        trackDailyText.setLetterSpacing(0.2)
+//        emptyView
 //        emptyVie
 //        title = "Health Guru"
         let titleLabel = UILabel()
@@ -88,4 +91,17 @@ class HealthGuruVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         navigationController?.pushViewController(vc, animated: true)
     }
     
+}
+extension UILabel{
+    func setLetterSpacing(_ spacing: CGFloat) {
+        guard let text = text else { return }
+        let attributedString: NSMutableAttributedString
+        if let existing = self.attributedText{
+            attributedString = NSMutableAttributedString(attributedString: existing)
+        }else{
+            attributedString = NSMutableAttributedString(string: text)
+        }
+        attributedString.addAttribute(.kern, value: spacing, range: NSRange(location: 0, length: attributedString.length-1))
+        self.attributedText = attributedString
+    }
 }

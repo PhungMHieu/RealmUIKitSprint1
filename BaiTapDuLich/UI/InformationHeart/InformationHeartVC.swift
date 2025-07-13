@@ -18,6 +18,7 @@ class InformationHeartVC: UIViewController {
         super.viewDidLoad()
         title = "Information"
         button.layer.cornerRadius = 16
+        button.titleLabel?.text = "Add"
         pulseV.config(label: "Pulse", textField: "bpm")
         hrvV.config(label: "HRV", textField: "bpm")
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(didTapClose))

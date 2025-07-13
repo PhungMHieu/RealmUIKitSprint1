@@ -19,34 +19,32 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="label premium" translatesAutoresizingMaskIntoConstraints="NO" id="SmM-Zi-RRE">
-                    <rect key="frame" x="25" y="178" width="343" height="104"/>
+                <imageView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="label_premium" translatesAutoresizingMaskIntoConstraints="NO" id="SmM-Zi-RRE">
+                    <rect key="frame" x="16" y="134" width="361" height="104"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="343" id="8Bt-zR-XHT"/>
                         <constraint firstAttribute="height" constant="104" id="ylv-Bc-G8l"/>
                     </constraints>
                 </imageView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HJ1-2Z-FQz">
-                    <rect key="frame" x="25" y="282" width="343" height="502"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="343" id="vRH-fq-akm"/>
-                    </constraints>
+                <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HJ1-2Z-FQz">
+                    <rect key="frame" x="16" y="238" width="361" height="546"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="backgroundTrang2"/>
             <constraints>
-                <constraint firstItem="SmM-Zi-RRE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9j7-11-V4f"/>
+                <constraint firstItem="SmM-Zi-RRE" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="4ug-0h-kbH"/>
+                <constraint firstItem="SmM-Zi-RRE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="9Uz-xn-T1U"/>
                 <constraint firstItem="HJ1-2Z-FQz" firstAttribute="top" secondItem="SmM-Zi-RRE" secondAttribute="bottom" id="Mr6-u5-RpI"/>
-                <constraint firstItem="SmM-Zi-RRE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="aVi-Ut-cRu"/>
+                <constraint firstItem="SmM-Zi-RRE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="Nti-v7-0lI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HJ1-2Z-FQz" secondAttribute="trailing" constant="16" id="dNI-sh-d4r"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HJ1-2Z-FQz" secondAttribute="bottom" id="k6n-By-4zP"/>
-                <constraint firstItem="HJ1-2Z-FQz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mHi-D2-ZZd"/>
+                <constraint firstItem="HJ1-2Z-FQz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="uTu-kj-ldy"/>
             </constraints>
             <point key="canvasLocation" x="39" y="20"/>
         </view>
     </objects>
     <resources>
-        <image name="label premium" width="343" height="104"/>
+        <image name="label_premium" width="343" height="104"/>
         <namedColor name="backgroundTrang2">
             <color red="0.95686274509803926" green="0.96470588235294119" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

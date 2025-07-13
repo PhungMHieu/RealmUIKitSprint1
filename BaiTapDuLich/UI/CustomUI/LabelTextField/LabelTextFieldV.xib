@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LabelTextFieldV" customModule="TestThuDelegate" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LabelTextFieldV" customModule="BaiTapDuLich" customModuleProvider="target">
             <connections>
                 <outlet property="label" destination="TH7-4u-EkX" id="u1y-cu-fGj"/>
                 <outlet property="textField" destination="pAs-Cb-OUo" id="ciQ-Lo-1cv"/>
@@ -36,8 +36,8 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7uZ-20-SB3">
                             <rect key="frame" x="0.0" y="36" width="417" height="52"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Enter first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pAs-Cb-OUo">
-                                    <rect key="frame" x="11.999999999999993" y="14" width="123.33333333333331" height="24"/>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Enter first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pAs-Cb-OUo" userLabel="Enter first name">
+                                    <rect key="frame" x="12" y="14" width="393" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="24" id="k5T-nS-vP5"/>
                                     </constraints>
@@ -48,6 +48,7 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
+                                <constraint firstItem="pAs-Cb-OUo" firstAttribute="centerX" secondItem="7uZ-20-SB3" secondAttribute="centerX" id="IrT-5b-CQc"/>
                                 <constraint firstAttribute="height" constant="52" id="JIH-WL-eaE"/>
                                 <constraint firstItem="pAs-Cb-OUo" firstAttribute="leading" secondItem="7uZ-20-SB3" secondAttribute="leading" constant="12" id="cV4-Tj-Rv2"/>
                                 <constraint firstItem="pAs-Cb-OUo" firstAttribute="centerY" secondItem="7uZ-20-SB3" secondAttribute="centerY" id="fSV-u9-OK2"/>

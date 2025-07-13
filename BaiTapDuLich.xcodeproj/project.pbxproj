@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		2C5ECA972E1B6A4900AD6A18 /* InformationHeartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5ECA952E1B6A4900AD6A18 /* InformationHeartVC.swift */; };
 		2C5ECA982E1B6A4900AD6A18 /* InformationHeartVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5ECA962E1B6A4900AD6A18 /* InformationHeartVC.xib */; };
+		842A041F2E240177007C9919 /* HearHealthCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842A041B2E240177007C9919 /* HearHealthCell1.xib */; };
+		842A04202E240177007C9919 /* OnBoardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842A041E2E240177007C9919 /* OnBoardVC.xib */; };
+		842A04212E240177007C9919 /* OnBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A041D2E240177007C9919 /* OnBoardVC.swift */; };
+		842A04222E240177007C9919 /* HearHealthCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A041A2E240177007C9919 /* HearHealthCell1.swift */; };
+		842A04412E240C52007C9919 /* ParentHearHealthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842A04402E240C52007C9919 /* ParentHearHealthCell.xib */; };
+		842A04422E240C52007C9919 /* ParentHearHealthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A043F2E240C52007C9919 /* ParentHearHealthCell.swift */; };
 		845E24E92E18424A0098E637 /* Trang3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E24E72E18424A0098E637 /* Trang3VC.swift */; };
 		845E24EA2E18424A0098E637 /* Trang3VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845E24E82E18424A0098E637 /* Trang3VC.xib */; };
 		845E24EC2E1909600098E637 /* Trang234V.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E24EB2E1909600098E637 /* Trang234V.swift */; };
@@ -48,8 +54,8 @@
 		849B2C802E169F93000BCDD4 /* Trang1VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849B2C7F2E169F93000BCDD4 /* Trang1VC.xib */; };
 		849B2C812E169F93000BCDD4 /* Trang1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B2C7E2E169F93000BCDD4 /* Trang1VC.swift */; };
 		849B2C832E16E505000BCDD4 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B2C822E16E4FF000BCDD4 /* CustomButton.swift */; };
-		849B2C872E17A8FC000BCDD4 /* Trang2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849B2C862E17A8FC000BCDD4 /* Trang2VC.xib */; };
-		849B2C882E17A8FC000BCDD4 /* Trang2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B2C852E17A8FC000BCDD4 /* Trang2VC.swift */; };
+		849B2C872E17A8FC000BCDD4 /* Page2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849B2C862E17A8FC000BCDD4 /* Page2VC.xib */; };
+		849B2C882E17A8FC000BCDD4 /* Page2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B2C852E17A8FC000BCDD4 /* Page2VC.swift */; };
 		849B2C972E17E078000BCDD4 /* HearHealthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B2C952E17E078000BCDD4 /* HearHealthCell.swift */; };
 		849B2C982E17E078000BCDD4 /* HearHealthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849B2C962E17E078000BCDD4 /* HearHealthCell.xib */; };
 		849B2C9A2E17E0C2000BCDD4 /* HearHealthV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B2C992E17E0C2000BCDD4 /* HearHealthV.swift */; };
@@ -61,6 +67,12 @@
 /* Begin PBXFileReference section */
 		2C5ECA952E1B6A4900AD6A18 /* InformationHeartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationHeartVC.swift; sourceTree = "<group>"; };
 		2C5ECA962E1B6A4900AD6A18 /* InformationHeartVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationHeartVC.xib; sourceTree = "<group>"; };
+		842A041A2E240177007C9919 /* HearHealthCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearHealthCell1.swift; sourceTree = "<group>"; };
+		842A041B2E240177007C9919 /* HearHealthCell1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HearHealthCell1.xib; sourceTree = "<group>"; };
+		842A041D2E240177007C9919 /* OnBoardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardVC.swift; sourceTree = "<group>"; };
+		842A041E2E240177007C9919 /* OnBoardVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardVC.xib; sourceTree = "<group>"; };
+		842A043F2E240C52007C9919 /* ParentHearHealthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentHearHealthCell.swift; sourceTree = "<group>"; };
+		842A04402E240C52007C9919 /* ParentHearHealthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParentHearHealthCell.xib; sourceTree = "<group>"; };
 		845E24E72E18424A0098E637 /* Trang3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trang3VC.swift; sourceTree = "<group>"; };
 		845E24E82E18424A0098E637 /* Trang3VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Trang3VC.xib; sourceTree = "<group>"; };
 		845E24EB2E1909600098E637 /* Trang234V.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trang234V.swift; sourceTree = "<group>"; };
@@ -102,8 +114,8 @@
 		849B2C7E2E169F93000BCDD4 /* Trang1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trang1VC.swift; sourceTree = "<group>"; };
 		849B2C7F2E169F93000BCDD4 /* Trang1VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Trang1VC.xib; sourceTree = "<group>"; };
 		849B2C822E16E4FF000BCDD4 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		849B2C852E17A8FC000BCDD4 /* Trang2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trang2VC.swift; sourceTree = "<group>"; };
-		849B2C862E17A8FC000BCDD4 /* Trang2VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Trang2VC.xib; sourceTree = "<group>"; };
+		849B2C852E17A8FC000BCDD4 /* Page2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2VC.swift; sourceTree = "<group>"; };
+		849B2C862E17A8FC000BCDD4 /* Page2VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Page2VC.xib; sourceTree = "<group>"; };
 		849B2C952E17E078000BCDD4 /* HearHealthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearHealthCell.swift; sourceTree = "<group>"; };
 		849B2C962E17E078000BCDD4 /* HearHealthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HearHealthCell.xib; sourceTree = "<group>"; };
 		849B2C992E17E0C2000BCDD4 /* HearHealthV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearHealthV.swift; sourceTree = "<group>"; };
@@ -132,22 +144,52 @@
 			path = InformationHeart;
 			sourceTree = "<group>";
 		};
-		845E24E22E1841A10098E637 /* Trang3 */ = {
+		842A04182E2400C3007C9919 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				849B2C952E17E078000BCDD4 /* HearHealthCell.swift */,
+				849B2C962E17E078000BCDD4 /* HearHealthCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		842A04192E24015E007C9919 /* OnBoard */ = {
+			isa = PBXGroup;
+			children = (
+				842A041C2E240177007C9919 /* Cells */,
+				842A041D2E240177007C9919 /* OnBoardVC.swift */,
+				842A041E2E240177007C9919 /* OnBoardVC.xib */,
+			);
+			path = OnBoard;
+			sourceTree = "<group>";
+		};
+		842A041C2E240177007C9919 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				842A041A2E240177007C9919 /* HearHealthCell1.swift */,
+				842A041B2E240177007C9919 /* HearHealthCell1.xib */,
+				842A043F2E240C52007C9919 /* ParentHearHealthCell.swift */,
+				842A04402E240C52007C9919 /* ParentHearHealthCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		845E24E22E1841A10098E637 /* Page3 */ = {
 			isa = PBXGroup;
 			children = (
 				845E24E72E18424A0098E637 /* Trang3VC.swift */,
 				845E24E82E18424A0098E637 /* Trang3VC.xib */,
 			);
-			path = Trang3;
+			path = Page3;
 			sourceTree = "<group>";
 		};
-		845E24F72E19774F0098E637 /* Trang4 */ = {
+		845E24F72E19774F0098E637 /* Page4 */ = {
 			isa = PBXGroup;
 			children = (
 				845E24F82E19775C0098E637 /* Trang4VC.swift */,
 				845E24F92E19775C0098E637 /* Trang4VC.xib */,
 			);
-			path = Trang4;
+			path = Page4;
 			sourceTree = "<group>";
 		};
 		845E24FC2E197D540098E637 /* HealthGuru */ = {
@@ -179,7 +221,7 @@
 			path = IndexV;
 			sourceTree = "<group>";
 		};
-		845E250B2E198A960098E637 /* Model */ = {
+		845E250B2E198A960098E637 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				845E252D2E1A94E80098E637 /* UserProfile.swift */,
@@ -189,7 +231,7 @@
 				845E24F12E1910250098E637 /* HearIssue.swift */,
 				845E252B2E1A94D20098E637 /* FormMode.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		845E25102E1A34360098E637 /* Settings */ = {
@@ -264,15 +306,16 @@
 		849B2C7B2E169E35000BCDD4 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				842A04192E24015E007C9919 /* OnBoard */,
 				2C5ECA942E1B6A2C00AD6A18 /* InformationHeart */,
 				845E25232E1A93230098E637 /* Information */,
 				845E25102E1A34360098E637 /* Settings */,
-				845E250B2E198A960098E637 /* Model */,
+				845E250B2E198A960098E637 /* Models */,
 				845E24FC2E197D540098E637 /* HealthGuru */,
-				845E24F72E19774F0098E637 /* Trang4 */,
-				845E24E22E1841A10098E637 /* Trang3 */,
-				849B2C842E17A8E6000BCDD4 /* Trang2 */,
-				849B2C7D2E169F82000BCDD4 /* Trang1 */,
+				845E24F72E19774F0098E637 /* Page4 */,
+				845E24E22E1841A10098E637 /* Page3 */,
+				849B2C842E17A8E6000BCDD4 /* Page2 */,
+				849B2C7D2E169F82000BCDD4 /* Page1 */,
 				849B2C7C2E169E3B000BCDD4 /* CustomUI */,
 				845E25282E1A94BC0098E637 /* Profile */,
 			);
@@ -296,24 +339,23 @@
 			path = CustomUI;
 			sourceTree = "<group>";
 		};
-		849B2C7D2E169F82000BCDD4 /* Trang1 */ = {
+		849B2C7D2E169F82000BCDD4 /* Page1 */ = {
 			isa = PBXGroup;
 			children = (
 				849B2C7E2E169F93000BCDD4 /* Trang1VC.swift */,
 				849B2C7F2E169F93000BCDD4 /* Trang1VC.xib */,
 			);
-			path = Trang1;
+			path = Page1;
 			sourceTree = "<group>";
 		};
-		849B2C842E17A8E6000BCDD4 /* Trang2 */ = {
+		849B2C842E17A8E6000BCDD4 /* Page2 */ = {
 			isa = PBXGroup;
 			children = (
-				849B2C852E17A8FC000BCDD4 /* Trang2VC.swift */,
-				849B2C862E17A8FC000BCDD4 /* Trang2VC.xib */,
-				849B2C952E17E078000BCDD4 /* HearHealthCell.swift */,
-				849B2C962E17E078000BCDD4 /* HearHealthCell.xib */,
+				842A04182E2400C3007C9919 /* Cells */,
+				849B2C852E17A8FC000BCDD4 /* Page2VC.swift */,
+				849B2C862E17A8FC000BCDD4 /* Page2VC.xib */,
 			);
-			path = Trang2;
+			path = Page2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,10 +420,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				845E25252E1A93230098E637 /* InformationVC.xib in Resources */,
+				842A04412E240C52007C9919 /* ParentHearHealthCell.xib in Resources */,
 				849B2C982E17E078000BCDD4 /* HearHealthCell.xib in Resources */,
 				845E24EA2E18424A0098E637 /* Trang3VC.xib in Resources */,
 				2C5ECA982E1B6A4900AD6A18 /* InformationHeartVC.xib in Resources */,
 				845E252A2E1A94BC0098E637 /* ProfileVC.xib in Resources */,
+				842A041F2E240177007C9919 /* HearHealthCell1.xib in Resources */,
+				842A04202E240177007C9919 /* OnBoardVC.xib in Resources */,
 				849B2C752E169E18000BCDD4 /* Assets.xcassets in Resources */,
 				845E25052E19820C0098E637 /* RateIndexV.xib in Resources */,
 				849B2CA02E17EE2D000BCDD4 /* CheckBoxView.xib in Resources */,
@@ -394,7 +439,7 @@
 				845E24FB2E19775C0098E637 /* Trang4VC.xib in Resources */,
 				845E25192E1A5F190098E637 /* SettingsCell.xib in Resources */,
 				849B2C802E169F93000BCDD4 /* Trang1VC.xib in Resources */,
-				849B2C872E17A8FC000BCDD4 /* Trang2VC.xib in Resources */,
+				849B2C872E17A8FC000BCDD4 /* Page2VC.xib in Resources */,
 				845E25342E1B4C0B0098E637 /* HealthGuruCell.xib in Resources */,
 				845E24EE2E1909720098E637 /* Trang234V.xib in Resources */,
 				849B2C9C2E17E0D8000BCDD4 /* HearHealthV.xib in Resources */,
@@ -408,6 +453,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				842A04212E240177007C9919 /* OnBoardVC.swift in Sources */,
+				842A04422E240C52007C9919 /* ParentHearHealthCell.swift in Sources */,
+				842A04222E240177007C9919 /* HearHealthCell1.swift in Sources */,
 				845E25182E1A5F190098E637 /* SettingsCell.swift in Sources */,
 				845E250F2E198BA80098E637 /* CustomIndex.swift in Sources */,
 				845E24F22E1910300098E637 /* HearIssue.swift in Sources */,
@@ -427,7 +475,7 @@
 				845E251B2E1A8E3F0098E637 /* Setting.swift in Sources */,
 				845E24E92E18424A0098E637 /* Trang3VC.swift in Sources */,
 				849B2C9E2E17ECEC000BCDD4 /* CheckBoxView.swift in Sources */,
-				849B2C882E17A8FC000BCDD4 /* Trang2VC.swift in Sources */,
+				849B2C882E17A8FC000BCDD4 /* Page2VC.swift in Sources */,
 				845E251E2E1A930D0098E637 /* LabelTextFieldV.swift in Sources */,
 				845E250D2E198AA70098E637 /* Index.swift in Sources */,
 				845E25032E1981CB0098E637 /* RateIndexV.swift in Sources */,

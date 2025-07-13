@@ -36,15 +36,15 @@
                             <rect key="frame" x="0.0" y="24" width="419" height="119"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyY-We-zvw">
-                                    <rect key="frame" x="0.0" y="0.0" width="384.33333333333331" height="119"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="16.333333333333332" height="119"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                    <color key="textColor" name="neutral2"/>
+                                    <color key="textColor" name="Neutral2"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bpm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61m-We-sDC">
-                                    <rect key="frame" x="386.33333333333331" y="0.0" width="32.666666666666686" height="119"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="bpm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61m-We-sDC">
+                                    <rect key="frame" x="18.333333333333343" y="0.0" width="400.66666666666663" height="119"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                    <color key="textColor" name="neutral2"/>
+                                    <color key="textColor" name="Neutral2"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -64,11 +64,11 @@
         </view>
     </objects>
     <resources>
+        <namedColor name="Neutral2">
+            <color red="0.34901960784313724" green="0.38039215686274508" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Neutral3">
             <color red="0.61176470588235299" green="0.61960784313725492" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="neutral2">
-            <color red="0.34901960784313724" green="0.38039215686274508" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

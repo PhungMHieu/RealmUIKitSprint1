@@ -31,10 +31,9 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="vpj-We-DlH" userLabel="DanhSachLuaChon">
-                    <rect key="frame" x="24.666666666666657" y="274" width="344" height="406"/>
+                    <rect key="frame" x="16" y="274" width="361" height="406"/>
                     <color key="backgroundColor" name="backgroundTrang2"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="344" id="RtT-gC-Uor"/>
                         <constraint firstAttribute="height" constant="406" id="zyL-HX-a4D"/>
                     </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="16" minimumInteritemSpacing="16" id="7Sn-jP-XOH">
@@ -45,10 +44,9 @@
                     </collectionViewFlowLayout>
                 </collectionView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdf-0g-8dP" customClass="RoundButton" customModule="BaiTapDuLich" customModuleProvider="target">
-                    <rect key="frame" x="25" y="712" width="343" height="56"/>
+                    <rect key="frame" x="16" y="712" width="361" height="56"/>
                     <color key="backgroundColor" name="Neutral3"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="343" id="JKZ-aq-pX2"/>
                         <constraint firstAttribute="height" constant="56" id="sbr-5K-DOl"/>
                     </constraints>
                     <color key="tintColor" name="Neutral5"/>
@@ -64,7 +62,9 @@
             <constraints>
                 <constraint firstItem="lJP-C4-c8a" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="380-TC-rkh"/>
                 <constraint firstItem="vpj-We-DlH" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="CMV-w3-Rmf"/>
+                <constraint firstItem="vdf-0g-8dP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="dh1-G7-Kkf"/>
                 <constraint firstItem="vpj-We-DlH" firstAttribute="top" secondItem="lJP-C4-c8a" secondAttribute="bottom" constant="24" id="e3S-LG-z00"/>
+                <constraint firstItem="vpj-We-DlH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="hXQ-TI-A7A"/>
                 <constraint firstItem="vdf-0g-8dP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="n2d-ZO-qQz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vdf-0g-8dP" secondAttribute="bottom" constant="16" id="tkp-bm-Qq2"/>
                 <constraint firstItem="lJP-C4-c8a" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="56" id="u7y-Mb-dqc"/>

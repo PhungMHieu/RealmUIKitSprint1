@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_3" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -19,14 +19,13 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvy-3h-GJC">
-                    <rect key="frame" x="25" y="714" width="343" height="56"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvy-3h-GJC">
+                    <rect key="frame" x="16" y="734" width="370" height="56"/>
                     <color key="backgroundColor" name="Primary"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="343" id="DXC-cy-Q8B"/>
                         <constraint firstAttribute="height" constant="56" id="WTY-Or-Bjm"/>
                     </constraints>
                     <color key="tintColor" name="Neutral5"/>
@@ -37,20 +36,19 @@
                     </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Y5j-zJ-Qbr">
-                    <rect key="frame" x="24.666666666666657" y="142" width="344" height="88"/>
+                    <rect key="frame" x="16" y="148" width="370" height="88"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTJ-kE-zmh" customClass="LabelTextFieldV" customModule="BaiTapDuLich" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="166" height="88"/>
+                            <rect key="frame" x="0.0" y="0.0" width="179" height="88"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="42J-DO-wav" customClass="LabelTextFieldV" customModule="BaiTapDuLich" customModuleProvider="target">
-                            <rect key="frame" x="178" y="0.0" width="166" height="88"/>
+                            <rect key="frame" x="191" y="0.0" width="179" height="88"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                     </subviews>
                     <viewLayoutGuide key="safeArea" id="dhS-mM-cgj"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="344" id="XLj-u3-JuC"/>
                         <constraint firstAttribute="height" constant="88" id="ZsG-G6-j11"/>
                     </constraints>
                 </stackView>
@@ -58,10 +56,13 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="backgroundTrang2"/>
             <constraints>
+                <constraint firstItem="Fvy-3h-GJC" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="OPa-bV-hs0"/>
                 <constraint firstItem="Y5j-zJ-Qbr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="Ofx-nm-Dtx"/>
                 <constraint firstItem="Y5j-zJ-Qbr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="SOf-Hf-anK"/>
                 <constraint firstItem="Fvy-3h-GJC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Uf1-Ry-kdR"/>
+                <constraint firstItem="Fvy-3h-GJC" firstAttribute="leading" secondItem="Y5j-zJ-Qbr" secondAttribute="leading" id="d7p-nu-ZYz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Fvy-3h-GJC" secondAttribute="bottom" constant="16" id="fzX-tt-izR"/>
+                <constraint firstItem="Y5j-zJ-Qbr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ynW-t0-4sG"/>
             </constraints>
             <point key="canvasLocation" x="12" y="-11"/>
         </view>

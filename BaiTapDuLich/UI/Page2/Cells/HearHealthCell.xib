@@ -18,9 +18,8 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pulse" translatesAutoresizingMaskIntoConstraints="NO" id="5I6-UF-jui">
-                        <rect key="frame" x="183" y="36" width="64" height="64"/>
+                        <rect key="frame" x="50" y="36" width="330" height="64"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="64" id="QDv-ZH-p82"/>
                             <constraint firstAttribute="height" constant="64" id="u7D-0U-bDd"/>
                         </constraints>
                     </imageView>
@@ -38,7 +37,7 @@
                             <constraint firstAttribute="width" constant="131" id="sd2-0f-Qwf"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" name="neutral2"/>
+                        <color key="textColor" name="Neutral2"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -46,12 +45,13 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" name="Neutral5"/>
             <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="5I6-UF-jui" secondAttribute="trailing" constant="50" id="7Cn-NM-F6o"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="5I6-UF-jui" secondAttribute="bottom" constant="83" id="Bt5-pV-Kbf"/>
+                <constraint firstItem="5I6-UF-jui" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="50" id="KaL-XS-B2I"/>
                 <constraint firstAttribute="bottom" secondItem="k4A-mz-K1u" secondAttribute="bottom" constant="18" id="Opz-AG-oU1"/>
                 <constraint firstItem="Yjg-uf-4tJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="VBE-CG-s2Z"/>
                 <constraint firstItem="k4A-mz-K1u" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="XLR-MM-aLu"/>
                 <constraint firstItem="Yjg-uf-4tJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="teY-YC-iUV"/>
-                <constraint firstItem="5I6-UF-jui" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="zSn-0X-Ryu"/>
             </constraints>
             <size key="customSize" width="430" height="251"/>
             <connections>
@@ -64,14 +64,14 @@
     </objects>
     <resources>
         <image name="pulse" width="64" height="64"/>
+        <namedColor name="Neutral2">
+            <color red="0.34901960784313724" green="0.38039215686274508" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Neutral4">
             <color red="0.87058823529411766" green="0.87450980392156863" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Neutral5">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="neutral2">
-            <color red="0.34901960784313724" green="0.38039215686274508" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

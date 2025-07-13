@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" userLabel="Hear Health Cell 1" customClass="HearHealthCell" customModule="BaiTapDuLich" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="251"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="430" height="251"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pulse" translatesAutoresizingMaskIntoConstraints="NO" id="5I6-UF-jui">
+                        <rect key="frame" x="50" y="36" width="330" height="64"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="64" id="u7D-0U-bDd"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yjg-uf-4tJ" customClass="CheckBoxView" customModule="BaiTapDuLich" customModuleProvider="target">
+                        <rect key="frame" x="16" y="16" width="24" height="24"/>
+                        <color key="backgroundColor" name="Neutral4"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="GZu-Wb-fIo"/>
+                            <constraint firstAttribute="height" constant="24" id="iY3-bS-MqV"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4A-mz-K1u" userLabel="title">
+                        <rect key="frame" x="16" y="212.66666666666666" width="131" height="20.333333333333343"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="131" id="sd2-0f-Qwf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" name="Neutral2"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" name="Neutral5"/>
+            <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="5I6-UF-jui" secondAttribute="trailing" constant="50" id="7Cn-NM-F6o"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="5I6-UF-jui" secondAttribute="bottom" constant="83" id="Bt5-pV-Kbf"/>
+                <constraint firstItem="5I6-UF-jui" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="50" id="KaL-XS-B2I"/>
+                <constraint firstAttribute="bottom" secondItem="k4A-mz-K1u" secondAttribute="bottom" constant="18" id="Opz-AG-oU1"/>
+                <constraint firstItem="Yjg-uf-4tJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="VBE-CG-s2Z"/>
+                <constraint firstItem="k4A-mz-K1u" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="XLR-MM-aLu"/>
+                <constraint firstItem="Yjg-uf-4tJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="teY-YC-iUV"/>
+            </constraints>
+            <size key="customSize" width="430" height="251"/>
+            <connections>
+                <outlet property="checkBox" destination="Yjg-uf-4tJ" id="r09-0S-Vj0"/>
+                <outlet property="image" destination="5I6-UF-jui" id="Yhz-j1-NB3"/>
+                <outlet property="title" destination="k4A-mz-K1u" id="Hkv-eE-4Iq"/>
+            </connections>
+            <point key="canvasLocation" x="239.69465648854961" y="-10.211267605633804"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="pulse" width="64" height="64"/>
+        <namedColor name="Neutral2">
+            <color red="0.34901960784313724" green="0.38039215686274508" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Neutral4">
+            <color red="0.87058823529411766" green="0.87450980392156863" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Neutral5">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
