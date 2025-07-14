@@ -18,6 +18,20 @@ class OnBoardVC: UIViewController,UICollectionViewDelegate, UICollectionViewData
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = healthCollectionView.dequeueReusableCell(withReuseIdentifier: "ParentHearHealthCell", for: indexPath) as! ParentHearHealthCell
+        
+        cell.changButtoncl = {[weak self] isChecked in
+            var tmp = 0
+            for value in isChecked{
+                if(value == true){
+                    self?.nextBtn.backgroundColor = .primary
+                }else{
+                    tmp += 1
+                }
+            }
+            if(tmp == 4){
+                self?.nextBtn.backgroundColor = .neutral3
+            }
+        }
 //        self.index = indexPath.item
 //        if(indexPath.item == 2){
 //            cell.hearHealhCell.isHidden = true
@@ -33,25 +47,52 @@ class OnBoardVC: UIViewController,UICollectionViewDelegate, UICollectionViewData
         healthCollectionView.dataSource = self
         healthCollectionView.register(nib, forCellWithReuseIdentifier: "Parent Cell")
         healthCollectionView.isScrollEnabled = false
+        if let flowLayout = healthCollectionView.collectionViewLayout as? UICollectionViewFlowLayout{
+            flowLayout.scrollDirection = .horizontal
+            flowLayout.minimumLineSpacing = 16
+//            flowLayout.minimumInteritemSpacing = 16
+            flowLayout.itemSize = healthCollectionView.bounds.size
+//            flowLayout.itemSize.width = 350
+//            flowLayout.itemSize.height = healthCollectionView.bounds.size.height
+        }
+//        nextBtn.addTarget(self, action: #selector(changeBtnColor), for: .valueChanged)
+//        healthCollectionView.isPagingEnabled = true
+//        healthCollectionView.showsHorizontalScrollIndicator = false
         
 //        healthCollectionView.register(<#T##cellClass: AnyClass?##AnyClass?#>, forCellWithReuseIdentifier: <#T##String#>)
     }
     
     @IBAction func nextAction(_ sender: Any) {
-//        guard var index = self.index else { return }
-//        if var index = self.index{
-            if(index == 2){
-                return
+        let currentIndexPath = IndexPath(item: index, section: 0)
+        if let cell = healthCollectionView.cellForItem(at: currentIndexPath) as? ParentHearHealthCell{
+            for value in cell.isChecked{
+                if(value == true){
+                    if(index == 2){
+                        let healthGuru = HealthGuruVC()
+                        navigationController?.pushViewController(healthGuru, animated: true)
+                        return
+                    }
+                    index += 1
+                    print("Trang sẽ tới là \(index)")
+        //            self.index = index+1
+                    let indexPath = IndexPath(item: index, section: 0)
+                    healthCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+                }
             }
-            index += 1
-            print("Trang sẽ tới là \(index)")
-//            self.index = index+1
-            let indexPath = IndexPath(item: index, section: 0)
-            healthCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-//        }
-//        self.index += 1
-        
+        }
     }
+//    @objc func changeBtnColor(value: [Bool]){
+//        var checkBtn = true
+//        for tmp in value{
+//            if tmp == true{
+//                nextBtn.backgroundColor = .primary
+//                checkBtn = false
+//            }
+//        }
+//        if checkBtn{
+//            nextBtn.backgroundColor = .neutral3
+//        }
+//    }
 }
 //extension
 

@@ -18,11 +18,11 @@ class HearHealthCell: UICollectionViewCell {
         super.awakeFromNib()
 //        layer.borderColor = UIColor.black.cgColor
         layer.cornerRadius = 20
-        checkBox.layer.cornerRadius = 5
+//        checkBox.layer.cornerRadius = 5
 //        layer.masksToBounds = true
 //        contentView
 //        view?.layer.cornerRadius = 20
-        checkBox.button.addTarget(self, action:#selector(onTapBtn), for: .touchUpInside)
+//        checkBox.button.addTarget(self, action:#selector(onTapBtn), for: .touchUpInside)
 //        checkBox.onToggle = {[weak self] (isChecked) in
 //            self?.checkBox.onToggle = {(isChecked) in
 //                if(isChecked){
