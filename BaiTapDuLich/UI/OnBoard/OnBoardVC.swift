@@ -69,7 +69,7 @@ class OnBoardVC: UIViewController,UICollectionViewDelegate, UICollectionViewData
                 if(value == true){
                     if(index == 2){
                         let healthGuru = HealthGuruVC()
-                        navigationController?.pushViewController(healthGuru, animated: true)
+                        navigationController?.pushViewController(healthGuru, animated: false)
                         return
                     }
                     index += 1

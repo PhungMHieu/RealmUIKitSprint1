@@ -8,19 +8,21 @@
 import UIKit
 
 class RoundButton: UIButton{
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
     
     required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
         super.init(coder: coder)
         setup()
     }
+  
     private func setup(){
         setTitle("Continue", for: .normal)
         setTitleColor(.neutral5, for: .normal)
+        titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         backgroundColor = .primary
         layer.cornerRadius = 16
         layer.shadowColor = UIColor.shadow.cgColor
