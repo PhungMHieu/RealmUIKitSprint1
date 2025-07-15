@@ -15,14 +15,14 @@ enum Page: String, CaseIterable{
         switch self{
         case .page1: [
             HearlIssue(healIssue: "Heart rate", image: "pulse"),
-            HearlIssue(healIssue: "High Blood Pressure", image: "hybertension"),
+            HearlIssue(healIssue: "High Blood\nPressure", image: "hybertension"),
             HearlIssue(healIssue: "Stress & Anxiety", image: "stress"),
-            HearlIssue(healIssue: "Low Energy Levels", image: "energy-consumption")]
+            HearlIssue(healIssue: "Low Energy\nLevels", image: "energy-consumption")]
         case .page2: [
-            HearlIssue(healIssue: "Improve Heart Health", image: "dumbbell"),
-            HearlIssue(healIssue: "Improve blood pressure health", image: "pressure"),
+            HearlIssue(healIssue: "Improve Heart\nHealth", image: "dumbbell"),
+            HearlIssue(healIssue: "Improve blood\npressure health", image: "pressure"),
             HearlIssue(healIssue: "Reduce Stress", image: "harmony"),
-            HearlIssue(healIssue: "Increase Energy Levels", image: "no-energy")]
+            HearlIssue(healIssue: "Increase Energy\nLevels", image: "no-energy")]
         case .page3:[
             HearlIssue(healIssue: "Educational Plan", image: "plan"),
             HearlIssue(healIssue: "Exercise Plan", image: "exercise-routine"),

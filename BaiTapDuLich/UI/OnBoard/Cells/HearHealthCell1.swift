@@ -52,3 +52,4 @@ class HearHealthCell1: UICollectionViewCell {
 //        changeButtonColor?()
 //    }
 }
+

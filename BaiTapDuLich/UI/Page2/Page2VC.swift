@@ -52,6 +52,7 @@ class Page2VC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         // Do any additional setup after loading the view.
         collectionView.delegate = self
         collectionView.dataSource = self
+//        UIImage
 //        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
 //            layout.itemSize = CGSize(width: 100, height: 100) // đặt kích thước mong muốn
 //        }

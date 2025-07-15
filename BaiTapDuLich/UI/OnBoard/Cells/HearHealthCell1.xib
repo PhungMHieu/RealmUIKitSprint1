@@ -23,16 +23,13 @@
                             <constraint firstAttribute="height" constant="64" id="u7D-0U-bDd"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4A-mz-K1u" userLabel="title">
-                        <rect key="frame" x="16" y="207" width="132" height="26"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="132" id="sd2-0f-Qwf"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4A-mz-K1u" userLabel="title">
+                        <rect key="frame" x="16" y="207" width="398" height="26"/>
                         <attributedString key="attributedText">
                             <fragment content="Label">
                                 <attributes>
                                     <color key="NSColor" name="Neutral2"/>
-                                    <font key="NSFont" size="17" name="SFPro-Regular"/>
+                                    <font key="NSFont" metaFont="system" size="18"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="26" maximumLineHeight="26" tighteningFactorForTruncation="0.0"/>
                                 </attributes>
                             </fragment>
@@ -58,6 +55,7 @@
                 <constraint firstItem="5I6-UF-jui" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="50" id="KaL-XS-B2I"/>
                 <constraint firstAttribute="bottom" secondItem="k4A-mz-K1u" secondAttribute="bottom" constant="18" id="Opz-AG-oU1"/>
                 <constraint firstItem="k4A-mz-K1u" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="XLR-MM-aLu"/>
+                <constraint firstItem="k4A-mz-K1u" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="diG-f8-d15"/>
             </constraints>
             <size key="customSize" width="430" height="251"/>
             <connections>

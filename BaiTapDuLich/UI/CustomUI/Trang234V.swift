@@ -45,5 +45,6 @@ class Trang234V: UIView {
         nibView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         nibView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         nibView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+//        let image = AssetCatalog.Image.increaseEnergyLevels
     }
 }
