@@ -8,11 +8,10 @@
 import UIKit
 
 class ParentHearHealthCell: UICollectionViewCell {
-    var data: [HearlIssue] = [
-        HearlIssue(healIssue: "Heart rate", image: "pulse"),
-        HearlIssue(healIssue: "High Blood Pressure", image: "hybertension"),
-        HearlIssue(healIssue: "Stress & Anxiety", image: "stress"),
-        HearlIssue(healIssue: "Low Energy Levels", image: "energy-consumption")]
+    var categoryName: String?
+    lazy var data: [HearlIssue] = {
+        Page(rawValue: categoryName ?? "page1")?.items ?? []
+    }()
     var isChecked: [Bool] = [false, false, false, false]
     var changButtoncl: (([Bool])->Void)?
     @IBOutlet weak var hearHealhCollection: UICollectionView!
@@ -24,15 +23,15 @@ class ParentHearHealthCell: UICollectionViewCell {
         hearHealhCollection.register(nib, forCellWithReuseIdentifier: "ChildCell1")
         hearHealhCollection.delegate = self
         hearHealhCollection.dataSource = self
-        if let flowLayout = hearHealhCollection.collectionViewLayout as? UICollectionViewFlowLayout{
-            flowLayout.minimumLineSpacing = 16
-            flowLayout.minimumInteritemSpacing = 16
-            flowLayout.itemSize.height = 195
-            flowLayout.itemSize.width = (hearHealhCollection.bounds.size.width-16)/2
-//            flowLayout.itemSize.width = (hearHealhCollection.bounds.size.width-48)/2
-//            flowLayout.itemSize.width = 164
-//            flowLayout.itemSize = hearHealhCell.bounds.size
-        }
+//        if let flowLayout = hearHealhCollection.collectionViewLayout as? UICollectionViewFlowLayout{
+//            flowLayout.minimumLineSpacing = 16
+//            flowLayout.minimumInteritemSpacing = 16
+//            flowLayout.itemSize.height = 195
+//            flowLayout.itemSize.width = (hearHealhCollection.bounds.size.width-16)/2
+////            flowLayout.itemSize.width = (hearHealhCollection.bounds.size.width-48)/2
+////            flowLayout.itemSize.width = 164
+////            flowLayout.itemSize = hearHealhCell.bounds.size
+//        }
         hearHealhCollection.allowsMultipleSelection = true
     }
     override func layoutSubviews() {
@@ -53,13 +52,17 @@ class ParentHearHealthCell: UICollectionViewCell {
 }
 extension ParentHearHealthCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ChildCell1", for: indexPath) as! HearHealthCell1
-        cell.image.image = UIImage(named: data[indexPath.row].image)
-        cell.title.text = data[indexPath.row].healIssue
+//        print("So luong data la :\(data)")
+//        print("Chi so là \(indexPath.row)")
+        var itemIndex = indexPath.row
+//        print("Chi so là \(indexPath.row)")
+        cell.image.image = UIImage(named: data[itemIndex].image)
+        cell.title.text = data[itemIndex].healIssue
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

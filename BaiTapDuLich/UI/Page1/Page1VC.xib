@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Trang1VC" customModule="BaiTapDuLich" customModuleProvider="target">
+            <connections>
+                <outlet property="detailInfo" destination="VOC-gB-njj" id="Ls3-tr-3FN"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health Plan Pro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tvu-TT-mj4">
+                    <rect key="frame" x="62" y="154" width="269" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="lDf-hW-TVV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
+                    <color key="textColor" name="Neutral1"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOC-gB-njj">
+                    <rect key="frame" x="33" y="210" width="327" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="30o-9S-GDX"/>
+                        <constraint firstAttribute="width" constant="327" id="Yvf-Jt-2Wb"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment content="Providing workout routines and health information to support well-being">
+                            <attributes>
+                                <color key="NSColor" red="0.61176470588235299" green="0.61960784313725492" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <font key="NSFont" size="16" name="SFPro-Medium"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="24" maximumLineHeight="24" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" image="Phone1" translatesAutoresizingMaskIntoConstraints="NO" id="czU-ht-IjK">
+                    <rect key="frame" x="30" y="344" width="190" height="378"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="190" id="DWu-rf-PfJ"/>
+                        <constraint firstAttribute="height" constant="378" id="Doh-Bc-90a"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Phone2" translatesAutoresizingMaskIntoConstraints="NO" id="eFy-Rn-4m0">
+                    <rect key="frame" x="149" y="298" width="212" height="424"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="424" id="8as-kO-rHr"/>
+                        <constraint firstAttribute="width" constant="212" id="rgY-54-IdT"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEE-LK-BBm" customClass="RoundButton" customModule="BaiTapDuLich" customModuleProvider="target">
+                    <rect key="frame" x="16" y="709" width="361" height="59"/>
+                    <color key="backgroundColor" name="Primary"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="fEE-LK-BBm" secondAttribute="height" multiplier="343:56" id="uf1-VC-aGz"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Continue"/>
+                    <connections>
+                        <action selector="continue:" destination="-1" eventType="touchUpInside" id="S3V-vB-0XL"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="Background"/>
+            <constraints>
+                <constraint firstItem="czU-ht-IjK" firstAttribute="top" secondItem="VOC-gB-njj" secondAttribute="bottom" constant="86" id="2tH-ko-BeO"/>
+                <constraint firstItem="VOC-gB-njj" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Ahe-Vu-iqb"/>
+                <constraint firstItem="fEE-LK-BBm" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-16" id="FB9-KZ-rne"/>
+                <constraint firstItem="fEE-LK-BBm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Hrx-YN-Dio"/>
+                <constraint firstItem="fEE-LK-BBm" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="MLZ-dC-Hnv"/>
+                <constraint firstItem="VOC-gB-njj" firstAttribute="top" secondItem="Tvu-TT-mj4" secondAttribute="bottom" constant="8" id="T1k-MM-C5g"/>
+                <constraint firstItem="czU-ht-IjK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Uym-GA-JKG"/>
+                <constraint firstItem="Tvu-TT-mj4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dGx-Zl-ZZN"/>
+                <constraint firstItem="Tvu-TT-mj4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="36" id="fqn-hq-Ojp"/>
+                <constraint firstItem="eFy-Rn-4m0" firstAttribute="top" secondItem="VOC-gB-njj" secondAttribute="bottom" constant="40" id="gVa-h3-o5i"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eFy-Rn-4m0" secondAttribute="trailing" constant="32" id="oZd-Zs-a5w"/>
+            </constraints>
+            <point key="canvasLocation" x="-220.90909090909093" y="49.581589958159"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Phone1" width="190" height="378"/>
+        <image name="Phone2" width="849" height="1696"/>
+        <namedColor name="Background">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Neutral1">
+            <color red="0.18431372549019609" green="0.20784313725490197" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary">
+            <color red="1" green="0.38823529411764707" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

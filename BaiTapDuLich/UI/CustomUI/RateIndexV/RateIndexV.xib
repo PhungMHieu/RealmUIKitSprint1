@@ -22,6 +22,7 @@
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="0hY-de-0fV">
                     <rect key="frame" x="12" y="64.666666666666671" width="56" height="56"/>
+                    <color key="backgroundColor" name="Neutral5"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="56" id="mNK-Qu-qag"/>
                         <constraint firstAttribute="width" constant="56" id="nIq-eU-95I"/>

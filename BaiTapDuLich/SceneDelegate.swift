@@ -21,7 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
 //        let vc = ProfileVC()
 //        let vc = InformationVC()
-        let vc = Trang1VC()
+//        let vc = Trang1VC()
+        let vc = Page1VC()
         let navi = UINavigationController(rootViewController: vc)
 //        let vc = Trang2VC()
         let settingsVC = SettingsVC()
@@ -97,4 +98,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
-
+//extension

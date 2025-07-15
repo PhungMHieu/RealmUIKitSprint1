@@ -21,9 +21,9 @@ class RoundButton: UIButton{
   
     private func setup(){
         setTitle("Continue", for: .normal)
-        setTitleColor(.neutral5, for: .normal)
+//        setTitleColor(.neutral5, for: .normal)
         titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-        backgroundColor = .primary
+//        backgroundColor = .primary
         layer.cornerRadius = 16
         layer.shadowColor = UIColor.shadow.cgColor
         layer.shadowOpacity = 0.32

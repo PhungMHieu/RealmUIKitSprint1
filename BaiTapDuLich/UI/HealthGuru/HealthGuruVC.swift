@@ -19,6 +19,7 @@ class HealthGuruVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     @IBOutlet weak var emptyView: UIStackView!
     @IBOutlet weak var trackDailyText: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var clickHeartText: UILabel!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data.count
     }
@@ -49,6 +50,8 @@ class HealthGuruVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         trackDailyV.layer.cornerRadius = 16
         rateIndexV.layer.cornerRadius = 16
         trackDailyText.setLetterSpacing(0.2)
+        clickHeartText.setLetterSpacing(0.4)
+//        emptyView
 //        emptyView
 //        emptyVie
 //        title = "Health Guru"

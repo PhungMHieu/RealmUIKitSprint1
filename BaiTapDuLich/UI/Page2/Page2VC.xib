@@ -43,15 +43,17 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdf-0g-8dP" customClass="RoundButton" customModule="BaiTapDuLich" customModuleProvider="target">
-                    <rect key="frame" x="16" y="712" width="361" height="56"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdf-0g-8dP" customClass="RoundButton" customModule="BaiTapDuLich" customModuleProvider="target">
+                    <rect key="frame" x="16" y="709" width="361" height="59"/>
                     <color key="backgroundColor" name="Neutral3"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="56" id="sbr-5K-DOl"/>
+                        <constraint firstAttribute="width" secondItem="vdf-0g-8dP" secondAttribute="height" multiplier="343:56" id="9ai-pp-z4m"/>
                     </constraints>
-                    <color key="tintColor" name="Neutral5"/>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" name="Neutral5"/>
+                    </state>
                     <connections>
                         <action selector="continue:" destination="-1" eventType="touchUpInside" id="uGd-Uc-WkW"/>
                     </connections>
@@ -62,7 +64,7 @@
             <constraints>
                 <constraint firstItem="lJP-C4-c8a" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="380-TC-rkh"/>
                 <constraint firstItem="vpj-We-DlH" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="CMV-w3-Rmf"/>
-                <constraint firstItem="vdf-0g-8dP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="dh1-G7-Kkf"/>
+                <constraint firstItem="vdf-0g-8dP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="aZx-7Y-6yE"/>
                 <constraint firstItem="vpj-We-DlH" firstAttribute="top" secondItem="lJP-C4-c8a" secondAttribute="bottom" constant="24" id="e3S-LG-z00"/>
                 <constraint firstItem="vpj-We-DlH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="hXQ-TI-A7A"/>
                 <constraint firstItem="vdf-0g-8dP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="n2d-ZO-qQz"/>

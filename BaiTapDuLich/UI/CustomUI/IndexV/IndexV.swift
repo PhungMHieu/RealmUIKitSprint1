@@ -49,6 +49,7 @@ class IndexV: UIView {
             unit.isHidden = false
             unit.text = customIndex.unit
         }
-        
+        unit.setLetterSpacing(0.2)
+        title.setLetterSpacing(0.2)
     }
 }

@@ -12,7 +12,7 @@ class Index{
         if(pulse < 60){
             return "Low"
         }else if(pulse > 100){
-            return "High"
+            return "Warning"
         }else{
             return "Good"
         }

@@ -28,23 +28,36 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="EID-0L-TA6"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                             <color key="textColor" name="Neutral3"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="RXY-38-dvh" userLabel="bpm">
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="RXY-38-dvh" userLabel="bpm">
                             <rect key="frame" x="0.0" y="24" width="419" height="119"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="--" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyY-We-zvw">
-                                    <rect key="frame" x="0.0" y="0.0" width="16.333333333333332" height="119"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                    <color key="textColor" name="Neutral2"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyY-We-zvw">
+                                    <rect key="frame" x="0.0" y="0.0" width="16.666666666666668" height="119"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="--">
+                                            <attributes>
+                                                <color key="NSColor" name="Neutral2"/>
+                                                <font key="NSFont" size="18" name="SFPro-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="bpm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61m-We-sDC">
-                                    <rect key="frame" x="18.333333333333343" y="0.0" width="400.66666666666663" height="119"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                    <color key="textColor" name="Neutral2"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61m-We-sDC">
+                                    <rect key="frame" x="20.666666666666657" y="0.0" width="398.33333333333337" height="119"/>
+                                    <attributedString key="attributedText">
+                                        <fragment content="bpm">
+                                            <attributes>
+                                                <color key="NSColor" name="Neutral2"/>
+                                                <font key="NSFont" size="16" name="SFPro-Medium"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="24" maximumLineHeight="24" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>

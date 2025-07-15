@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="healthCollectionView" destination="vpj-We-DlH" id="ouh-87-l75"/>
                 <outlet property="nextBtn" destination="vdf-0g-8dP" id="6xy-KT-IxU"/>
+                <outlet property="titleOfPage" destination="lJP-C4-c8a" id="yw7-Fd-djv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="tDG-5F-Ekx"/>
             </connections>
         </placeholder>
@@ -20,14 +21,21 @@
             <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which heart health issue concerns you the most?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJP-C4-c8a" userLabel="TieuDe">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJP-C4-c8a" userLabel="TieuDe">
                     <rect key="frame" x="46.666666666666657" y="180" width="309" height="76"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="76" id="VPk-jZ-Ev0"/>
                         <constraint firstAttribute="width" constant="309" id="n5S-1W-rAb"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                    <color key="textColor" name="Neutral1"/>
+                    <attributedString key="attributedText">
+                        <fragment content="Which heart health issue concerns you the most?">
+                            <attributes>
+                                <color key="NSColor" name="Neutral1"/>
+                                <font key="NSFont" size="26" name="SFPro-Bold"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="38" maximumLineHeight="38" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="vpj-We-DlH" userLabel="DanhSachLuaChon">
@@ -50,8 +58,8 @@
                         <constraint firstAttribute="height" constant="56" id="sbr-5K-DOl"/>
                     </constraints>
                     <color key="tintColor" name="Neutral5"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
                     <connections>
                         <action selector="nextAction:" destination="-1" eventType="touchUpInside" id="fDn-4e-bOj"/>
                     </connections>
@@ -61,10 +69,10 @@
             <color key="backgroundColor" name="backgroundTrang2"/>
             <constraints>
                 <constraint firstItem="lJP-C4-c8a" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="380-TC-rkh"/>
+                <constraint firstItem="vpj-We-DlH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Jii-0I-9mo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vpj-We-DlH" secondAttribute="trailing" constant="16" id="Sof-zx-p4c"/>
                 <constraint firstItem="vdf-0g-8dP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="dh1-G7-Kkf"/>
                 <constraint firstItem="vpj-We-DlH" firstAttribute="top" secondItem="lJP-C4-c8a" secondAttribute="bottom" constant="24" id="e3S-LG-z00"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vpj-We-DlH" secondAttribute="trailing" constant="16" id="gvQ-nK-gjw"/>
-                <constraint firstItem="vpj-We-DlH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="hXQ-TI-A7A"/>
                 <constraint firstItem="vdf-0g-8dP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="n2d-ZO-qQz"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vdf-0g-8dP" secondAttribute="bottom" constant="16" id="tkp-bm-Qq2"/>
                 <constraint firstItem="lJP-C4-c8a" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="56" id="u7y-Mb-dqc"/>

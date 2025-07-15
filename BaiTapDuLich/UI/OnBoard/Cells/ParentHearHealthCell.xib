@@ -17,8 +17,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="465" height="349"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="OQw-9t-ikW" userLabel="Hear Healh Collection">
-                        <rect key="frame" x="-11" y="0.0" width="465" height="349"/>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="OQw-9t-ikW" userLabel="Hear Healh Collection">
+                        <rect key="frame" x="0.0" y="0.0" width="465" height="349"/>
                         <color key="backgroundColor" name="backgroundTrang2"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="eYv-vG-acC">
                             <size key="itemSize" width="100" height="195"/>

@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HealthGuruVC" customModule="BaiTapDuLich" customModuleProvider="target">
             <connections>
+                <outlet property="clickHeartText" destination="AV4-rn-m6b" id="lmg-GS-W4f"/>
                 <outlet property="emptyView" destination="FwV-x3-9cs" id="GJw-O1-BUu"/>
                 <outlet property="heartView" destination="Xsi-Cq-C3n" id="Tbw-U1-bjq"/>
                 <outlet property="rateIndexV" destination="epj-ja-yR2" id="nvJ-pF-fgT"/>
@@ -61,21 +62,21 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dcs-tk-kho">
                             <rect key="frame" x="0.0" y="104" width="370" height="80"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vit-BZ-2k9">
-                                    <rect key="frame" x="16" y="12" width="338" height="56"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Vit-BZ-2k9">
+                                    <rect key="frame" x="16" y="16" width="338" height="48"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="YUW-wC-Qty">
-                                            <rect key="frame" x="0.0" y="0.0" width="120" height="28"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="YUW-wC-Qty">
+                                            <rect key="frame" x="0.0" y="0.0" width="116" height="28"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Like 5" translatesAutoresizingMaskIntoConstraints="NO" id="IZT-64-dVg">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Like 5" translatesAutoresizingMaskIntoConstraints="NO" id="IZT-64-dVg">
                                                     <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="28" id="0zo-tc-8Vu"/>
                                                         <constraint firstAttribute="height" constant="28" id="Nf2-b9-ocU"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track daily" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BrW-EM-Gcy">
-                                                    <rect key="frame" x="32" y="0.0" width="88" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track daily" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BrW-EM-Gcy">
+                                                    <rect key="frame" x="28" y="0.0" width="88" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="88" id="rDD-1D-NZO"/>
                                                         <constraint firstAttribute="height" constant="24" id="sc5-93-byz"/>
@@ -90,7 +91,7 @@
                                             </constraints>
                                         </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click heart icon to log your data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AV4-rn-m6b">
-                                            <rect key="frame" x="0.0" y="36" width="311" height="20"/>
+                                            <rect key="frame" x="0.0" y="28" width="311" height="20"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="311" id="AxU-4q-7Q6"/>
                                                 <constraint firstAttribute="height" constant="20" id="Vma-kh-gt0"/>
