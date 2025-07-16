@@ -67,6 +67,18 @@ class HealthGuruVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
+        clickHeartText.setLetterSpacing(0.2)
+        clickHeartText.setLineHeight(20)
+        
+        trackDailyText.setLetterSpacing(0.2)
+        trackDailyText.setLineHeight(24)
+        
+//        rateIndexV.hrv.index.setLineHeight(32)
+//        rateIndexV.pulseV.index.setLineHeight(32)
+//        rateIndexV.status.index.setLineHeight(32)
+//        
+//        rateIndexV.hrv.index.
+        
 //        tableView.
         
 //        title.alignment(to: .leading)

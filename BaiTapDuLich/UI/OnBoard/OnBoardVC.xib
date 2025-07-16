@@ -21,21 +21,14 @@
             <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJP-C4-c8a" userLabel="TieuDe">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which heart health issue concerns you the most?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJP-C4-c8a" userLabel="TieuDe">
                     <rect key="frame" x="46.666666666666657" y="180" width="309" height="76"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="76" id="VPk-jZ-Ev0"/>
                         <constraint firstAttribute="width" constant="309" id="n5S-1W-rAb"/>
                     </constraints>
-                    <attributedString key="attributedText">
-                        <fragment content="Which heart health issue concerns you the most?">
-                            <attributes>
-                                <color key="NSColor" name="Neutral1"/>
-                                <font key="NSFont" size="26" name="SFPro-Bold"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" minimumLineHeight="38" maximumLineHeight="38" tighteningFactorForTruncation="0.0"/>
-                            </attributes>
-                        </fragment>
-                    </attributedString>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                    <color key="textColor" name="Neutral1"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="vpj-We-DlH" userLabel="DanhSachLuaChon">

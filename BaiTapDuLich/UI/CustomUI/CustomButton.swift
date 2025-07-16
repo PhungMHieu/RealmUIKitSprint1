@@ -25,10 +25,10 @@ class RoundButton: UIButton{
         titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
 //        backgroundColor = .primary
         layer.cornerRadius = 16
-        layer.shadowColor = UIColor.shadow.cgColor
-        layer.shadowOpacity = 0.32
-        layer.shadowOffset = CGSize(width: 0, height: 4)
-        layer.shadowRadius = 12
+//        layer.shadowColor = UIColor.shadow.cgColor
+//        layer.shadowOpacity = 0.32
+//        layer.shadowOffset = CGSize(width: 0, height: 4)
+//        layer.shadowRadius = 12
         layer.masksToBounds = false
     }
 }

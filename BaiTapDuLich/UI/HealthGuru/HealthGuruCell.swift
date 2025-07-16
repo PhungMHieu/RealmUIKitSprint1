@@ -19,7 +19,9 @@ class HealthGuruCell: UITableViewCell {
         contentView.layer.cornerRadius = 16
         contentView.layer.masksToBounds = true
         contentView.clipsToBounds = true
+//        imageView?.image = #imageLiteral(resourceName: "monotoneCoffeeImage")
 //        cell.clipsToBounds = true
+//        #colorLiteral(red: 0.3176470697, green: 0.07450980693, blue: 0.02745098062, alpha: 1)
         // Initialization code
     }
 
@@ -36,6 +38,7 @@ class HealthGuruCell: UITableViewCell {
         healthGuruV.hrv.unit.textColor = color
         healthGuruV.status.index.textColor = color
         
+//        healthGuruV
 //        healthGuruV.pulseV.index.font = UIFont.boldSystemFont(ofSize: healthGuruV.pulseV.index.font.pointSize)
 //        healthGuruV.hrv.index.font = UIFont.boldSystemFont(ofSize: healthGuruV.pulseV.index.font.pointSize)
 //        healthGuruV.status.index.font = UIFont.boldSystemFont(ofSize: healthGuruV.pulseV.index.font.pointSize)

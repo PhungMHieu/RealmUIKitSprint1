@@ -31,6 +31,7 @@ class OnBoardVC: UIViewController{
         healthCollectionView.isScrollEnabled = false
         healthCollectionView.isPagingEnabled = true
         titleOfPage.text = pageTitle
+        titleOfPage.setLineHeight(38)
     }
     override func viewDidLayoutSubviews() {
         if let flowLayout = healthCollectionView.collectionViewLayout as? UICollectionViewFlowLayout{

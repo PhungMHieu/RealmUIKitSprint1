@@ -23,6 +23,7 @@ class HearHealthCell1: UICollectionViewCell {
 //        self.addTarget(self, action: <#T##Selector#>)
 //        layer.borderColor = UIColor.black.cgColor
         layer.cornerRadius = 20
+        title.setLineHeight(26)
 //        checkBox.image = UIImage(named: "monotoneCoffeeImage")
 //        checkBox.layer.cornerRadius = 5
 //        layer.masksToBounds = true

@@ -49,7 +49,12 @@ class IndexV: UIView {
             unit.isHidden = false
             unit.text = customIndex.unit
         }
+//        title.setLineHeight(20)
+        unit.setLineHeight(24)
+//        index.setLineHeight(32)
+        
         unit.setLetterSpacing(0.2)
         title.setLetterSpacing(0.2)
+//        index.set
     }
 }

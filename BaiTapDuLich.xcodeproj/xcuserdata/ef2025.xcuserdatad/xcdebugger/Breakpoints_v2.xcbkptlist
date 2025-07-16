@@ -62,9 +62,9 @@
             filePath = "BaiTapDuLich/UI/OnBoard/OnBoardVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "setUpRootVC()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
