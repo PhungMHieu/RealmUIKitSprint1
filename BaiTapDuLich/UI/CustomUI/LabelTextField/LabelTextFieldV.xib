@@ -29,7 +29,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="24" id="JIR-kh-cBo"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                             <color key="textColor" name="Neutral15"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -38,6 +38,7 @@
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Enter first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pAs-Cb-OUo" userLabel="Enter first name">
                                     <rect key="frame" x="12" y="14" width="393" height="24"/>
+                                    <color key="backgroundColor" name="Neutral5"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="24" id="k5T-nS-vP5"/>
                                     </constraints>
@@ -46,7 +47,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" name="Neutral5"/>
                             <constraints>
                                 <constraint firstItem="pAs-Cb-OUo" firstAttribute="centerX" secondItem="7uZ-20-SB3" secondAttribute="centerX" id="IrT-5b-CQc"/>
                                 <constraint firstAttribute="height" constant="52" id="JIH-WL-eaE"/>
@@ -78,6 +79,9 @@
         </namedColor>
         <namedColor name="Neutral15">
             <color red="0.34901960784313724" green="0.38039215686274508" blue="0.47843137254901963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Neutral5">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

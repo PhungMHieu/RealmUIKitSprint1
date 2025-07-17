@@ -30,14 +30,14 @@ class InformationVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Information"
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(didTapBackForBtn))
-        navigationItem.leftBarButtonItem?.tintColor = .neutral2
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(didTapBackForBtn))
+//        navigationItem.leftBarButtonItem?.tintColor = .neutral2
         //        self.view.layer.cornerRadius = 16
         //        self.layer.cornerRadius = 16
-        heightV.config(label: "Height", textField: "Cm")
-        weightV.config(label: "Weight", textField: "Kg")
-        firstNameV.config(label: "First name", textField: "Enter first name")
-        lastNameV.config(label: "Last name", textField: "Enter last name")
+        heightV.config(label: "Height", textField: "Enter height...")
+        weightV.config(label: "Weight", textField: "Enter weight...")
+        firstNameV.config(label: "First name", textField: "Enter first name...")
+        lastNameV.config(label: "Last name", textField: "Enter last name...")
         button.layer.cornerRadius = 16
         //        print(inf)
         if(mode == .update){
@@ -51,7 +51,7 @@ class InformationVC: UIViewController {
                 //                print(gender.numberOfSegments)
                 for i in 0..<gender.numberOfSegments{
                     print("\(gender.titleForSegment(at: i)) \(userProfile.gender.rawValue)")
-                    if(gender.titleForSegment(at: i) == userProfile.gender.rawValue){
+                    if(gender.titleForSegment(at: i)?.lowercased() == userProfile.gender.rawValue.lowercased()){
                         //                        print("\(gender.titleForSegment(at: i)) \(userProfile.gender.rawValue)")
                         //                        print(i)
                         gender.selectedSegmentIndex = i
@@ -83,7 +83,7 @@ class InformationVC: UIViewController {
             let weight = weightV.textField.text ?? "0"
             let height = heightV.textField.text ?? "0"
             let genderIndexPath = gender.selectedSegmentIndex
-            let genderString = gender.titleForSegment(at: genderIndexPath) ?? ""
+            let genderString = gender.titleForSegment(at: genderIndexPath)?.lowercased() ?? ""
             let selectedGender = Gender(rawValue: genderString)
             //            let selectedGender = Gender(description: genderString)
             //            print("\(selectedGender) la gender duoc chon")
@@ -113,7 +113,7 @@ class InformationVC: UIViewController {
                 userProfile?.weight = Double(weightValue) ?? 0.0
             }
             let genderString: String = gender.titleForSegment(at: gender.selectedSegmentIndex) ?? ""
-            if let selectedGender = Gender(rawValue: genderString) {
+            if let selectedGender = Gender(rawValue: genderString.lowercased()) {
                 userProfile?.gender = selectedGender
             }
             if let userProfile = userProfile{

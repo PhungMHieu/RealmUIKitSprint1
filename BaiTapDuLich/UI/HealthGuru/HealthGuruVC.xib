@@ -32,7 +32,7 @@
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="XMLID_482_" translatesAutoresizingMaskIntoConstraints="NO" id="Uci-YN-jI3">
                             <rect key="frame" x="0.0" y="0.0" width="263" height="241"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CTA Measure" translatesAutoresizingMaskIntoConstraints="NO" id="YdH-SV-rsB">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CTAMeasure" translatesAutoresizingMaskIntoConstraints="NO" id="YdH-SV-rsB">
                             <rect key="frame" x="0.0" y="0.0" width="263" height="241"/>
                             <color key="backgroundColor" name="backgroundTrang2"/>
                         </imageView>
@@ -62,10 +62,10 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dcs-tk-kho">
                             <rect key="frame" x="0.0" y="104" width="370" height="80"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Vit-BZ-2k9">
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Vit-BZ-2k9" userLabel="Like5CheckDailyClickHeart">
                                     <rect key="frame" x="16" y="16" width="338" height="48"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="YUW-wC-Qty">
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="YUW-wC-Qty" userLabel="Like5TrackDaily">
                                             <rect key="frame" x="0.0" y="0.0" width="116" height="28"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Like 5" translatesAutoresizingMaskIntoConstraints="NO" id="IZT-64-dVg">
@@ -135,7 +135,7 @@
         </view>
     </objects>
     <resources>
-        <image name="CTA Measure" width="263" height="241"/>
+        <image name="CTAMeasure" width="263" height="241"/>
         <image name="Like 5" width="33" height="31"/>
         <image name="XMLID_482_" width="263" height="241"/>
         <namedColor name="TrackDailyApp">

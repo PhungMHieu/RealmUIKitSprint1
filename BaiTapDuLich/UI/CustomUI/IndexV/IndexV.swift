@@ -50,7 +50,7 @@ class IndexV: UIView {
             unit.text = customIndex.unit
         }
 //        title.setLineHeight(20)
-        unit.setLineHeight(24)
+//        unit.setLineHeight(24)
 //        index.setLineHeight(32)
         
         unit.setLetterSpacing(0.2)

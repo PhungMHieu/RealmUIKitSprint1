@@ -51,19 +51,19 @@ class OnBoardVC: UIViewController{
               let window = sceneDelegate.window else { return }
         let settingsVC = SettingsVC()
         let settingsNavi = UINavigationController(rootViewController: settingsVC)
-        settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gearshape"), selectedImage: UIImage(systemName: "gearshape.fill"))
+        settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: .setting, selectedImage: .settingRed)
         let healthGuruVC = HealthGuruVC()
-        healthGuruVC.tabBarItem = UITabBarItem(title: "Report", image: UIImage(named: "Chart 1"), selectedImage: UIImage(named: "Chart"))
+        healthGuruVC.tabBarItem = UITabBarItem(title: "Report", image: .chart, selectedImage: .chartRed)
         let healthGuruNavi = UINavigationController(rootViewController: healthGuruVC)
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [healthGuruNavi, settingsNavi]
         tabBarController.tabBar.tintColor = .primary
         tabBarController.tabBar.barTintColor = .neutral5
-        let apperance = UITabBarAppearance()
-        apperance.configureWithOpaqueBackground()
-        apperance.backgroundColor = .neutral5
-        tabBarController.tabBar.standardAppearance = apperance
-        tabBarController.tabBar.scrollEdgeAppearance = apperance
+//        let apperance = tabBarController.tabBar.standardAppearance
+//        apperance.configureWithOpaqueBackground()
+//        apperance.backgroundColor = .neutral5
+//        tabBarController.tabBar.standardAppearance = apperance
+//        tabBarController.tabBar.scrollEdgeAppearance = apperance
         tabBarController.tabBar.layer.cornerRadius = 20
         tabBarController.tabBar.layer.masksToBounds = true
         tabBarController.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -85,6 +85,7 @@ class OnBoardVC: UIViewController{
                     let indexPath = IndexPath(item: index, section: 0)
                     nextBtn.backgroundColor = .neutral3
                     healthCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
+                    break
                 }
             }
         }

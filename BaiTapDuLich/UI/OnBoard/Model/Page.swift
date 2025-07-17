@@ -14,19 +14,19 @@ enum Page: String, CaseIterable{
     var items: [HearlIssue]{
         switch self{
         case .page1: [
-            HearlIssue(healIssue: "Heart rate", image: "pulse"),
-            HearlIssue(healIssue: "High Blood\nPressure", image: "hybertension"),
-            HearlIssue(healIssue: "Stress & Anxiety", image: "stress"),
-            HearlIssue(healIssue: "Low Energy\nLevels", image: "energy-consumption")]
+            HearlIssue(healIssue: "Heart rate", image: "pulseImage"),
+            HearlIssue(healIssue: "High Blood\nPressure", image: "hypertensionImage"),
+            HearlIssue(healIssue: "Stress & Anxiety", image: "stressImage"),
+            HearlIssue(healIssue: "Low Energy\nLevels", image: "energyConsumptionImage")]
         case .page2: [
-            HearlIssue(healIssue: "Improve Heart\nHealth", image: "dumbbell"),
-            HearlIssue(healIssue: "Improve blood\npressure health", image: "pressure"),
-            HearlIssue(healIssue: "Reduce Stress", image: "harmony"),
-            HearlIssue(healIssue: "Increase Energy\nLevels", image: "no-energy")]
+            HearlIssue(healIssue: "Improve Heart\nHealth", image: "dumbbellImage"),
+            HearlIssue(healIssue: "Improve blood\npressure health", image: "pressureImage"),
+            HearlIssue(healIssue: "Reduce Stress", image: "harmonyImage"),
+            HearlIssue(healIssue: "Increase Energy\nLevels", image: "noEnergyImage")]
         case .page3:[
-            HearlIssue(healIssue: "Educational Plan", image: "plan"),
-            HearlIssue(healIssue: "Exercise Plan", image: "exercise-routine"),
-            HearlIssue(healIssue: "Health Tests", image: "stress-test")]
+            HearlIssue(healIssue: "Educational Plan", image: "planImage"),
+            HearlIssue(healIssue: "Exercise Plan", image: "exerciseRoutineImage"),
+            HearlIssue(healIssue: "Health Tests", image: "stressTestImage")]
         }
     }
     var titles: String{

@@ -13,24 +13,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-//        guard let _ = (scene as? UIWindowScene) else { return }
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-//        let vc = ProfileVC()
-//        let vc = InformationVC()
-//        let vc = Trang1VC()
         let vc = Page1VC()
         let navi = UINavigationController(rootViewController: vc)
-//        let vc = Trang2VC()
         let settingsVC = SettingsVC()
         let settingsNavi = UINavigationController(rootViewController: settingsVC)
-        settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: UIImage(systemName: "gearshape"), selectedImage: UIImage(systemName: "gearshape.fill"))
+        settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: .setting, selectedImage: .settingRed)
         let healthGuruVC = HealthGuruVC()
-//        let healthNavi = UINavigationController(rootViewController: healthGuruVC)
-        healthGuruVC.tabBarItem = UITabBarItem(title: "Report", image: UIImage(named: "Chart 1"), selectedImage: UIImage(named: "Chart 1"))
+        healthGuruVC.tabBarItem = UITabBarItem(title: "Report", image: .chart, selectedImage: .chartRed)
 //        healthGuruVC.tabBarItem = UITabBarItem(title: "Report", image: UIImage(systemName: "Chart 1"), selectedImage: UIImage(systemName: "Chart"))
 //        settingsVC.tabBarItem
         let healthGuruNavi = UINavigationController(rootViewController: healthGuruVC)
@@ -47,19 +38,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         apperance.configureWithOpaqueBackground()
         apperance.backgroundColor = .neutral5
 //            apperance.layer.cornerRadius = 10
-        tabBarController.tabBar.standardAppearance = apperance
-        tabBarController.tabBar.scrollEdgeAppearance = apperance
+//        tabBarController.tabBar.standardAppearance = apperance
+//        tabBarController.tabBar.scrollEdgeAppearance = apperance
         tabBarController.tabBar.layer.cornerRadius = 20
         tabBarController.tabBar.layer.masksToBounds = true
         
         tabBarController.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-
-//        if(UserDefaults.standard.bool(forKey: ("didEnterMainApp"))){
-//            window.rootViewController = tabBarController
-//        }else{
-//            window.rootViewController = navi
-//        }
-        window.rootViewController = navi
+//        tab
+        if(UserDefaults.standard.bool(forKey: ("didEnterMainApp"))){
+            window.rootViewController = tabBarController
+        }else{
+            window.rootViewController = navi
+        }
+//        window.rootViewController = navi
 //
         
         self.window = window

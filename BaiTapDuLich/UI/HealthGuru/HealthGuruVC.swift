@@ -68,10 +68,10 @@ class HealthGuruVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         tableView.dataSource = self
         tableView.separatorStyle = .none
         clickHeartText.setLetterSpacing(0.2)
-        clickHeartText.setLineHeight(20)
+//        clickHeartText.setLineHeight(20)
         
         trackDailyText.setLetterSpacing(0.2)
-        trackDailyText.setLineHeight(24)
+//        trackDailyText.setLineHeight(24)
         
 //        rateIndexV.hrv.index.setLineHeight(32)
 //        rateIndexV.pulseV.index.setLineHeight(32)
@@ -102,8 +102,10 @@ class HealthGuruVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             self?.updateBackground()
             self?.tableView.reloadData()
         }
-        vc.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(vc, animated: true)
+        let nav = UINavigationController(rootViewController: vc)
+//        vc.hidesBottomBarWhenPushed = true
+        present(nav, animated: true)
+//        navigationController?.pushViewController(vc, animated: true)
     }
     
 }

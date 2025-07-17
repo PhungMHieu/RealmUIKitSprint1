@@ -13,8 +13,55 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        setUpTabBar()
+        setUpNavBar()
         return true
+    }
+    func setUpNavBar(){
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = .clear
+        appearance.titleTextAttributes = [
+            .font: UIFont.boldSystemFont(ofSize: 20),
+            .foregroundColor: UIColor.neutral1
+        ]
+        let backImage = UIImage.left2.withRenderingMode(.alwaysOriginal)
+        appearance.setBackIndicatorImage(backImage, transitionMaskImage: backImage)
+//        UIBarButtonItem.appearance().setTitleTextAttributes([
+//            .font: UIFont.systemFont(ofSize: 50),
+//            .foregroundColor: UIColor.red
+//        ], for: .normal)
+        let backButtonAppearance = UIBarButtonItemAppearance()
+        backButtonAppearance.normal.titleTextAttributes = [
+            .foregroundColor: UIColor.clear
+        ]
+        appearance.backButtonAppearance = backButtonAppearance
+        appearance.shadowColor = .clear
+//        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -1000,vertical: 0), for: .default)
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        UINavigationBar.appearance().compactAppearance = appearance
+        //        ßappearance.setBackIndicatorImage(/**/, transitionMaskImage: T##UIImage?)
+    }
+    func setUpTabBar(){
+        let apperance = UITabBarAppearance()
+        apperance.configureWithOpaqueBackground()
+        apperance.backgroundColor = .neutral5
+        // Override point for customization after application launch.
+//        let attributedString = NSAttributedString()
+        let normalAttributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: UIColor.neutral4,
+            .font: UIFont.systemFont(ofSize: 14)
+        ]
+        let selectedAttributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: UIColor.primary,
+            .font: UIFont.systemFont(ofSize: 14)
+        ]
+        apperance.stackedLayoutAppearance.normal.titleTextAttributes = normalAttributes
+        apperance.stackedLayoutAppearance.selected
+            .titleTextAttributes = selectedAttributes
+        UITabBar.appearance().standardAppearance = apperance
+        UITabBar.appearance().scrollEdgeAppearance = apperance
     }
 
     // MARK: UISceneSession Lifecycle

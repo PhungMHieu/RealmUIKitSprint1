@@ -32,11 +32,8 @@ class ProfileVC: UIViewController {
     var userIndex: Int!
     
     weak var profileDelegate: ProfileDelegate?
-    weak var profileDeleteDelegate: ProfileDeleteDelegate?
 //    weak var profileDeleteDelegate: ProfileDeleteDelegate?
-//    override func viewWillAppear(_ animated: Bool) {
-//        
-//    }
+//    weak var profileDeleteDelegate: ProfileDeleteDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +52,8 @@ class ProfileVC: UIViewController {
 //        UITableView.headerView(/*<#T##self: UITableView##UITableView#>*/)
 //        editBtn.layer.cornerRadius = 16
         fullName.text = userProfile?.fullName
-        genderRes.text = userProfile?.gender.rawValue
+        genderRes.text = userProfile?.gender.rawValue.capitalized
+        
         if let heightValue = userProfile?.height{
             heightRes.text = String(heightValue)
         }
@@ -109,7 +107,7 @@ class ProfileVC: UIViewController {
         }
 //        heightRes.text = userProfile?.height
 //        weightRes.text = (userProfile?.weight)
-        genderRes.text = (userProfile?.gender.rawValue)
+        genderRes.text = (userProfile?.gender.rawValue)?.capitalized
         if let bmiValue = (userProfile?.calculateBMI()){
             bmi.text = String(bmiValue)
         }

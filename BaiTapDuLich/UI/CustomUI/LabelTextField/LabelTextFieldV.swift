@@ -41,7 +41,11 @@ class LabelTextFieldV: UIView {
         self.viewTextField.layer.borderWidth = 1
         self.viewTextField.layer.borderColor = UIColor.neutral4.cgColor
         self.label.text = label
-        self.textField.placeholder = textField
+//        self.textField.placeholder = textField
+        self.textField.attributedPlaceholder = NSAttributedString(string: textField, attributes: [
+            .foregroundColor: UIColor.neutral3
+        ])
+//        self.textField.placeholder
         //        self.textField.setBorder(radius: 16, color: .neutral4, width: 1)
     }
 }

@@ -342,13 +342,13 @@
 				845E251C2E1A93030098E637 /* LabelTextField */,
 				845E25062E1984C80098E637 /* IndexV */,
 				845E25012E1981AB0098E637 /* RateIndexV */,
-				849B2C822E16E4FF000BCDD4 /* CustomButton.swift */,
 				849B2C992E17E0C2000BCDD4 /* HearHealthV.swift */,
 				849B2C9B2E17E0D8000BCDD4 /* HearHealthV.xib */,
 				849B2C9D2E17ECEC000BCDD4 /* CheckBoxView.swift */,
 				849B2C9F2E17EE2D000BCDD4 /* CheckBoxView.xib */,
 				845E24EB2E1909600098E637 /* Trang234V.swift */,
 				845E24ED2E1909720098E637 /* Trang234V.xib */,
+				849B2C822E16E4FF000BCDD4 /* CustomButton.swift */,
 			);
 			path = CustomUI;
 			sourceTree = "<group>";

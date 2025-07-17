@@ -62,8 +62,8 @@
                                         <constraint firstAttribute="height" constant="32" id="CQs-oW-yep"/>
                                     </constraints>
                                     <segments>
-                                        <segment title="male"/>
-                                        <segment title="female"/>
+                                        <segment title="Male"/>
+                                        <segment title="Female"/>
                                     </segments>
                                 </segmentedControl>
                             </subviews>
@@ -97,7 +97,9 @@
                     </constraints>
                     <color key="tintColor" name="Neutral5"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Update"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Update">
+                        <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                    </buttonConfiguration>
                     <connections>
                         <action selector="btn:" destination="-1" eventType="touchUpInside" id="p1f-6E-9xh"/>
                     </connections>

@@ -30,7 +30,9 @@
                     </constraints>
                     <color key="tintColor" name="Neutral5"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Add">
+                        <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="18"/>
+                    </buttonConfiguration>
                     <connections>
                         <action selector="saveAction:" destination="-1" eventType="touchUpInside" id="BY9-Ta-cqV"/>
                     </connections>
