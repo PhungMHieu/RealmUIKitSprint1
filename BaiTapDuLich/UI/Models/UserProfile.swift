@@ -14,11 +14,10 @@ class UserProfile {
     var fullName: String{
         return "\(firstName) \(lastName)"
     }
-//    var bmi: Double
     var weight: Double
     var height: Double
     func calculateBMI()->Double{
-        return Double(Int(weight / (height * height / 100_00)))
+        return Double(String(format: "%.1f",(weight / (height * height / 100_00)))) ?? 0
     }
     var gender: Gender
     init(firstName: String, lastName: String, weight: Double, height: Double, gender: Gender) {
@@ -28,16 +27,19 @@ class UserProfile {
         self.height = height
         self.gender = gender
     }
+    func getGender() -> String {
+        return gender.description
+    }
 }
 enum Gender: String{
     case male
     case female
-    case other
+//    case other
     var description: String {
         switch self {
-            case .male: return "Nam"
-            case .female: return "Nữ"
-            case .other: return "Khác"
+            case .male: return "Male"
+            case .female: return "Female"
+//            case .other: return "Khác"
         }
     }
 }
@@ -49,7 +51,7 @@ extension Gender {
         case Gender.female.description:
             self = .female
         default:
-            self = .other
+            self = .male
         }
     }
 }

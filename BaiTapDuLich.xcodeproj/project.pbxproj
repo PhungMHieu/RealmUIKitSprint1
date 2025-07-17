@@ -17,13 +17,7 @@
 		842A04422E240C52007C9919 /* ParentHearHealthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A043F2E240C52007C9919 /* ParentHearHealthCell.swift */; };
 		842A044A2E2694A2007C9919 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04492E2694A2007C9919 /* Page.swift */; };
 		842A04CE2E26C3C5007C9919 /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 842A04CD2E26C3C5007C9919 /* SF-Pro.ttf */; };
-		845E24E92E18424A0098E637 /* Trang3VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E24E72E18424A0098E637 /* Trang3VC.swift */; };
-		845E24EA2E18424A0098E637 /* Trang3VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845E24E82E18424A0098E637 /* Trang3VC.xib */; };
-		845E24EC2E1909600098E637 /* Trang234V.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E24EB2E1909600098E637 /* Trang234V.swift */; };
-		845E24EE2E1909720098E637 /* Trang234V.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845E24ED2E1909720098E637 /* Trang234V.xib */; };
 		845E24F22E1910300098E637 /* HearIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E24F12E1910250098E637 /* HearIssue.swift */; };
-		845E24FA2E19775C0098E637 /* Trang4VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E24F82E19775C0098E637 /* Trang4VC.swift */; };
-		845E24FB2E19775C0098E637 /* Trang4VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845E24F92E19775C0098E637 /* Trang4VC.xib */; };
 		845E24FF2E197D680098E637 /* HealthGuruVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E24FD2E197D680098E637 /* HealthGuruVC.swift */; };
 		845E25002E197D680098E637 /* HealthGuruVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845E24FE2E197D680098E637 /* HealthGuruVC.xib */; };
 		845E25032E1981CB0098E637 /* RateIndexV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E25022E1981CB0098E637 /* RateIndexV.swift */; };
@@ -56,12 +50,6 @@
 		849B2C802E169F93000BCDD4 /* Page1VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849B2C7F2E169F93000BCDD4 /* Page1VC.xib */; };
 		849B2C812E169F93000BCDD4 /* Page1VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B2C7E2E169F93000BCDD4 /* Page1VC.swift */; };
 		849B2C832E16E505000BCDD4 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B2C822E16E4FF000BCDD4 /* CustomButton.swift */; };
-		849B2C872E17A8FC000BCDD4 /* Page2VC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849B2C862E17A8FC000BCDD4 /* Page2VC.xib */; };
-		849B2C882E17A8FC000BCDD4 /* Page2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B2C852E17A8FC000BCDD4 /* Page2VC.swift */; };
-		849B2C972E17E078000BCDD4 /* HearHealthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B2C952E17E078000BCDD4 /* HearHealthCell.swift */; };
-		849B2C982E17E078000BCDD4 /* HearHealthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849B2C962E17E078000BCDD4 /* HearHealthCell.xib */; };
-		849B2C9A2E17E0C2000BCDD4 /* HearHealthV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B2C992E17E0C2000BCDD4 /* HearHealthV.swift */; };
-		849B2C9C2E17E0D8000BCDD4 /* HearHealthV.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849B2C9B2E17E0D8000BCDD4 /* HearHealthV.xib */; };
 		849B2C9E2E17ECEC000BCDD4 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849B2C9D2E17ECEC000BCDD4 /* CheckBoxView.swift */; };
 		849B2CA02E17EE2D000BCDD4 /* CheckBoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849B2C9F2E17EE2D000BCDD4 /* CheckBoxView.xib */; };
 /* End PBXBuildFile section */
@@ -77,13 +65,7 @@
 		842A04402E240C52007C9919 /* ParentHearHealthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParentHearHealthCell.xib; sourceTree = "<group>"; };
 		842A04492E2694A2007C9919 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		842A04CD2E26C3C5007C9919 /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
-		845E24E72E18424A0098E637 /* Trang3VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trang3VC.swift; sourceTree = "<group>"; };
-		845E24E82E18424A0098E637 /* Trang3VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Trang3VC.xib; sourceTree = "<group>"; };
-		845E24EB2E1909600098E637 /* Trang234V.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trang234V.swift; sourceTree = "<group>"; };
-		845E24ED2E1909720098E637 /* Trang234V.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Trang234V.xib; sourceTree = "<group>"; };
 		845E24F12E1910250098E637 /* HearIssue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearIssue.swift; sourceTree = "<group>"; };
-		845E24F82E19775C0098E637 /* Trang4VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trang4VC.swift; sourceTree = "<group>"; };
-		845E24F92E19775C0098E637 /* Trang4VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Trang4VC.xib; sourceTree = "<group>"; };
 		845E24FD2E197D680098E637 /* HealthGuruVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthGuruVC.swift; sourceTree = "<group>"; };
 		845E24FE2E197D680098E637 /* HealthGuruVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthGuruVC.xib; sourceTree = "<group>"; };
 		845E25022E1981CB0098E637 /* RateIndexV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateIndexV.swift; sourceTree = "<group>"; };
@@ -118,12 +100,6 @@
 		849B2C7E2E169F93000BCDD4 /* Page1VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page1VC.swift; sourceTree = "<group>"; };
 		849B2C7F2E169F93000BCDD4 /* Page1VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Page1VC.xib; sourceTree = "<group>"; };
 		849B2C822E16E4FF000BCDD4 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
-		849B2C852E17A8FC000BCDD4 /* Page2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page2VC.swift; sourceTree = "<group>"; };
-		849B2C862E17A8FC000BCDD4 /* Page2VC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Page2VC.xib; sourceTree = "<group>"; };
-		849B2C952E17E078000BCDD4 /* HearHealthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearHealthCell.swift; sourceTree = "<group>"; };
-		849B2C962E17E078000BCDD4 /* HearHealthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HearHealthCell.xib; sourceTree = "<group>"; };
-		849B2C992E17E0C2000BCDD4 /* HearHealthV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearHealthV.swift; sourceTree = "<group>"; };
-		849B2C9B2E17E0D8000BCDD4 /* HearHealthV.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HearHealthV.xib; sourceTree = "<group>"; };
 		849B2C9D2E17ECEC000BCDD4 /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
 		849B2C9F2E17EE2D000BCDD4 /* CheckBoxView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckBoxView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,22 +124,100 @@
 			path = InformationHeart;
 			sourceTree = "<group>";
 		};
-		842A04182E2400C3007C9919 /* Cells */ = {
+		840428762E296AB200719C57 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				849B2C952E17E078000BCDD4 /* HearHealthCell.swift */,
-				849B2C962E17E078000BCDD4 /* HearHealthCell.xib */,
+				842A041D2E240177007C9919 /* OnBoardVC.swift */,
+				842A041E2E240177007C9919 /* OnBoardVC.xib */,
 			);
-			path = Cells;
+			path = View;
+			sourceTree = "<group>";
+		};
+		840428772E296AD400719C57 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				845E25162E1A5F190098E637 /* SettingsCell.swift */,
+				845E25172E1A5F190098E637 /* SettingsCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		840428782E296ADB00719C57 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				845E25112E1A345C0098E637 /* SettingsVC.swift */,
+				845E25122E1A345C0098E637 /* SettingsVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		840428792E296AF900719C57 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				845E251A2E1A8E3B0098E637 /* Setting.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8404287A2E296B0B00719C57 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				845E25322E1B4C0B0098E637 /* HealthGuruCell.xib */,
+				845E25312E1B4C0B0098E637 /* HealthGuruCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		8404287B2E296B1400719C57 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				845E24FD2E197D680098E637 /* HealthGuruVC.swift */,
+				845E24FE2E197D680098E637 /* HealthGuruVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8404287C2E296B2900719C57 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				845E250E2E198B9B0098E637 /* CustomIndex.swift */,
+				845E250C2E198AA30098E637 /* Index.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8404287D2E296B5500719C57 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				845E25212E1A93230098E637 /* InformationVC.swift */,
+				845E25222E1A93230098E637 /* InformationVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8404287E2E296B5C00719C57 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				845E252B2E1A94D20098E637 /* FormMode.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8404287F2E296BBD00719C57 /* CheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				849B2C9D2E17ECEC000BCDD4 /* CheckBoxView.swift */,
+				849B2C9F2E17EE2D000BCDD4 /* CheckBoxView.xib */,
+			);
+			path = CheckBox;
 			sourceTree = "<group>";
 		};
 		842A04192E24015E007C9919 /* OnBoard */ = {
 			isa = PBXGroup;
 			children = (
+				840428762E296AB200719C57 /* View */,
 				842A04482E2693EE007C9919 /* Model */,
 				842A041C2E240177007C9919 /* Cells */,
-				842A041D2E240177007C9919 /* OnBoardVC.swift */,
-				842A041E2E240177007C9919 /* OnBoardVC.xib */,
 			);
 			path = OnBoard;
 			sourceTree = "<group>";
@@ -187,31 +241,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		845E24E22E1841A10098E637 /* Page3 */ = {
-			isa = PBXGroup;
-			children = (
-				845E24E72E18424A0098E637 /* Trang3VC.swift */,
-				845E24E82E18424A0098E637 /* Trang3VC.xib */,
-			);
-			path = Page3;
-			sourceTree = "<group>";
-		};
-		845E24F72E19774F0098E637 /* Page4 */ = {
-			isa = PBXGroup;
-			children = (
-				845E24F82E19775C0098E637 /* Trang4VC.swift */,
-				845E24F92E19775C0098E637 /* Trang4VC.xib */,
-			);
-			path = Page4;
-			sourceTree = "<group>";
-		};
 		845E24FC2E197D540098E637 /* HealthGuru */ = {
 			isa = PBXGroup;
 			children = (
-				845E24FD2E197D680098E637 /* HealthGuruVC.swift */,
-				845E24FE2E197D680098E637 /* HealthGuruVC.xib */,
-				845E25312E1B4C0B0098E637 /* HealthGuruCell.swift */,
-				845E25322E1B4C0B0098E637 /* HealthGuruCell.xib */,
+				8404287C2E296B2900719C57 /* Model */,
+				8404287B2E296B1400719C57 /* View */,
+				8404287A2E296B0B00719C57 /* Cell */,
 			);
 			path = HealthGuru;
 			sourceTree = "<group>";
@@ -238,11 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				845E252D2E1A94E80098E637 /* UserProfile.swift */,
-				845E251A2E1A8E3B0098E637 /* Setting.swift */,
-				845E250E2E198B9B0098E637 /* CustomIndex.swift */,
-				845E250C2E198AA30098E637 /* Index.swift */,
 				845E24F12E1910250098E637 /* HearIssue.swift */,
-				845E252B2E1A94D20098E637 /* FormMode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -250,10 +281,9 @@
 		845E25102E1A34360098E637 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				845E25112E1A345C0098E637 /* SettingsVC.swift */,
-				845E25122E1A345C0098E637 /* SettingsVC.xib */,
-				845E25162E1A5F190098E637 /* SettingsCell.swift */,
-				845E25172E1A5F190098E637 /* SettingsCell.xib */,
+				840428792E296AF900719C57 /* Model */,
+				840428782E296ADB00719C57 /* View */,
+				840428772E296AD400719C57 /* Cell */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -270,8 +300,8 @@
 		845E25232E1A93230098E637 /* Information */ = {
 			isa = PBXGroup;
 			children = (
-				845E25212E1A93230098E637 /* InformationVC.swift */,
-				845E25222E1A93230098E637 /* InformationVC.xib */,
+				8404287E2E296B5C00719C57 /* Model */,
+				8404287D2E296B5500719C57 /* View */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -326,31 +356,23 @@
 				845E25102E1A34360098E637 /* Settings */,
 				845E250B2E198A960098E637 /* Models */,
 				845E24FC2E197D540098E637 /* HealthGuru */,
-				845E24F72E19774F0098E637 /* Page4 */,
-				845E24E22E1841A10098E637 /* Page3 */,
-				849B2C842E17A8E6000BCDD4 /* Page2 */,
 				849B2C7D2E169F82000BCDD4 /* Page1 */,
-				849B2C7C2E169E3B000BCDD4 /* CustomUI */,
+				849B2C7C2E169E3B000BCDD4 /* CustomView */,
 				845E25282E1A94BC0098E637 /* Profile */,
 			);
 			path = UI;
 			sourceTree = "<group>";
 		};
-		849B2C7C2E169E3B000BCDD4 /* CustomUI */ = {
+		849B2C7C2E169E3B000BCDD4 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
+				8404287F2E296BBD00719C57 /* CheckBox */,
 				845E251C2E1A93030098E637 /* LabelTextField */,
 				845E25062E1984C80098E637 /* IndexV */,
 				845E25012E1981AB0098E637 /* RateIndexV */,
-				849B2C992E17E0C2000BCDD4 /* HearHealthV.swift */,
-				849B2C9B2E17E0D8000BCDD4 /* HearHealthV.xib */,
-				849B2C9D2E17ECEC000BCDD4 /* CheckBoxView.swift */,
-				849B2C9F2E17EE2D000BCDD4 /* CheckBoxView.xib */,
-				845E24EB2E1909600098E637 /* Trang234V.swift */,
-				845E24ED2E1909720098E637 /* Trang234V.xib */,
 				849B2C822E16E4FF000BCDD4 /* CustomButton.swift */,
 			);
-			path = CustomUI;
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		849B2C7D2E169F82000BCDD4 /* Page1 */ = {
@@ -360,16 +382,6 @@
 				849B2C7F2E169F93000BCDD4 /* Page1VC.xib */,
 			);
 			path = Page1;
-			sourceTree = "<group>";
-		};
-		849B2C842E17A8E6000BCDD4 /* Page2 */ = {
-			isa = PBXGroup;
-			children = (
-				842A04182E2400C3007C9919 /* Cells */,
-				849B2C852E17A8FC000BCDD4 /* Page2VC.swift */,
-				849B2C862E17A8FC000BCDD4 /* Page2VC.xib */,
-			);
-			path = Page2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,8 +447,6 @@
 			files = (
 				845E25252E1A93230098E637 /* InformationVC.xib in Resources */,
 				842A04412E240C52007C9919 /* ParentHearHealthCell.xib in Resources */,
-				849B2C982E17E078000BCDD4 /* HearHealthCell.xib in Resources */,
-				845E24EA2E18424A0098E637 /* Trang3VC.xib in Resources */,
 				2C5ECA982E1B6A4900AD6A18 /* InformationHeartVC.xib in Resources */,
 				845E252A2E1A94BC0098E637 /* ProfileVC.xib in Resources */,
 				842A041F2E240177007C9919 /* HearHealthCell1.xib in Resources */,
@@ -450,14 +460,10 @@
 				845E25002E197D680098E637 /* HealthGuruVC.xib in Resources */,
 				845E25202E1A93140098E637 /* LabelTextFieldV.xib in Resources */,
 				845E250A2E1985080098E637 /* IndexV.xib in Resources */,
-				845E24FB2E19775C0098E637 /* Trang4VC.xib in Resources */,
 				845E25192E1A5F190098E637 /* SettingsCell.xib in Resources */,
 				842A04CE2E26C3C5007C9919 /* SF-Pro.ttf in Resources */,
 				849B2C802E169F93000BCDD4 /* Page1VC.xib in Resources */,
-				849B2C872E17A8FC000BCDD4 /* Page2VC.xib in Resources */,
 				845E25342E1B4C0B0098E637 /* HealthGuruCell.xib in Resources */,
-				845E24EE2E1909720098E637 /* Trang234V.xib in Resources */,
-				849B2C9C2E17E0D8000BCDD4 /* HearHealthV.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,22 +482,17 @@
 				845E250F2E198BA80098E637 /* CustomIndex.swift in Sources */,
 				845E24F22E1910300098E637 /* HearIssue.swift in Sources */,
 				849B2C722E169E18000BCDD4 /* AppDelegate.swift in Sources */,
-				845E24FA2E19775C0098E637 /* Trang4VC.swift in Sources */,
 				845E25082E1984FC0098E637 /* IndexV.swift in Sources */,
 				849B2C732E169E18000BCDD4 /* SceneDelegate.swift in Sources */,
 				845E25332E1B4C0B0098E637 /* HealthGuruCell.swift in Sources */,
 				845E252E2E1A94E80098E637 /* UserProfile.swift in Sources */,
 				849B2C742E169E18000BCDD4 /* ViewController.swift in Sources */,
 				845E252C2E1A94D20098E637 /* FormMode.swift in Sources */,
-				845E24EC2E1909600098E637 /* Trang234V.swift in Sources */,
 				849B2C812E169F93000BCDD4 /* Page1VC.swift in Sources */,
 				845E25132E1A345C0098E637 /* SettingsVC.swift in Sources */,
 				2C5ECA972E1B6A4900AD6A18 /* InformationHeartVC.swift in Sources */,
-				849B2C9A2E17E0C2000BCDD4 /* HearHealthV.swift in Sources */,
 				845E251B2E1A8E3F0098E637 /* Setting.swift in Sources */,
-				845E24E92E18424A0098E637 /* Trang3VC.swift in Sources */,
 				849B2C9E2E17ECEC000BCDD4 /* CheckBoxView.swift in Sources */,
-				849B2C882E17A8FC000BCDD4 /* Page2VC.swift in Sources */,
 				845E251E2E1A930D0098E637 /* LabelTextFieldV.swift in Sources */,
 				845E250D2E198AA70098E637 /* Index.swift in Sources */,
 				845E25032E1981CB0098E637 /* RateIndexV.swift in Sources */,
@@ -499,7 +500,6 @@
 				845E24FF2E197D680098E637 /* HealthGuruVC.swift in Sources */,
 				845E25242E1A93230098E637 /* InformationVC.swift in Sources */,
 				849B2C832E16E505000BCDD4 /* CustomButton.swift in Sources */,
-				849B2C972E17E078000BCDD4 /* HearHealthCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

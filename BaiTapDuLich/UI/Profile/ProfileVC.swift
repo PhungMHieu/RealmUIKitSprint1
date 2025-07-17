@@ -12,7 +12,7 @@ protocol ProfileDelegate: AnyObject{
 protocol ProfileDeleteDelegate: AnyObject{
     func deleteProfile(_ index:Int)
 }
-class ProfileVC: UIViewController {
+class ProfileVC: UIViewController, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var editBtn: UIButton!
     @IBOutlet weak var genderRes: UILabel!
@@ -32,66 +32,48 @@ class ProfileVC: UIViewController {
     var userIndex: Int!
     
     weak var profileDelegate: ProfileDelegate?
-//    weak var profileDeleteDelegate: ProfileDeleteDelegate?
-//    weak var profileDeleteDelegate: ProfileDeleteDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(didTapBackForBtn))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: .icLeft2, style: .plain, target: self, action: #selector(didTapBack))
+        let edgePan = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(didTapBack))
+        edgePan.edges = .left
+        view.addGestureRecognizer(edgePan)
+
         self.userProfileV.layer.cornerRadius = 16
         self.userProfileV.clipsToBounds = true
-//        self.profileView.backgroundColor = .accentNormal
-//        if userProfile == nil{
-////            view.isHidden = true
-//            let informationVC = InformationVC()
-//            informationVC.userProfile = self.userProfile
-//            informationVC.informationDelegate = self
-//            navigationController?.pushViewController(informationVC, animated: true)
-////            navigationController?.popViewController(animated: true)
-//        }
-//        UITableView.headerView(/*<#T##self: UITableView##UITableView#>*/)
-//        editBtn.layer.cornerRadius = 16
         fullName.text = userProfile?.fullName
         genderRes.text = userProfile?.gender.rawValue.capitalized
         
         if let heightValue = userProfile?.height{
-            heightRes.text = String(heightValue)
+            heightRes.text = String(Int(heightValue))
         }
         if let weightValue = userProfile?.weight{
-            weightRes.text = String(weightValue)
+            weightRes.text = String(Int(weightValue))
         }
         if let bmiValue = userProfile?.calculateBMI(){
             bmi.text = String(bmiValue)
         }
         title = "Profile"
         let updateButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(didTapUpdate))
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.minimumLineHeight = 24
+        paragraphStyle.maximumLineHeight = 24
         let attributes: [NSAttributedString.Key: Any] = [
-            .font: UIFont.boldSystemFont(ofSize: 16)
+            .font: UIFont.systemFont(ofSize: 16, weight: UIFont.Weight.semibold),
+            .paragraphStyle: paragraphStyle
         ]
         updateButton.setTitleTextAttributes(attributes, for: .normal)
-        updateButton.tintColor = .primary
+        updateButton.tintColor = .primary1
         navigationItem.rightBarButtonItem = updateButton
         
-        let customLeftButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(didTapBack))
-        navigationItem.leftBarButtonItem = customLeftButton
-        navigationItem.leftBarButtonItem?.tintColor = .neutral2
         profileDelegate?.getUpdateProfile(userProfile!)
-//        genderRes.text = userProfile?.gender.
-        // Do any additional setup after loading the view.
     }
-//    @IBAction func updateBtn(_ sender: UIButton) {
-//        let informationVC = InformationVC()
-//        informationVC.mode = .update
-//        informationVC.userProfile = userProfile
-//        informationVC.informationUpdateDelegate = self
-////        informationVC.
-//        navigationController?.pushViewController(informationVC, animated: true)
-//    }
+    
     func config(_ userProfile: UserProfile){
         self.userProfile = userProfile
         self.fullNameText = userProfile.fullName
         self.bmiText = String(Int(userProfile.calculateBMI()))
-//        print(userProfile.bmi)
         self.heightText = String(userProfile.height)
         self.weightText = String(userProfile.weight)
         self.genderText = userProfile.gender.rawValue
@@ -100,36 +82,34 @@ class ProfileVC: UIViewController {
     func updateUI(){
         fullName.text = userProfile?.fullName
         if let heightValue = userProfile?.height{
-            heightRes.text = String(heightValue)
+            heightRes.text = String(Int(heightValue))
         }
         if let weightValue = (userProfile?.weight){
-            weightRes.text = String(weightValue)
+            weightRes.text = String(Int(weightValue))
         }
-//        heightRes.text = userProfile?.height
-//        weightRes.text = (userProfile?.weight)
         genderRes.text = (userProfile?.gender.rawValue)?.capitalized
         if let bmiValue = (userProfile?.calculateBMI()){
             bmi.text = String(bmiValue)
         }
-//        bmi.text = (userProfile?.calculateBMI())
     }
     
     @objc func didTapBack(){
 //        updateUI()
         navigationController?.popToRootViewController(animated: true)
-//        navigationController?.popToViewController(vc, animated: true)
     }
     @objc func didTapUpdate(){
         let informationVC = InformationVC()
         informationVC.mode = .update
         informationVC.userProfile = userProfile
         informationVC.informationUpdateDelegate = self
-//        informationVC.
         navigationController?.pushViewController(informationVC, animated: true)
     }
-//    @objc func didTapBackForBtn(){
-//        navigationController?.popViewController(animated: true)
-//    }
+    @objc func didTapBackForBtn(){
+        navigationController?.popViewController(animated: true)
+    }
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        true
+    }
 }
 extension ProfileVC: InformationUpdateDelegate{
     func didUpdateUser(_ user: UserProfile) {

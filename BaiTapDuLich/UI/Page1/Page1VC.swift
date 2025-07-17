@@ -29,18 +29,11 @@ extension UILabel{
         paragraphStyle.minimumLineHeight = lineHeight
         paragraphStyle.maximumLineHeight = lineHeight
         paragraphStyle.alignment = self.textAlignment
-//        let attributedString: NSMutableAttributedString
         let attributes: [NSAttributedString.Key: Any] = [
             .font: self.font ?? UIFont.systemFont(ofSize: 3),
             .foregroundColor: self.textColor ?? UIColor.cyan,
             .paragraphStyle: paragraphStyle
         ]
-//        if let currentAttrText = self.attributedText{
-//            attributedString = NSMutableAttributedString(attributedString: currentAttrText)
-//        } else {
-//            attributedString = NSMutableAttributedString(string:text)
-//        }
-//        attributedString.addAttribute(.paragraphStyle, value: paragraphStyle, range: NSMakeRange(0, attributedString.length))
         let attributedString = NSAttributedString(string: text, attributes: attributes)
         self.attributedText = attributedString
     }

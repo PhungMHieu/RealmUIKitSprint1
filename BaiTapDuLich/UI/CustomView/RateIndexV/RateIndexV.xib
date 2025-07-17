@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RateIndexV" customModule="BaiTapDuLich" customModuleProvider="target">
+            <connections>
+                <outlet property="hrv" destination="DAF-K7-Zb6" id="xti-O6-YBM"/>
+                <outlet property="pulseV" destination="SdX-dI-Vlz" id="CWv-uz-3Qy"/>
+                <outlet property="status" destination="2GC-bp-2Gm" id="5kb-fN-Wxo"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="781" height="185"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icHeart" translatesAutoresizingMaskIntoConstraints="NO" id="0hY-de-0fV">
+                    <rect key="frame" x="12" y="12" width="56" height="161"/>
+                    <color key="backgroundColor" name="Neutral5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="56" id="nIq-eU-95I"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="eOe-ch-k90">
+                    <rect key="frame" x="81" y="12" width="680" height="161"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SdX-dI-Vlz" userLabel="PulseV" customClass="IndexV" customModule="BaiTapDuLich" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="215.33333333333334" height="161"/>
+                            <color key="backgroundColor" name="Neutral5"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAF-K7-Zb6" userLabel="HrvV" customClass="IndexV" customModule="BaiTapDuLich" customModuleProvider="target">
+                            <rect key="frame" x="232.33333333333331" y="0.0" width="215.33333333333331" height="161"/>
+                            <color key="backgroundColor" name="Neutral5"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2GC-bp-2Gm" userLabel="StatusV" customClass="IndexV" customModule="BaiTapDuLich" customModuleProvider="target">
+                            <rect key="frame" x="464.66666666666657" y="0.0" width="215.33333333333331" height="161"/>
+                            <color key="backgroundColor" name="Neutral5"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" name="Neutral5"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" name="Neutral5"/>
+            <constraints>
+                <constraint firstItem="eOe-ch-k90" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="IUO-Qu-sjS"/>
+                <constraint firstItem="eOe-ch-k90" firstAttribute="leading" secondItem="0hY-de-0fV" secondAttribute="trailing" constant="13" id="IfK-tc-vsq"/>
+                <constraint firstAttribute="trailing" secondItem="eOe-ch-k90" secondAttribute="trailing" constant="20" id="KQy-bR-xAJ"/>
+                <constraint firstItem="eOe-ch-k90" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="SkJ-cM-Fmu"/>
+                <constraint firstItem="0hY-de-0fV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="izN-mc-8Nw"/>
+                <constraint firstItem="0hY-de-0fV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="jld-jN-Vne"/>
+                <constraint firstAttribute="bottom" secondItem="0hY-de-0fV" secondAttribute="bottom" constant="12" id="xbD-41-gcY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="287.78625954198475" y="253.87323943661974"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icHeart" width="56" height="56"/>
+        <namedColor name="Neutral5">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

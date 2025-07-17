@@ -21,23 +21,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = .clear
+        UINavigationBar.appearance().tintColor = .neutral2
         appearance.titleTextAttributes = [
             .font: UIFont.boldSystemFont(ofSize: 20),
             .foregroundColor: UIColor.neutral1
         ]
-        let backImage = UIImage.left2.withRenderingMode(.alwaysOriginal)
+        let backImage = UIImage.icLeft2
         appearance.setBackIndicatorImage(backImage, transitionMaskImage: backImage)
-//        UIBarButtonItem.appearance().setTitleTextAttributes([
-//            .font: UIFont.systemFont(ofSize: 50),
-//            .foregroundColor: UIColor.red
-//        ], for: .normal)
         let backButtonAppearance = UIBarButtonItemAppearance()
         backButtonAppearance.normal.titleTextAttributes = [
             .foregroundColor: UIColor.clear
         ]
         appearance.backButtonAppearance = backButtonAppearance
         appearance.shadowColor = .clear
-//        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -1000,vertical: 0), for: .default)
+        
+////        UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -1000,vertical: 0), for: .default)
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
         UINavigationBar.appearance().compactAppearance = appearance

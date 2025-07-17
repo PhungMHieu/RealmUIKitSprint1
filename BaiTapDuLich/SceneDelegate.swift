@@ -19,27 +19,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navi = UINavigationController(rootViewController: vc)
         let settingsVC = SettingsVC()
         let settingsNavi = UINavigationController(rootViewController: settingsVC)
-        settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: .setting, selectedImage: .settingRed)
+        settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: .icSetting, selectedImage: .icSettingRed)
         let healthGuruVC = HealthGuruVC()
-        healthGuruVC.tabBarItem = UITabBarItem(title: "Report", image: .chart, selectedImage: .chartRed)
-//        healthGuruVC.tabBarItem = UITabBarItem(title: "Report", image: UIImage(systemName: "Chart 1"), selectedImage: UIImage(systemName: "Chart"))
-//        settingsVC.tabBarItem
+        healthGuruVC.tabBarItem = UITabBarItem(title: "Report", image: .icChart, selectedImage: .icChartRed)
         let healthGuruNavi = UINavigationController(rootViewController: healthGuruVC)
-    
-        
-//        let vc = TestCollectionVVc()
-//        let vc = ListUserVC()
-        
-//        window.rootViewController = navi
         let tabBarController = UITabBarController()
         tabBarController.viewControllers = [healthGuruNavi, settingsNavi]
         tabBarController.tabBar.tintColor = .primary
         let apperance = UITabBarAppearance()
         apperance.configureWithOpaqueBackground()
         apperance.backgroundColor = .neutral5
-//            apperance.layer.cornerRadius = 10
-//        tabBarController.tabBar.standardAppearance = apperance
-//        tabBarController.tabBar.scrollEdgeAppearance = apperance
+
         tabBarController.tabBar.layer.cornerRadius = 20
         tabBarController.tabBar.layer.masksToBounds = true
         
@@ -50,9 +40,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }else{
             window.rootViewController = navi
         }
-//        window.rootViewController = navi
-//
-        
+
         self.window = window
         window.makeKeyAndVisible()
 

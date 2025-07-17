@@ -14,7 +14,7 @@ enum Page: String, CaseIterable{
     var items: [HearlIssue]{
         switch self{
         case .page1: [
-            HearlIssue(healIssue: "Heart rate", image: "pulseImage"),
+            HearlIssue(healIssue: "Heart Rate", image: "pulseImage"),
             HearlIssue(healIssue: "High Blood\nPressure", image: "hypertensionImage"),
             HearlIssue(healIssue: "Stress & Anxiety", image: "stressImage"),
             HearlIssue(healIssue: "Low Energy\nLevels", image: "energyConsumptionImage")]
