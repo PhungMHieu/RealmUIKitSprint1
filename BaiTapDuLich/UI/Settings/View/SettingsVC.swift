@@ -95,7 +95,7 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let titleLabel = UILabel()
         titleLabel.text = "Settings"
         titleLabel.textColor = .neutral1
-        titleLabel.font = .systemFont(ofSize: 32, weight: .bold)
+        titleLabel.font = .systemFont(ofSize: 32, weight: .semibold)
         titleLabel.sizeToFit()
         let leftItem = UIBarButtonItem(customView: titleLabel)
         self.navigationItem.leftBarButtonItem = leftItem
