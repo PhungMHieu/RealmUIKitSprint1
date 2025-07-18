@@ -115,6 +115,7 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         imageView.frame = headerView.bounds
         imageView.layer.cornerRadius = 16
         imageView.contentMode = .scaleAspectFill
+//        imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         headerView.addSubview(imageView)
         tableView.tableHeaderView = headerView

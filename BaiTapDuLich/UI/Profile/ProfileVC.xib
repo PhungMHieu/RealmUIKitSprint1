@@ -26,7 +26,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dO5-hk-5v9" userLabel="userProfileV">
-                    <rect key="frame" x="31.666666666666671" y="341" width="45" height="214"/>
+                    <rect key="frame" x="31.666666666666657" y="341" width="330" height="214"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gFW-ZD-tLf" userLabel="fullIndex">
                             <rect key="frame" x="16" y="16" width="298" height="182"/>
@@ -157,19 +157,18 @@
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="hPK-db-SwS" userLabel="AvatarNameSV">
-                    <rect key="frame" x="0.0" y="136" width="108" height="177"/>
+                    <rect key="frame" x="0.0" y="136" width="393" height="177"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Ava" translatesAutoresizingMaskIntoConstraints="NO" id="cc8-AI-phg">
-                            <rect key="frame" x="0.0" y="0.0" width="108" height="108"/>
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="108"/>
                             <color key="backgroundColor" name="Background"/>
                             <color key="tintColor" name="Primary"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="108" id="3he-Oc-THh"/>
                                 <constraint firstAttribute="height" constant="108" id="9XF-wJ-UrJ"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="----" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5G-Uj-0jM">
-                            <rect key="frame" x="0.0" y="132" width="108" height="45"/>
+                            <rect key="frame" x="0.0" y="132" width="393" height="45"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
                             <color key="textColor" name="Neutral15"/>
                             <nil key="highlightedColor"/>
