@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icHeart" translatesAutoresizingMaskIntoConstraints="NO" id="0hY-de-0fV">
-                    <rect key="frame" x="12" y="12" width="56" height="161"/>
+                    <rect key="frame" x="12" y="64.666666666666671" width="56" height="56"/>
                     <color key="backgroundColor" name="Neutral5"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="56" id="nIq-eU-95I"/>
@@ -52,8 +52,7 @@
                 <constraint firstAttribute="trailing" secondItem="eOe-ch-k90" secondAttribute="trailing" constant="20" id="KQy-bR-xAJ"/>
                 <constraint firstItem="eOe-ch-k90" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="SkJ-cM-Fmu"/>
                 <constraint firstItem="0hY-de-0fV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="izN-mc-8Nw"/>
-                <constraint firstItem="0hY-de-0fV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="jld-jN-Vne"/>
-                <constraint firstAttribute="bottom" secondItem="0hY-de-0fV" secondAttribute="bottom" constant="12" id="xbD-41-gcY"/>
+                <constraint firstItem="0hY-de-0fV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="wQ1-n3-LsP"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="287.78625954198475" y="253.87323943661974"/>

@@ -22,9 +22,9 @@ class RateIndexV: UIView {
         loadFromNib()
     }
     override func layoutSubviews() {
-        
+//        layer.cornerRadius = 16
     }
-    
+//    layoutSub
     private func loadFromNib(){
         let nib = UINib(nibName: "RateIndexV", bundle: nil)
         let nibView = nib.instantiate(withOwner: self).first as! UIView
@@ -38,7 +38,10 @@ class RateIndexV: UIView {
         hrv.config(customIndex: CustomIndex(title: "HRV", index: "--", unit: "bpm"))
         status.config(customIndex: CustomIndex(title: "Status", index: "--", unit: ""))
         nibView.layer.cornerRadius = 16
+        nibView.clipsToBounds = true
     }
+    
+//    viewDidLayoutSubviews()
     
     func config(color: UIColor){
         pulseV.config(color: color)

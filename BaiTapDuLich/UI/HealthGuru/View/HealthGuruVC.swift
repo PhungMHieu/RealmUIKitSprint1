@@ -25,7 +25,9 @@ class HealthGuruVC: UIViewController{
         heartView.isUserInteractionEnabled = true
         heartView.addGestureRecognizer(tapGestureRecognizer)
         trackDailyV.layer.cornerRadius = 16
+        trackDailyV.clipsToBounds = true
         rateIndexV.layer.cornerRadius = 16
+        rateIndexV.clipsToBounds = true
         trackDailyText.setLetterSpacing(0.2)
         clickHeartText.setLetterSpacing(0.4)
         let titleLabel = UILabel()
@@ -40,8 +42,8 @@ class HealthGuruVC: UIViewController{
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
-        clickHeartText.setLetterSpacing(0.2)
-        trackDailyText.setLetterSpacing(0.2)
+//        clickHeartText.setLetterSpacing(0.2)
+//        trackDailyText.setLetterSpacing(0.2)
     }
     
     func updateBackground(){

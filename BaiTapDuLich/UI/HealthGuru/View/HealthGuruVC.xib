@@ -27,7 +27,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xsi-Cq-C3n" userLabel="HeartV">
-                    <rect key="frame" x="69.666666666666686" y="205" width="263" height="241"/>
+                    <rect key="frame" x="69.666666666666686" y="189" width="263" height="241"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icXMLID482" translatesAutoresizingMaskIntoConstraints="NO" id="Uci-YN-jI3">
                             <rect key="frame" x="0.0" y="0.0" width="263" height="241"/>
@@ -49,15 +49,12 @@
                         <constraint firstItem="Uci-YN-jI3" firstAttribute="top" secondItem="Xsi-Cq-C3n" secondAttribute="top" id="urL-EB-4F8"/>
                     </constraints>
                 </view>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="FwV-x3-9cs" userLabel="EmtpyView">
-                    <rect key="frame" x="16" y="515" width="370" height="184"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="FwV-x3-9cs" userLabel="EmtpyView">
+                    <rect key="frame" x="16" y="499" width="370" height="184"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epj-ja-yR2" customClass="RateIndexV" customModule="BaiTapDuLich" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="370" height="80"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="80" id="YWK-QC-3wu"/>
-                            </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dcs-tk-kho">
                             <rect key="frame" x="0.0" y="104" width="370" height="80"/>
@@ -103,18 +100,20 @@
                                     </subviews>
                                 </stackView>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <color key="backgroundColor" name="Neutral5"/>
                             <constraints>
                                 <constraint firstItem="Vit-BZ-2k9" firstAttribute="centerX" secondItem="Dcs-tk-kho" secondAttribute="centerX" id="0ma-x2-emg"/>
                                 <constraint firstItem="Vit-BZ-2k9" firstAttribute="leading" secondItem="Dcs-tk-kho" secondAttribute="leading" constant="16" id="aCs-f2-sta"/>
-                                <constraint firstAttribute="height" constant="80" id="fXY-V8-ceQ"/>
                                 <constraint firstItem="Vit-BZ-2k9" firstAttribute="centerY" secondItem="Dcs-tk-kho" secondAttribute="centerY" id="kdJ-aU-H6d"/>
                             </constraints>
                         </view>
                     </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="184" id="h4o-Bb-GYB"/>
+                    </constraints>
                 </stackView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YhH-Df-cDb">
-                    <rect key="frame" x="16" y="515" width="370" height="291"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="YhH-Df-cDb">
+                    <rect key="frame" x="16" y="499" width="370" height="307"/>
                     <color key="backgroundColor" name="Backlground1"/>
                 </tableView>
             </subviews>
@@ -122,7 +121,7 @@
             <color key="backgroundColor" name="Backlground1"/>
             <constraints>
                 <constraint firstItem="FwV-x3-9cs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="1Ou-UD-KAJ"/>
-                <constraint firstItem="Xsi-Cq-C3n" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="81" id="HeZ-Hh-2NC"/>
+                <constraint firstItem="Xsi-Cq-C3n" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="65" id="HeZ-Hh-2NC"/>
                 <constraint firstItem="YhH-Df-cDb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="L3J-7b-hIO"/>
                 <constraint firstItem="YhH-Df-cDb" firstAttribute="top" secondItem="Xsi-Cq-C3n" secondAttribute="bottom" constant="69" id="Q8H-mG-pLR"/>
                 <constraint firstItem="YhH-Df-cDb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ru4-qu-dLq"/>
@@ -140,6 +139,9 @@
         <image name="icXMLID482" width="263" height="241"/>
         <namedColor name="Backlground1">
             <color red="0.92549019607843142" green="0.94117647058823528" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Neutral5">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TrackDailyApp">
             <color red="0.17647058823529413" green="0.19215686274509805" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
