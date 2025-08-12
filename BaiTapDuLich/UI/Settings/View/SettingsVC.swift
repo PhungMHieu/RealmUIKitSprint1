@@ -8,6 +8,8 @@
 import UIKit
 
 class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var tableView: UITableView!
+    
     var data: [[Setting]] = [
         [Setting(image: "icProfileCircle", title: "Profile")],
         [Setting(image: "icNotification", title: "Daily Reminder"),
@@ -19,8 +21,6 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
          Setting(image: "icDocumentAlignRight", title: "Term of User")]
     ]
     var userProfile: UserProfile?
-    
-    @IBOutlet weak var tableView: UITableView!
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data[section].count

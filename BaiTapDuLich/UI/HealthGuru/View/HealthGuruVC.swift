@@ -6,10 +6,9 @@
 //
 
 import UIKit
+import Combine
 
 class HealthGuruVC: UIViewController{
-    var data:[Index] = []
-    
     @IBOutlet weak var trackDailyV: UIView!
     @IBOutlet weak var rateIndexV: RateIndexV!
     @IBOutlet weak var heartView: UIView!
@@ -17,10 +16,13 @@ class HealthGuruVC: UIViewController{
     @IBOutlet weak var trackDailyText: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var clickHeartText: UILabel!
-        
+    
+    var data:[Index] = []
+    private var cancellables: Set<AnyCancellable> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateBackground()
+//        updateBackground()
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         heartView.isUserInteractionEnabled = true
         heartView.addGestureRecognizer(tapGestureRecognizer)
@@ -37,19 +39,49 @@ class HealthGuruVC: UIViewController{
         titleLabel.sizeToFit()
         let leftItem = UIBarButtonItem(customView: titleLabel)
         self.navigationItem.leftBarButtonItem = leftItem
+        
+        
+        
         let nib = UINib(nibName: "HealthGuruCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "cell")
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
+        
+//        setUpUserObservationDe()
+        setUpObservationDetail()
 //        clickHeartText.setLetterSpacing(0.2)
 //        trackDailyText.setLetterSpacing(0.2)
     }
-    
+
+    func setUpObservationDetail() {
+        RealmManager.shared.observeđDetails(Index.self)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] changes in
+                guard let tableView = self?.tableView else { return }
+                switch changes {
+                case .initial(let collection):
+                    self?.data =  Array(collection)
+                    tableView.reloadData()
+                case .update(let collection, deletions: let deletions, insertions: let insertions, modifications: let modifications):
+                    self?.data =  Array(collection)
+                    tableView.performBatchUpdates {
+                        tableView.insertRows(at: insertions.map { IndexPath(row: $0, section: 0) }, with: .automatic)
+                        tableView.deleteRows(at: deletions.map { IndexPath(row: $0, section: 0) }, with: .automatic)
+                        tableView.reloadRows(at: modifications.map { IndexPath(row: $0, section: 0) }, with: .automatic)
+                    }
+                case .error(_):
+                    print("error")
+                }
+            }
+            .store(in: &cancellables)
+    }
     func updateBackground(){
         if(data.isEmpty){
-            tableView.isHidden = true
-            emptyView.isHidden = false
+            tableView.isHidden = false
+            emptyView.isHidden = true
+//            tableView.isHidden = true
+//            emptyView.isHidden = false
         }else{
             tableView.isHidden = false
             emptyView.isHidden = true
@@ -89,6 +121,25 @@ extension HealthGuruVC:UITableViewDelegate, UITableViewDataSource {
         return cell
     }
 }
+
+extension HealthGuruVC  {
+    func setUpUserObservation() {
+        RealmManager.shared.observe(Index.self)
+            .print()
+            .receive(on: DispatchQueue.main)
+            .sink { value in
+                print(value)
+            } receiveValue: { [weak self] indexs in
+//                self?.data = indexs.sorted(by: { x0, x1 in
+//                    return x0.pulse < x1.pulse
+//                })
+                self?.data = indexs
+                self?.tableView.reloadData()
+            }
+            .store(in: &cancellables)
+
+    }
+}
 extension UILabel{
     func setLetterSpacing(_ spacing: CGFloat) {
         guard let text = text else { return }
@@ -102,3 +153,4 @@ extension UILabel{
         self.attributedText = attributedString
     }
 }
+

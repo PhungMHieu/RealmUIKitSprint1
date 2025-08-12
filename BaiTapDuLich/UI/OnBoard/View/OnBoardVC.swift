@@ -8,6 +8,10 @@
 import UIKit
 
 class OnBoardVC: UIViewController{
+    @IBOutlet weak var nextBtn: RoundButton!
+    @IBOutlet weak var healthCollectionView: UICollectionView!
+    @IBOutlet weak var titleOfPage: UILabel!
+    
     var index: Int = 0{
         didSet {
             titleOfPage.text = pageTitle
@@ -17,10 +21,6 @@ class OnBoardVC: UIViewController{
     var pageTitle: String{
         Page(rawValue: categoryName[index])?.titles ?? ""
     }
-    
-    @IBOutlet weak var nextBtn: RoundButton!
-    @IBOutlet weak var healthCollectionView: UICollectionView!
-    @IBOutlet weak var titleOfPage: UILabel!
     
     override func viewDidLoad() {
         let nib = UINib(nibName: "ParentHearHealthCell", bundle: nil)

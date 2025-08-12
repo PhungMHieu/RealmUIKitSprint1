@@ -10,6 +10,7 @@ import UIKit
 class Page1VC: UIViewController {
 
     @IBOutlet weak var detailInfo: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         detailInfo.setLineHeight(24)
