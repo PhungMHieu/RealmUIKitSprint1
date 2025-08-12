@@ -52,7 +52,7 @@ class OnBoardVC: UIViewController{
               let window = sceneDelegate.window else { return }
         let settingsVC = SettingsVC()
         let settingsNavi = UINavigationController(rootViewController: settingsVC)
-        settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: .icSetting, selectedImage: .icSettingRed)
+        settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: .icsetting, selectedImage: .icSettingRed)
         let healthGuruVC = HealthGuruVC()
         healthGuruVC.tabBarItem = UITabBarItem(title: "Report", image: .icChart, selectedImage: .icChartRed)
         let healthGuruNavi = UINavigationController(rootViewController: healthGuruVC)

@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C188DC72E4B30F0004831C5 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C188DC62E4B30F0004831C5 /* RealmManager.swift */; };
 		2C5ECA972E1B6A4900AD6A18 /* InformationHeartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C5ECA952E1B6A4900AD6A18 /* InformationHeartVC.swift */; };
 		2C5ECA982E1B6A4900AD6A18 /* InformationHeartVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C5ECA962E1B6A4900AD6A18 /* InformationHeartVC.xib */; };
+		83ECF645B7BB4FE35E782BA2 /* Pods_BaiTapDuLich.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29DEF29E0F0FE7F7AE35E09A /* Pods_BaiTapDuLich.framework */; };
 		842A041F2E240177007C9919 /* HearHealthCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842A041B2E240177007C9919 /* HearHealthCell1.xib */; };
 		842A04202E240177007C9919 /* OnBoardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842A041E2E240177007C9919 /* OnBoardVC.xib */; };
 		842A04212E240177007C9919 /* OnBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A041D2E240177007C9919 /* OnBoardVC.swift */; };
@@ -55,6 +57,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		137DFADF2B1053C84C9B8AB2 /* Pods-BaiTapDuLich.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiTapDuLich.debug.xcconfig"; path = "Target Support Files/Pods-BaiTapDuLich/Pods-BaiTapDuLich.debug.xcconfig"; sourceTree = "<group>"; };
+		29DEF29E0F0FE7F7AE35E09A /* Pods_BaiTapDuLich.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BaiTapDuLich.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C188DC62E4B30F0004831C5 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		2C5ECA952E1B6A4900AD6A18 /* InformationHeartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationHeartVC.swift; sourceTree = "<group>"; };
 		2C5ECA962E1B6A4900AD6A18 /* InformationHeartVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationHeartVC.xib; sourceTree = "<group>"; };
 		842A041A2E240177007C9919 /* HearHealthCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HearHealthCell1.swift; sourceTree = "<group>"; };
@@ -102,6 +107,7 @@
 		849B2C822E16E4FF000BCDD4 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		849B2C9D2E17ECEC000BCDD4 /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
 		849B2C9F2E17EE2D000BCDD4 /* CheckBoxView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckBoxView.xib; sourceTree = "<group>"; };
+		CB332805698BAE12BE564A24 /* Pods-BaiTapDuLich.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiTapDuLich.release.xcconfig"; path = "Target Support Files/Pods-BaiTapDuLich/Pods-BaiTapDuLich.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,19 +115,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83ECF645B7BB4FE35E782BA2 /* Pods_BaiTapDuLich.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C188DC52E4B30DE004831C5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2C188DC62E4B30F0004831C5 /* RealmManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		2C5ECA942E1B6A2C00AD6A18 /* InformationHeart */ = {
 			isa = PBXGroup;
 			children = (
+				845E250C2E198AA30098E637 /* Index.swift */,
 				2C5ECA952E1B6A4900AD6A18 /* InformationHeartVC.swift */,
 				2C5ECA962E1B6A4900AD6A18 /* InformationHeartVC.xib */,
 			);
 			path = InformationHeart;
+			sourceTree = "<group>";
+		};
+		343419BC7F8467AB72017F6B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				137DFADF2B1053C84C9B8AB2 /* Pods-BaiTapDuLich.debug.xcconfig */,
+				CB332805698BAE12BE564A24 /* Pods-BaiTapDuLich.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6783AA204BE5334663A079EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29DEF29E0F0FE7F7AE35E09A /* Pods_BaiTapDuLich.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		840428762E296AB200719C57 /* View */ = {
@@ -181,7 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				845E250E2E198B9B0098E637 /* CustomIndex.swift */,
-				845E250C2E198AA30098E637 /* Index.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -320,6 +352,8 @@
 			children = (
 				849B2C712E169E18000BCDD4 /* BaiTapDuLich */,
 				849B2C512E169DBC000BCDD4 /* Products */,
+				343419BC7F8467AB72017F6B /* Pods */,
+				6783AA204BE5334663A079EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -350,6 +384,7 @@
 		849B2C7B2E169E35000BCDD4 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2C188DC52E4B30DE004831C5 /* Manager */,
 				842A04192E24015E007C9919 /* OnBoard */,
 				2C5ECA942E1B6A2C00AD6A18 /* InformationHeart */,
 				845E25232E1A93230098E637 /* Information */,
@@ -391,17 +426,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 849B2C632E169DBC000BCDD4 /* Build configuration list for PBXNativeTarget "BaiTapDuLich" */;
 			buildPhases = (
+				1D9A1610CB4FB4105D10CB2E /* [CP] Check Pods Manifest.lock */,
 				849B2C4C2E169DBC000BCDD4 /* Sources */,
 				849B2C4D2E169DBC000BCDD4 /* Frameworks */,
 				849B2C4E2E169DBC000BCDD4 /* Resources */,
+				D219D403046B4F93806DA139 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = BaiTapDuLich;
-			packageProductDependencies = (
-			);
 			productName = BaiTapDuLich;
 			productReference = 849B2C502E169DBC000BCDD4 /* BaiTapDuLich.app */;
 			productType = "com.apple.product-type.application";
@@ -469,6 +504,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D9A1610CB4FB4105D10CB2E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BaiTapDuLich-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D219D403046B4F93806DA139 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaiTapDuLich/Pods-BaiTapDuLich-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BaiTapDuLich/Pods-BaiTapDuLich-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BaiTapDuLich/Pods-BaiTapDuLich-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		849B2C4C2E169DBC000BCDD4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -488,6 +569,7 @@
 				845E252E2E1A94E80098E637 /* UserProfile.swift in Sources */,
 				849B2C742E169E18000BCDD4 /* ViewController.swift in Sources */,
 				845E252C2E1A94D20098E637 /* FormMode.swift in Sources */,
+				2C188DC72E4B30F0004831C5 /* RealmManager.swift in Sources */,
 				849B2C812E169F93000BCDD4 /* Page1VC.swift in Sources */,
 				845E25132E1A345C0098E637 /* SettingsVC.swift in Sources */,
 				2C5ECA972E1B6A4900AD6A18 /* InformationHeartVC.swift in Sources */,
@@ -527,11 +609,13 @@
 /* Begin XCBuildConfiguration section */
 		849B2C642E169DBC000BCDD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 137DFADF2B1053C84C9B8AB2 /* Pods-BaiTapDuLich.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BaiTapDuLich/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -554,11 +638,13 @@
 		};
 		849B2C652E169DBC000BCDD4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB332805698BAE12BE564A24 /* Pods-BaiTapDuLich.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BaiTapDuLich/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

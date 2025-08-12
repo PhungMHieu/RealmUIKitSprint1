@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navi = UINavigationController(rootViewController: vc)
         let settingsVC = SettingsVC()
         let settingsNavi = UINavigationController(rootViewController: settingsVC)
-        settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: .icSetting, selectedImage: .icSettingRed)
+        settingsVC.tabBarItem = UITabBarItem(title: "Settings", image: .icsetting, selectedImage: .icSettingRed)
         let healthGuruVC = HealthGuruVC()
         healthGuruVC.tabBarItem = UITabBarItem(title: "Report", image: .icChart, selectedImage: .icChartRed)
         let healthGuruNavi = UINavigationController(rootViewController: healthGuruVC)

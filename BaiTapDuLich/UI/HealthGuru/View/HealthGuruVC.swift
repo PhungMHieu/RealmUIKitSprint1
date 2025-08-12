@@ -57,11 +57,11 @@ class HealthGuruVC: UIViewController{
     }
     @objc func handleTap() {
         let vc = InformationHeartVC()
-        vc.addIndex = {[weak self] index in
-            self?.data.append(index)
-            self?.updateBackground()
-            self?.tableView.reloadData()
-        }
+//        vc.addIndex = {[weak self] index in
+//            self?.data.append(index)
+//            self?.updateBackground()
+//            self?.tableView.reloadData()
+//        }
         let nav = UINavigationController(rootViewController: vc)
         present(nav, animated: true)
     }
