@@ -13,8 +13,6 @@ class InformationHeartVC: UIViewController {
     @IBOutlet weak var hrvV: LabelTextFieldV!
     @IBOutlet weak var pulseV: LabelTextFieldV!
     
-//    var addIndex: ((Index)->Void)?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Information"
@@ -32,7 +30,6 @@ class InformationHeartVC: UIViewController {
         guard let pulseInt = Int(pulse) else { return }
         if(hrVInt < 300 && pulseInt < 300){
             let index = Index(pulse: pulseInt, hrv: hrVInt)
-//            addIndex?(index)
             RealmManager.shared.save(object: index)
             print(index)
             dismiss(animated: true)

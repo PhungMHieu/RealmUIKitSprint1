@@ -6,12 +6,13 @@
 //
 
 import UIKit
-protocol ProfileDelegate: AnyObject{
-    func getUpdateProfile(_ userProfile: UserProfile)
-}
-protocol ProfileDeleteDelegate: AnyObject{
-    func deleteProfile(_ index:Int)
-}
+import Combine
+//protocol ProfileDelegate: AnyObject{
+//    func getUpdateProfile(_ userProfile: UserProfile)
+//}
+//protocol ProfileDeleteDelegate: AnyObject{
+//    func deleteProfile(_ index:Int)
+//}
 class ProfileVC: UIViewController, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var editBtn: UIButton!
@@ -31,10 +32,12 @@ class ProfileVC: UIViewController, UIGestureRecognizerDelegate {
     var userProfile: UserProfile?
     var userIndex: Int!
     
-    weak var profileDelegate: ProfileDelegate?
+    var cancellables: Set<AnyCancellable> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpObserver()
+        
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: .icLeft2, style: .plain, target: self, action: #selector(didTapBack))
         let edgePan = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(didTapBack))
         edgePan.edges = .left
@@ -67,7 +70,16 @@ class ProfileVC: UIViewController, UIGestureRecognizerDelegate {
         updateButton.tintColor = .primary1
         navigationItem.rightBarButtonItem = updateButton
         
-        profileDelegate?.getUpdateProfile(userProfile!)
+    }
+    
+    func setUpObserver() {
+        RealmManager.shared.observe(UserProfile.self)
+            .receive(on: DispatchQueue.main)
+            .sink {[weak self] user in
+                self?.userProfile = user.first
+                self?.updateUI()
+            }
+            .store(in: &cancellables)
     }
     
     func config(_ userProfile: UserProfile){
@@ -100,8 +112,6 @@ class ProfileVC: UIViewController, UIGestureRecognizerDelegate {
     @objc func didTapUpdate(){
         let informationVC = InformationVC()
         informationVC.mode = .update
-        informationVC.userProfile = userProfile
-        informationVC.informationUpdateDelegate = self
         navigationController?.pushViewController(informationVC, animated: true)
     }
     @objc func didTapBackForBtn(){
@@ -109,20 +119,5 @@ class ProfileVC: UIViewController, UIGestureRecognizerDelegate {
     }
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         true
-    }
-}
-extension ProfileVC: InformationUpdateDelegate{
-    func didUpdateUser(_ user: UserProfile) {
-//        self.userProfile = user
-        updateUI()
-        profileDelegate?.getUpdateProfile(user)
-    }
-}
-extension ProfileVC: InformationDelegate{
-    func didAddUserProfile(_ userProfile: UserProfile) {
-        self.userProfile = userProfile
-        self.profileDelegate?.getUpdateProfile(userProfile)
-        updateUI()
-//        profileDelegate?.getUpdateProfile(userProfile)
     }
 }

@@ -6,21 +6,23 @@
 //
 
 import Foundation
+import RealmSwift
 
-class UserProfile {
-    let id: String = UUID().uuidString
-    var firstName: String
-    var lastName: String
+class UserProfile:Object {
+    @Persisted(primaryKey: true) var _id: ObjectId
+    @Persisted var firstName: String
+    @Persisted var lastName: String
     var fullName: String{
         return "\(firstName) \(lastName)"
     }
-    var weight: Double
-    var height: Double
+    @Persisted var weight: Double
+    @Persisted var height: Double
     func calculateBMI()->Double{
         return Double(String(format: "%.1f",(weight / (height * height / 100_00)))) ?? 0
     }
-    var gender: Gender
-    init(firstName: String, lastName: String, weight: Double, height: Double, gender: Gender) {
+    @Persisted var gender: Gender
+    convenience init(firstName: String, lastName: String, weight: Double, height: Double, gender: Gender) {
+        self.init()
         self.firstName = firstName
         self.lastName = lastName
         self.weight = weight
@@ -31,15 +33,13 @@ class UserProfile {
         return gender.description
     }
 }
-enum Gender: String{
+enum Gender: String, PersistableEnum{
     case male
     case female
-//    case other
     var description: String {
         switch self {
             case .male: return "Male"
             case .female: return "Female"
-//            case .other: return "Khác"
         }
     }
 }

@@ -25,6 +25,11 @@ class RealmManager {
     private init() {
         do {
             realm = try Realm()
+            if let path = realm.configuration.fileURL?.path {
+                print("Realm file path: \(path)")
+            } else {
+                print( "Realm file path not found")
+            }
         } catch let error as NSError {
             fatalError("Lỗi tạo Realm: \(error)")
         }
@@ -33,6 +38,7 @@ class RealmManager {
     func observeđDetails<T:Object>(_ type: T.Type) -> AnyPublisher<RealmCollectionChange<Results<T >>, Never> {
         let subject = PassthroughSubject<RealmCollectionChange<Results<T>>, Never>()
         let results = realm.objects(type)
+//        let results = realm.objects(type).changesetPublisher
         let token = results.observe { changes in
             subject.send(changes)
         }
@@ -76,6 +82,20 @@ extension RealmManager {
     }
     func fetch<T:Object> (_ type: T.Type) -> Results<T> {
         return realm.objects(type)
+    }
+    func update<T:Object> (_ object: T, byPrimaryKey key:Any, ofType type: T.Type) {
+        do {
+            try realm.write {
+                if let objectAdd = realm.object(ofType: type, forPrimaryKey: key){
+//                    objectAdd.objectSchema.primaryKeyProperty
+                    realm.add(object)
+                } else {
+                    print("Không tìm thấy đối tượng")
+                }
+            }
+        } catch {
+            print("Lỗi khi update object: \(error)")
+        }
     }
 }
 

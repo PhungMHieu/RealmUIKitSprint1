@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
@@ -21,7 +22,8 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
          Setting(image: "icDocumentAlignRight", title: "Term of User")]
     ]
     var userProfile: UserProfile?
-
+    var cancellables: Set<AnyCancellable> = []
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return data[section].count
     }
@@ -49,12 +51,10 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
             if(userProfile == nil){
                 let vc = InformationVC()
-                vc.informationUpdateDelegate = self
                 vc.hidesBottomBarWhenPushed = true
                 navigationController?.pushViewController(vc, animated: true)
             }else{
                 let vc = ProfileVC()
-                vc.userProfile = self.userProfile
                 vc.hidesBottomBarWhenPushed = true
                 navigationController?.pushViewController(vc, animated: true)
             }
@@ -92,6 +92,7 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpObserver()
         let titleLabel = UILabel()
         titleLabel.text = "Settings"
         titleLabel.textColor = .neutral1
@@ -120,10 +121,19 @@ class SettingsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         headerView.addSubview(imageView)
         tableView.tableHeaderView = headerView
     }
-}
-
-extension SettingsVC: InformationUpdateDelegate{
-    func didUpdateUser(_ user: UserProfile) {
-        self.userProfile = user
+    
+    func setUpObserver() {
+        RealmManager.shared.observe(UserProfile.self)
+            .receive(on: DispatchQueue.main)
+            .sink {[weak self] user in
+                self?.userProfile = user.first
+            }
+            .store(in: &cancellables)
     }
 }
+
+//extension SettingsVC: InformationUpdateDelegate{
+//    func didUpdateUser(_ user: UserProfile) {
+//        self.userProfile = user
+//    }
+//}

@@ -47,8 +47,6 @@ class HealthGuruVC: UIViewController{
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
-        
-//        setUpUserObservationDe()
         setUpObservationDetail()
 //        clickHeartText.setLetterSpacing(0.2)
 //        trackDailyText.setLetterSpacing(0.2)
@@ -69,31 +67,29 @@ class HealthGuruVC: UIViewController{
                         tableView.insertRows(at: insertions.map { IndexPath(row: $0, section: 0) }, with: .automatic)
                         tableView.deleteRows(at: deletions.map { IndexPath(row: $0, section: 0) }, with: .automatic)
                         tableView.reloadRows(at: modifications.map { IndexPath(row: $0, section: 0) }, with: .automatic)
+                    } completion: { _ in
+                        tableView.reloadData()
                     }
                 case .error(_):
                     print("error")
                 }
+                self?.updateBackground()
             }
             .store(in: &cancellables)
     }
+    
     func updateBackground(){
         if(data.isEmpty){
-            tableView.isHidden = false
-            emptyView.isHidden = true
-//            tableView.isHidden = true
-//            emptyView.isHidden = false
+            tableView.isHidden = true
+            emptyView.isHidden = false
         }else{
             tableView.isHidden = false
             emptyView.isHidden = true
         }
     }
+    
     @objc func handleTap() {
         let vc = InformationHeartVC()
-//        vc.addIndex = {[weak self] index in
-//            self?.data.append(index)
-//            self?.updateBackground()
-//            self?.tableView.reloadData()
-//        }
         let nav = UINavigationController(rootViewController: vc)
         present(nav, animated: true)
     }
@@ -120,6 +116,17 @@ extension HealthGuruVC:UITableViewDelegate, UITableViewDataSource {
         }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = UIContextualAction(style: .normal, title: "Delete") {_,_,_ in 
+            RealmManager.shared.delete(byPrimaryKey: self.data[indexPath.row]._id, ofType: Index.self)
+        }
+        delete.image = UIImage(systemName: "trash.circle.fill")?.withTintColor(.primary1, renderingMode: .alwaysOriginal)
+        delete.backgroundColor = .backlground1
+        let swipe = UISwipeActionsConfiguration(actions: [delete])
+        swipe.performsFirstActionWithFullSwipe = true
+        return swipe
+    }
 }
 
 extension HealthGuruVC  {
@@ -130,14 +137,10 @@ extension HealthGuruVC  {
             .sink { value in
                 print(value)
             } receiveValue: { [weak self] indexs in
-//                self?.data = indexs.sorted(by: { x0, x1 in
-//                    return x0.pulse < x1.pulse
-//                })
                 self?.data = indexs
                 self?.tableView.reloadData()
             }
             .store(in: &cancellables)
-
     }
 }
 extension UILabel{
